@@ -1,0 +1,26 @@
+---
+import { getCollection } from "astro:content";
+import PagePreview from "./PagePreview.astro";
+
+const pages = await getCollection("page");
+---
+
+<section>
+  <h2 id="latest-pages">Latest Pages</h2>
+  <ul>
+    {
+      pages.map((page) => (
+        <li>
+          <PagePreview {...page} />
+        </li>
+      ))
+    }
+  </ul>
+</section>
+
+<style>
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+</style>

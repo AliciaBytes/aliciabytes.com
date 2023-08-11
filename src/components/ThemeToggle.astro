@@ -1,0 +1,29 @@
+---
+---
+
+<button id="theme-switcher-toggle">Theme Switcher</button>
+
+<script>
+  const handleThemeToggling = (event: Event) => {
+    const themeSwitcher = document.querySelector(
+      "#theme-switcher"
+    ) as HTMLDivElement;
+    const oppositeVisibility =
+      themeSwitcher.getAttribute("data-visible") === "true" ? "false" : "true";
+
+    themeSwitcher.setAttribute("data-visible", oppositeVisibility);
+  };
+
+  const themeSwitcherToggle = document.querySelector(
+    "#theme-switcher-toggle"
+  ) as HTMLButtonElement;
+
+  themeSwitcherToggle.addEventListener("click", handleThemeToggling);
+</script>
+
+<style>
+  button {
+    display: grid;
+    place-content: center;
+  }
+</style>

@@ -1,0 +1,34 @@
+---
+import { format } from "date-fns";
+const { slug } = Astro.props;
+const { title, excerpt, published, lastUpdated } = Astro.props.data;
+---
+
+<article>
+  <a href={`/${slug}`}><h3 id={slug} set:html={title} /></a>
+  <div>
+    <span
+      >Published: <time datetime={published.toISOString()}
+        >{format(published, "dd MMMM yyyy")}</time
+      ></span
+    >
+    {
+      lastUpdated && (
+        <span>
+          Last Updated:
+          <time datetime={lastUpdated.toISOString()}>
+            {format(lastUpdated, "dd MMMM yyyy")}
+          </time>
+        </span>
+      )
+    }
+  </div>
+  <p set:html={excerpt} />
+</article>
+
+<style>
+  span {
+    color: var(--color-subtext0);
+    font-size: var(--size-font-subtext0);
+  }
+</style>

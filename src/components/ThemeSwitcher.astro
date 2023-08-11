@@ -1,0 +1,71 @@
+---
+// Based on https://fossheim.io/writing/posts/accessible-theme-picker-html-css-js/
+---
+
+<div id="theme-switcher" data-visible="false">
+  <button aria-pressed="true" data-theme="system">System Default</button>
+  <button aria-pressed="false" data-theme="latte">Latte</button>
+  <button aria-pressed="false" data-theme="frappe">Frappé</button>
+  <button aria-pressed="false" data-theme="macchiato">Macchiato</button>
+  <button aria-pressed="false" data-theme="mocha">Mocha</button>
+</div>
+
+<script>
+  const applyTheme = (theme: string) => {
+    const target = document.querySelector(`[data-theme="${theme}"]`);
+
+    document.documentElement.setAttribute("data-selected-theme", theme);
+
+    document
+      .querySelector('[data-theme][aria-pressed="true"]')
+      ?.setAttribute("aria-pressed", "false");
+
+    target?.setAttribute("aria-pressed", "true");
+  };
+
+  const handleThemeSelection = (event: Event) => {
+    const target = event.currentTarget as HTMLButtonElement;
+    const isPressed = target.getAttribute("aria-pressed");
+
+    /* if clicked theme is different from current theme */
+    if (isPressed !== "true") {
+      const theme = target.getAttribute("data-theme") || defaultTheme;
+      applyTheme(theme);
+      localStorage.setItem("selected-theme", theme);
+    }
+  };
+
+  const savedTheme = localStorage.getItem("selected-theme");
+  const defaultTheme = "system";
+
+  /* if saved theme is different from current theme */
+  if (savedTheme && savedTheme !== defaultTheme) {
+    applyTheme(savedTheme);
+  }
+
+  const themeSwitcher = document.querySelector("#theme-switcher");
+  const buttons = themeSwitcher?.querySelectorAll("button");
+
+  buttons?.forEach((button) => {
+    button.addEventListener("click", handleThemeSelection);
+  });
+</script>
+
+<style>
+  :global(.no-js) #theme-switcher,
+  #theme-switcher[data-visible="false"] {
+    display: none;
+  }
+
+  #theme-switcher {
+    display: grid;
+    margin: 24px 0 0 0;
+    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(min(10ch, 100%), 1fr));
+  }
+
+  button[aria-pressed="true"] {
+    background: var(--color-text);
+    color: var(--color-base);
+  }
+</style>

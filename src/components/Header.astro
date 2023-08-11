@@ -1,0 +1,68 @@
+---
+import ThemeToggle from "./ThemeToggle.astro";
+import ThemeSwitcher from "./ThemeSwitcher.astro";
+import Navigation from "./Navigation.astro";
+
+const { class: className } = Astro.props;
+
+const navigation = [
+  { slug: "/", title: "Home" },
+  { slug: "/about/", title: "About" },
+];
+---
+
+<header class={className}>
+  <div id="top_bar">
+    <a id="home_link" href="/">
+      <img
+        width="56px"
+        height="56px"
+        src="/icon.svg"
+        alt="Picture of a caticorn, a pink cat with a rainbow colored unicorn horn licking it's paw as site logo"
+      />
+      <span id="title_text">AliciaBytes</span>
+    </a>
+    <ThemeToggle />
+  </div>
+  <ThemeSwitcher />
+  <Navigation navigation={navigation} />
+</header>
+
+<style>
+  header {
+    margin-top: 18px;
+  }
+
+  div {
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+
+  #home_link {
+    display: grid;
+    place-content: center;
+    grid-template-columns: auto auto;
+    gap: 6px;
+  }
+
+  #top_bar {
+    --top-bar-size: 60px;
+    display: inline flex;
+    font-size: clamp(1.2rem, 5vw, var(--size-font-header1));
+    line-height: var(--top-bar-size);
+    height: var(--top-bar-size);
+    justify-content: space-between;
+  }
+
+  #top_bar * {
+    height: var(--top-bar-size);
+    margin: 0;
+    padding: 0;
+  }
+
+  @media screen and (max-width: 450px) {
+    #title_text {
+      display: none;
+    }
+  }
+</style>

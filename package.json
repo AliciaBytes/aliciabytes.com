@@ -10,6 +10,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^2.8.0"
+    "@astrojs/mdx": "^0.19.7",
+    "astro": "^2.8.0",
+    "date-fns": "^2.30.0",
+    "rehype-pretty-code": "^0.10.0",
+    "sanitize.css": "^13.0.0",
+    "shiki": "^0.14.3"
   }
 }

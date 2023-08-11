@@ -1,0 +1,10 @@
+/*
+    Content-Security-Policy: default-src 'self'; style-src 'self' 'unsafe-inline'
+    X-Frame-Options: SAMEORIGIN
+    X-Content-Type-Options: nosniff
+    Referrer-Policy: no-referrer-when-downgrade
+
+/*.js
+    cache-control: public,max-age=31536000,immutable
+/*.css
+    cache-control: public,max-age=31536000,immutable

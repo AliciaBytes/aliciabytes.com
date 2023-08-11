@@ -19,3 +19,8 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+# Remotely downloaded assets during build
+src/lib/rassets/
+public/*icon*
+public/*.png

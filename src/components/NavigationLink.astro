@@ -1,0 +1,26 @@
+---
+export interface Props {
+  slug: string;
+  title: string;
+}
+const { slug, title } = Astro.props;
+const url = Astro.url;
+const pathname = url.pathname;
+---
+
+{
+  pathname === slug ? (
+    <a href={slug} aria-current="page">
+      {title}
+    </a>
+  ) : (
+    <a href={slug}>{title}</a>
+  )
+}
+
+<style>
+  a {
+    display: grid;
+    place-content: center;
+  }
+</style>

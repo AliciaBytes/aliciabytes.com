@@ -1,0 +1,81 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+}
+
+import "sanitize.css";
+import "sanitize.css/forms.css";
+import "sanitize.css/assets.css";
+import "sanitize.css/typography.css";
+// import "sanitize.css/reduce-motion.css";
+
+import Header from "@src/components/Header.astro";
+import Footer from "@src/components/Footer.astro";
+
+import "@styles/themes.css";
+import "@styles/global.css";
+
+const { title, description } = Astro.props;
+const origin = Astro.site?.origin;
+const url = Astro.url;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title set:html={title} />
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={`${origin}/opengraph.png`} />
+    <meta property="og:locale" content="en" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={url} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={`${origin}/opengraph.png`} />
+    <meta name="twitter:creator" content="@AliciaBytes" />
+    <meta
+      name="theme-color"
+      content="#1a202c"
+      media="(prefers-color-scheme: dark)"
+    />
+    <meta
+      name="theme-color"
+      content="#FFF"
+      media="(prefers-color-scheme: light)"
+    />
+    <link rel="canonical" href={url} />
+    <link
+      rel="alternate"
+      title="AliciaBytes' Blog"
+      href={`${origin}/rss.xml`}
+      type="application/rss+xml"
+    />
+    <script>
+      document.documentElement.classList.remove("no-js");
+      document.documentElement.classList.add("js");
+    </script>
+  </head>
+  <body>
+    <Header class="grid-center-wrapper" />
+    <main class="grid-center-wrapper">
+      <slot />
+    </main>
+    <Footer class="grid-center-wrapper such-a-bottom" />
+  </body>
+</html>
+
+<style>
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .such-a-bottom {
+    margin-top: auto;
+  }
+</style>

@@ -1,0 +1,28 @@
+---
+const { class: className } = Astro.props;
+---
+
+<footer class={className}>
+  <div class="social-section">
+    <a rel="me" href="https://notes.aliciabytes.com">Digital Garden</a>
+    <a rel="me" href="https://tech.lgbt/@AliciaBytes">Mastodon</a>
+    <a rel="me" href="https://github.com/AliciaBytes">GitHub</a>
+    <a rel="me" href="https://www.linkedin.com/in/aliciamiedl/">LinkedIn</a>
+  </div>
+</footer>
+
+<style>
+  footer {
+    margin: 18px 0;
+  }
+
+  .social-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(15ch, 100%), 1fr));
+  }
+
+  a {
+    display: grid;
+    place-content: center;
+  }
+</style>

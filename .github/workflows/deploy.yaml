@@ -1,0 +1,31 @@
+name: deploy
+on:
+    push:
+        branches:
+            - main
+    pull_request:
+        branches:
+            - main
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: "lts/*"
+                  cache: "npm"
+            - run: npm install
+            - run: utils/download-images.sh
+            - run: npm run build
+            - name: Deploy to Netlify
+              uses: nwtgck/actions-netlify@v2.0.0
+              with:
+                  publish-dir: "./dist"
+                  production-branch: main
+                  github-token: ${{ secrets.GITHUB_TOKEN }}
+                  deploy-message: ${{ github.event.head_commit.message }}
+              env:
+                  NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+                  NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+              timeout-minutes: 5
