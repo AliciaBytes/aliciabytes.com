@@ -1,6 +1,6 @@
 name: deploy
 on:
-  push:
+  pull_request:
     branches:
       - main
 jobs:
@@ -22,9 +22,10 @@ jobs:
       - name: Build the website
         run: npm run build
       - name: Publish to Netlify
+        id: netlify_publish
         uses: netlify/actions/cli@master
         with:
-          args: deploy --prod --dir=dist --functions=functions
+          args: deploy --dir=dist --functions=functions
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
@@ -41,7 +42,6 @@ jobs:
 
             **Log Location:** ${{steps.netlify_publish.outputs.NETLIFY_LOGS_URL }}
             **Preview location:** ${{ steps.netlify_publish.outputs.NETLIFY_URL }}
-            **Live location:** ${{ steps.netlify_publish.outputs.NETLIFY_LIVE_URL }}
           message-failure: |
             **Publishing to Netlify failed!**
 
