@@ -2,7 +2,13 @@
 import { getCollection } from "astro:content";
 import PagePreview from "./PagePreview.astro";
 
-const pages = await getCollection("page");
+let pages = await getCollection("page");
+pages.sort((a, b) => {
+  const a_comparator = (a.data.lastUpdated || a.data.published).getTime();
+  const b_comparator = (b.data.lastUpdated || b.data.published).getTime();
+
+  return b_comparator - a_comparator;
+});
 ---
 
 <section>
