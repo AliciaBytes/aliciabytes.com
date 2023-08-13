@@ -9,7 +9,7 @@
     "preview": "astro preview",
     "astro": "astro"
   },
-  "dependencies": {
+  "devDependencies": {
     "@astrojs/mdx": "^0.19.7",
     "@astrojs/rss": "^2.4.4",
     "astro": "^2.8.0",
@@ -22,9 +22,8 @@
     "sanitize-html": "^2.11.0",
     "sanitize.css": "^13.0.0",
     "shiki": "^0.14.3",
-    "unified": "^10.1.2"
-  },
-  "devDependencies": {
+    "unified": "^10.1.2",
     "@types/sanitize-html": "^2.9.0"
-  }
+  },
+  "dependencies": {}
 }
