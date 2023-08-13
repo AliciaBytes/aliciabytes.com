@@ -27,6 +27,9 @@ export default defineConfig({
     syntaxHighlight: false,
   },
   vite: {
+    build: {
+      assetsInlineLimit: -1
+    },
     ssr: {
       noExternal: [
         'sanitize.css'
