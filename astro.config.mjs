@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import mdx from "@astrojs/mdx";
 import robotsTxt from "astro-robots-txt";
 import sitemap from "@astrojs/sitemap";
+import compress from 'astro-compress';
 
 import rehypePrettyCode from 'rehype-pretty-code';
 import frappe from '/utils/shiki-themes/frappe.json';
@@ -13,6 +14,27 @@ import mocha from '/utils/shiki-themes/mocha.json';
 export default defineConfig({
   site: "https://aliciabytes.com",
   integrations: [
+    compress({
+      CSS: false,
+      HTML: {
+        "collapseWhitespace": true,
+        "collapseInlineTagWhitespace": true,
+        "preserveLineBreaks": true,
+        "conservativeCollapse": true,
+        "decodeEntities": true,
+        "minifyCSS": true,
+        "minifyJS": true,
+        "removeComments": true,
+        "removeScriptTypeAttributes": true,
+        "removeStyleLinkTypeAttributes": true,
+        "sortAttributes": true,
+        "sortClassName": true,
+        "useShortDoctype": true
+      },
+      Image: false,
+      JavaScript: false,
+      SVG: false,
+    }),
     mdx(),
     robotsTxt({
       host: "aliciabytes.com",
