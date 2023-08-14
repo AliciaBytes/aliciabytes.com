@@ -3,6 +3,10 @@ on:
   push:
     branches:
       - main
+
+env:
+  DOMAIN: aliciabytes.com
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -31,6 +35,8 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           timeout-minutes: 5
+      - name: Submit sitemap to google
+        run: curl -X GET https://www.google.com/ping?sitemap=https://${{ env.DOMAIN }}/sitemap-index.xml
       - name: Print the deploy status
         uses: mshick/add-pr-comment@v2
         if: success() || failure()
