@@ -5,7 +5,13 @@ updates:
     schedule:
       interval: daily
     versioning-strategy: increase-if-necessary
+    labels:
+      - "dependencies"
+      - "dependencies:javascript"
   - directory: /
     package-ecosystem: github-actions
     schedule:
       interval: daily
+    labels:
+      - "dependencies"
+      - "dependencies:actions"
