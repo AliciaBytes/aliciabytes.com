@@ -8,6 +8,11 @@ updates:
     labels:
       - "dependencies"
       - "dependencies:javascript"
+    groups:
+      astro:
+        patterns:
+          - "astro"
+          - "@astrojs/*"
   - directory: /
     package-ecosystem: github-actions
     schedule:
