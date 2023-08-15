@@ -14,12 +14,14 @@ const { title, excerpt, published, lastUpdated } = Astro.props.data;
     >
     {
       lastUpdated && (
-        <span>
-          Last Updated:
-          <time datetime={lastUpdated.toISOString()}>
-            {format(lastUpdated, "dd MMMM yyyy")}
-          </time>
-        </span>
+        <>
+          <span>
+            Last Updated:
+            <time datetime={lastUpdated.toISOString()}>
+              {format(lastUpdated, "dd MMMM yyyy")}
+            </time>
+          </span>
+        </>
       )
     }
   </div>
@@ -30,5 +32,25 @@ const { title, excerpt, published, lastUpdated } = Astro.props.data;
   span {
     color: var(--color-subtext0);
     font-size: var(--size-font-subtext0);
+  }
+
+  article {
+    margin-top: 9px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* grid-template-columns: repeat(auto-fit, 25ch); */
+    column-gap: 12px;
+    row-gap: 6px;
+  }
+
+  article * {
+    margin: 0;
   }
 </style>
