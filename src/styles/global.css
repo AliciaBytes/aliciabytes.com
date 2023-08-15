@@ -14,14 +14,17 @@ html {
 
 h1 {
     font-size: var(--size-font-header1);
+    margin: 12px 0;
 }
 
 h2 {
     font-size: var(--size-font-header2);
+    margin: 9px 0;
 }
 
 h3 {
     font-size: var(--size-font-header3);
+    margin: 6px 0;
 }
 
 :where(.grid-center-wrapper) {
