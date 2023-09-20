@@ -12,7 +12,7 @@ import mocha from '/utils/shiki-themes/mocha.json';
 
 import sanitizeHtml from 'sanitize-html';
 
-export async function get(context: { site: string }) {
+export async function GET(context: { site: string }) {
     let pages = await getCollection("page");
 
     pages.sort((a, b) => {
