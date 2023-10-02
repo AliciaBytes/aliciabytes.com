@@ -39,12 +39,12 @@ const url = Astro.url;
     <meta name="twitter:creator" content="@AliciaBytes" />
     <meta
       name="theme-color"
-      content="#1a202c"
+      content="#1e1e2e"
       media="(prefers-color-scheme: dark)"
     />
     <meta
       name="theme-color"
-      content="#FFF"
+      content="#eff1f5"
       media="(prefers-color-scheme: light)"
     />
     <link rel="canonical" href={url} />
@@ -54,6 +54,7 @@ const url = Astro.url;
       href={`${origin}/rss.xml`}
       type="application/rss+xml"
     />
+    <meta name="robots" content="noai, noimageai" />
     <script>
       document.documentElement.classList.remove("no-js");
       document.documentElement.classList.add("js");

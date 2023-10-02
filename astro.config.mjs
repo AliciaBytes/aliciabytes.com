@@ -38,13 +38,31 @@ export default defineConfig({
     mdx(),
     robotsTxt({
       host: "aliciabytes.com",
-      policy: [{
-        userAgent: 'GPTBot',
-        disallow: '/'
-      }, {
-        userAgent: '*',
-        allow: '/'
-      }],
+      policy: [
+        {
+          userAgent: 'CCBot',
+          disallow: '/'
+        },
+        {
+          userAgent: 'GPTBot',
+          disallow: '/'
+        },
+        {
+          userAgent: 'ChatGPT-User',
+          disallow: '/'
+        },
+        {
+          userAgent: 'FacebookBot',
+          disallow: '/'
+        },
+        {
+          userAgent: 'Omgilibot',
+          disallow: '/'
+        },
+        {
+          userAgent: '*',
+          allow: '/'
+        }],
     }),
     sitemap({
       changefreq: 'weekly',
