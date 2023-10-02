@@ -4,8 +4,8 @@
     display: none;
 }
 
-:where([data-selected-theme="system"] [data-theme="latte"]),
-[data-selected-theme="latte"] [data-theme="latte"] {
+[data-selected-theme="system"] :is(pre, code)[data-theme="latte"],
+[data-selected-theme="latte"] :is(pre, code)[data-theme="latte"] {
     display: inherit;
 }
 
@@ -39,7 +39,7 @@
     color-scheme: light;
 }
 
-[data-selected-theme="frappe"] [data-theme="frappe"] {
+[data-selected-theme="frappe"] :is(pre, code)[data-theme="frappe"] {
     display: inherit;
 }
 
@@ -73,7 +73,7 @@
     color-scheme: dark;
 }
 
-[data-selected-theme="macchiato"] [data-theme="macchiato"] {
+[data-selected-theme="macchiato"] :is(pre, code)[data-theme="macchiato"] {
     display: inherit;
 }
 
@@ -107,7 +107,7 @@
     color-scheme: dark;
 }
 
-[data-selected-theme="mocha"] [data-theme="mocha"] {
+[data-selected-theme="mocha"] :is(pre, code)[data-theme="mocha"] {
     display: inherit;
 }
 
@@ -143,11 +143,11 @@
 
 @media (prefers-color-scheme: dark) {
 
-    :where([data-selected-theme="system"] [data-theme="latte"]) {
+    [data-selected-theme="system"] :is(pre, code)[data-theme="latte"] {
         display: none;
     }
 
-    :where([data-selected-theme="system"] [data-theme="mocha"]) {
+    [data-selected-theme="system"] :is(pre, code)[data-theme="mocha"] {
         display: inherit;
     }
 
