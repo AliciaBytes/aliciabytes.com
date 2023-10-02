@@ -1,9 +1,10 @@
 /* Using the Catppuccin Theme: https://github.com/catppuccin/catppuccin */
 
-pre, code {
+:where(pre, code) {
     display: none;
 }
 
+:where([data-selected-theme="system"] [data-theme="latte"]),
 [data-selected-theme="latte"] [data-theme="latte"] {
     display: inherit;
 }
@@ -141,6 +142,15 @@ pre, code {
 }
 
 @media (prefers-color-scheme: dark) {
+
+    :where([data-selected-theme="system"] [data-theme="latte"]) {
+        display: none;
+    }
+
+    :where([data-selected-theme="system"] [data-theme="mocha"]) {
+        display: inherit;
+    }
+
     :where(:root) {
         /* Using Mocha theme as default dark scheme */
         --color-base: hsl(240, 21%, 15%);
