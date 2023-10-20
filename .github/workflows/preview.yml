@@ -21,28 +21,10 @@ jobs:
         run: utils/download-images.sh
       - name: Build the website
         run: npm run build
-      - name: Publish to Netlify
-        id: netlify_publish
-        uses: netlify/actions/cli@master
+      - name: Deploy to Cloudflare pages
+        uses: cloudflare/wrangler-action@v3
         with:
-          args: deploy --dir=dist --functions=functions
-        env:
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          timeout-minutes: 5
-      - name: Print the deploy status
-        uses: mshick/add-pr-comment@v2
-        if: success() || failure()
-        with:
-          status: ${{ steps.netlify_publish.outcome }}
-          message: |
-            **Ooops, something went wrong.**
-          message-success: |
-            **Publishing to Netlify succeeded!**
-
-            **Log Location:** ${{steps.netlify_publish.outputs.NETLIFY_LOGS_URL }}
-            **Preview location:** ${{ steps.netlify_publish.outputs.NETLIFY_URL }}
-          message-failure: |
-            **Publishing to Netlify failed!**
-
-            **Log Location:** ${{steps.netlify_publish.outputs.NETLIFY_LOGS_URL }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          command: pages deploy dist --project-name=aliciabytes-com
+        timeout-minutes: 5
