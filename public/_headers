@@ -1,8 +1,9 @@
 /*
     Content-Security-Policy: default-src 'self'; style-src 'self' 'unsafe-inline'
+    Referrer-Policy: no-referrer-when-downgrade
+    Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
     X-Frame-Options: SAMEORIGIN
     X-Content-Type-Options: nosniff
-    Referrer-Policy: no-referrer-when-downgrade
 
 /_astro/*
     cache-control: public,max-age=31536000,immutable
