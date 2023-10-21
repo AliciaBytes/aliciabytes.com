@@ -1,4 +1,5 @@
 import { z, defineCollection, reference } from 'astro:content';
+
 const page = defineCollection({
     type: 'content',
     schema: z.object({
@@ -11,6 +12,7 @@ const page = defineCollection({
         backlinks: z.array(reference('page')),
     })
 });
+
 export const collections = {
     page,
 };

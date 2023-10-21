@@ -10,8 +10,6 @@ import rehypePrettyCode from 'rehype-pretty-code';
 
 import mocha from '/utils/shiki-themes/mocha.json';
 
-import sanitizeHtml from 'sanitize-html';
-
 export async function GET(context: { site: string }) {
     let pages = await getCollection("page");
 
@@ -32,7 +30,7 @@ export async function GET(context: { site: string }) {
             title: page.data.title,
             pubDate: page.data.lastUpdated || page.data.published,
             description: page.data.excerpt,
-            content: sanitizeHtml(await render_post_content(page.body))
+            content: await render_post_content(page.body),
         })))
     })
 }
