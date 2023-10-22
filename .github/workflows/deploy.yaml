@@ -5,7 +5,7 @@ on:
       - main
 
 env:
-  DOMAIN: aliciabytes.com
+  DOMAIN: www.aliciabytes.com
 
 jobs:
   deploy:

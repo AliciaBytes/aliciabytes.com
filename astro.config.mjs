@@ -12,7 +12,7 @@ import mocha from '/utils/shiki-themes/mocha.json';
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://aliciabytes.com",
+  site: "https://www.aliciabytes.com",
   integrations: [
     compress({
       CSS: false,
@@ -37,7 +37,7 @@ export default defineConfig({
     }),
     mdx(),
     robotsTxt({
-      host: "aliciabytes.com",
+      host: "www.aliciabytes.com",
       policy: [
         {
           userAgent: 'CCBot',
