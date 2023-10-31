@@ -1,8 +1,9 @@
 import { defineConfig } from 'astro/config';
-import mdx from "@astrojs/mdx";
 import robotsTxt from "astro-robots-txt";
 import sitemap from "@astrojs/sitemap";
 import compress from 'astro-compress';
+
+import mdx from "@astrojs/mdx";
 
 import rehypePrettyCode from 'rehype-pretty-code';
 import frappe from '/utils/shiki-themes/frappe.json';
@@ -69,14 +70,19 @@ export default defineConfig({
     })],
   markdown: {
     remarkPlugins: [],
-    rehypePlugins: [[rehypePrettyCode, {
-      theme: {
-        frappe: frappe,
-        latte: latte,
-        macchiato: macchiato,
-        mocha: mocha
-      }
-    }]],
+    rehypePlugins: [
+      [
+        rehypePrettyCode,
+        {
+          theme: {
+            frappe: frappe,
+            latte: latte,
+            macchiato: macchiato,
+            mocha: mocha
+          }
+        }
+      ],
+    ],
     syntaxHighlight: false
   },
   vite: {
