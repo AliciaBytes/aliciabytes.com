@@ -4,6 +4,10 @@
     display: none;
 }
 
+:not(pre)>code {
+    display: inline;
+}
+
 [data-selected-theme="system"] :is(pre, code)[data-theme="latte"],
 [data-selected-theme="latte"] :is(pre, code)[data-theme="latte"] {
     display: inherit;
