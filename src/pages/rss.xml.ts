@@ -4,6 +4,7 @@ import { getCollection } from 'astro:content';
 import { unified } from 'unified';
 import remarkParse from 'remark-parse';
 import remarkGfm from 'remark-gfm';
+import { remarkKroki } from 'remark-kroki';
 import remarkRehype from 'remark-rehype';
 import rehypeStringify from 'rehype-stringify';
 import rehypePrettyCode from 'rehype-pretty-code';
@@ -40,6 +41,10 @@ async function render_post_content(content: string) {
         await unified()
             .use(remarkParse)
             .use(remarkGfm)
+            .use(remarkKroki, {
+                server: "https://kroki.io/",
+                output: "inline-svg",
+            })
             .use(remarkRehype)
             .use(rehypePrettyCode, {
                 grid: false,

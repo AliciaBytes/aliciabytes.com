@@ -3,7 +3,7 @@ title: Behind the scenes of my website
 excerpt: The goals behind my website and what I use to build it.
 slug: behind-the-scenes-of-my-website
 published: 2023-08-13
-lastUpdated: 2023-08-15
+lastUpdated: 2023-10-31
 tags: []
 relatedPages: []
 backlinks: []
@@ -23,6 +23,7 @@ Some of the main tools and technologies I use to achieve this are:
 - [astro](https://astro.build/) as a web framework to assemble the code and content into static pages.
 - [Catppuccin Theme](https://github.com/catppuccin/catppuccin) so I don't have to think about color schemes and making things pretty. It comes with 4 different nice looking flavors. I have done my own color scheme for my website before, but I'm not a fan of doing that work.
 - [Rehype Pretty Code](https://rehype-pretty-code.netlify.app/) & [Shiki](https://github.com/shikijs/shiki) for nice looking static code highlighting that fits the rest of the website.
+- The amazing [Kroki](https://kroki.io/) through [remark-kroki](https://github.com/nice-move/remark-kroki) for diagrams and visualizations.
 - The amazing [Rainbow Caticorn](https://openclipart.org/detail/222469/rainbow-caticorn) is a public domain SVG from Openclipart that I use for favicon and other graphics content.
 
 You can find the source code for my website over at https://github.com/AliciaBytes/aliciabytes.com.

@@ -1,0 +1,114 @@
+---
+title: How SQL Many-To-Many relationships work
+excerpt: Many Object-Relational Mappers (ORMs) allow you to just declare a Many-To-Many relationship between Objects of different Entitys, but what actually happens underneath? This isn't an elementary relationship that can be mapped directly for the database, we need some intermediate step to make it actually work.
+slug: how-sql-many-to-many-relationships-work
+published: 2023-11-01
+tags: ["SQL"]
+relatedPages: []
+backlinks: []
+---
+
+import RemoteSVG from '@src/components/RemoteSVG.astro';
+
+Many Object-Relational Mappers (ORMs) allow you to just declare a `Many-To-Many` relationship between Objects of different Entitys, but what actually happens underneath? This isn't an elementary relationship that can be mapped directly for the database, we need some intermediate step to make it actually work.
+
+## What's a Many-To-Many relationship?
+
+It's a relationship where a record from entity A can have a relationship with many records from entity B, **and** a record from entity B can have a relationship with many records from entity A. For example, a `Student` can have multiple `Course`s, and a `Course` can have multiple `Student`s. We can visualize this in an Entity Relationship Diagram (ERD) like this:
+
+```kroki type=erd
+[Student]
+*ID
+Name
+Birthday
+etc
+
+[Course]
+*ID
+Name
+Description
+etc
+
+Student *--* Course
+```
+
+And many ORMs are perfectly happy to make this work directly if we tell them that we need a many to many relationship. But they are hiding some of the underlying complexity for us. Let's visualizte it a bit further with a diagram:
+
+<RemoteSVG src="https://www-cdn.aliciabytes.com/file/aliciabytes-com/pages/how-sql-many-to-many-relationships-work/students-courses-starter.drawio.svg" alt="Example image showing a Many-To-Many relationship between Students and Courses" />
+
+Here "John Doe" and "Jean Dupont" are both in multiple courses, and the maths course has mutliptle students.
+
+Usually with relationships between entities we have one entity that has a reference to the foreign key of the other entity. In a `One-To-Many` relationship the foreign key is referenced on the many side, so that each one of the many records there only has to refer to a single foreign entity on the one side. But how do we do it here? We have only 2 "many" sides and no one side. Do we reference an array of foreign keys on some side? This doesn't work, but let's do a visualization of the wrong way anyways:
+
+<RemoteSVG src="https://www-cdn.aliciabytes.com/file/aliciabytes-com/pages/how-sql-many-to-many-relationships-work/students-courses-foreign-key-array.drawio.svg" alt="Example image showing a Many-To-Many relationship between Students and Courses" />
+
+**No, we need some intermediary.**
+
+## Introducing an intermediate table
+
+What we really need to do is reduce the problem so we only need to reference a single foreign key. This can be done by introducing an intermediate table. Let's look at it visually:
+
+```kroki type=erd
+[Student]
+*ID
+Name
+Birthday
+etc
+
+[Course]
+*ID
+Name
+Description
+etc
+
+[StudentCourse]
+*StudentID
+*CourseID
+
+Student 1--* StudentCourse
+StudentCourse *--1 Course
+```
+
+By introducing an intermediate table between the `Student` and `Course` tables we change the problem from one `Many-To-Many` relationship to two `One-To-Many` relationships. And we know how to deal with this, we reference the foreign key of the one side from the many side. In fact the above diagram already shows this. We have a `StudentID` field which is a foreign key for referencing the `ID` field of the `Student` table and a `CourseID` field which is a foreign key for referencing the `ID` of the `Course` table. The 2 foreign keys together build a composite primary key for the `StudentCourse` table.
+
+Let's go back to our example with actual data of "John Doe" and friends earlier and see how that would actually look like for the data stored in the tables:
+
+<RemoteSVG src="https://www-cdn.aliciabytes.com/file/aliciabytes-com/pages/how-sql-many-to-many-relationships-work/students-courses-intermediate-table.drawio.svg" alt="Example image showing a Many-To-Many relationship between Students and Courses" />
+
+Here we have it solved, so that each record int he intermediate table only needs to reference a single foreign key from each of the other tables. "John Doe" still attends the "Maths" and "Geography" courses and "Jean Dupont" still attends the "Maths" and "Latin" courses. And now we have it in a way that plain SQL can work with and represent it. This is also what all the ORMs do under the hoods if we ask them for a `Many-To-Many` relationship. They create some kind of intermediate table for us that they work with under the hood.
+
+## Can this be extended furhter?
+
+Whilst ORMs allow us to simply and directly work with simple `Many-To-Many` relationships by creating a simple intermediate table under the hood for us, if we try to extend it further we'll have to switch to an explicit table even with ORMs.
+
+Let's think for a second. What if the Student + Course combination isn't so simple. What if we additionally want to store the graduation grade for the Student + Course combination? We have to add a `GraduationGrade` field to the `StudentCourse` intermediate table. But that is usually too much for ORMs to do it automatically under the hood for us, we need to finally have an explicit entity and explicit table mapping the Student + Course relationship. In terms of plain SQL there isn't really that much of a difference. It's only one additional field for the `StudentCourse` table. Let's visualize it again through an ERD:
+
+```kroki type=erd
+[Student]
+*ID
+Name
+Birthday
+etc
+
+[Course]
+*ID
+Name
+Description
+etc
+
+[StudentCourse]
+*StudentID
+*CourseID
+GraduationGrade
+
+Student 1--* StudentCourse
+StudentCourse *--1 Course
+```
+
+And also how the actual example tables with data would look like:
+
+<RemoteSVG src="https://www-cdn.aliciabytes.com/file/aliciabytes-com/pages/how-sql-many-to-many-relationships-work/students-courses-extra-field.drawio.svg" alt="Example image showing a Many-To-Many relationship between Students and Courses" />
+
+## Conclusion
+
+ORMs can simplify easy queries and relationships by hiding some of the underlying details from us, but SQL in and of itself isn't necessarily complex. A single complex relationship might just have to be reduced down to multiple simpler relationships. The same works for complex queries, they are easier to think of if you try to simplify them and think only of the relevant part at a time, combining multiple such relatively simpler parts into one complex query.
