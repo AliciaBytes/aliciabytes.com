@@ -25,6 +25,7 @@
     "rehype-pretty-code": "^0.10.0",
     "rehype-stringify": "^10.0.0",
     "remark-gfm": "^4.0.0",
+    "remark-kroki": "^0.2.10",
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.0.0",
     "sanitize-html": "^2.11.0",

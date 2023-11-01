@@ -4,6 +4,7 @@ import sitemap from "@astrojs/sitemap";
 import compress from 'astro-compress';
 
 import mdx from "@astrojs/mdx";
+import { remarkKroki } from 'remark-kroki';
 
 import rehypePrettyCode from 'rehype-pretty-code';
 import frappe from '/utils/shiki-themes/frappe.json';
@@ -69,7 +70,13 @@ export default defineConfig({
       changefreq: 'weekly',
     })],
   markdown: {
-    remarkPlugins: [],
+    remarkPlugins: [
+      [
+        remarkKroki, {
+          server: "https://kroki.io/",
+          output: "inline-svg",
+        }]
+    ],
     rehypePlugins: [
       [
         rehypePrettyCode,

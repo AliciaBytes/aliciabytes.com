@@ -54,3 +54,8 @@ a:hover, a:focus {
 pre>code {
     display: grid;
 }
+
+.kroki-inline-svg, .kroki-inline-svg>svg {
+    color: black;
+    max-width: 100%;
+}
