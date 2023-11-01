@@ -1,15 +1,7 @@
 import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
 
-import { unified } from 'unified';
-import remarkParse from 'remark-parse';
-import remarkGfm from 'remark-gfm';
-import { remarkKroki } from 'remark-kroki';
-import remarkRehype from 'remark-rehype';
-import rehypeStringify from 'rehype-stringify';
-import rehypePrettyCode from 'rehype-pretty-code';
-
-import mocha from '/utils/shiki-themes/mocha.json';
+import render_markdown from '@src/utils/remark';
 
 export async function GET(context: { site: string }) {
     let pages = await getCollection("page");
@@ -31,28 +23,7 @@ export async function GET(context: { site: string }) {
             title: page.data.title,
             pubDate: page.data.lastUpdated || page.data.published,
             description: page.data.excerpt,
-            content: await render_post_content(page.body),
+            content: await render_markdown(page.body, "mocha"),
         })))
     })
-}
-
-async function render_post_content(content: string) {
-    return String(
-        await unified()
-            .use(remarkParse)
-            .use(remarkGfm)
-            .use(remarkKroki, {
-                server: "https://kroki.io/",
-                output: "inline-svg",
-            })
-            .use(remarkRehype)
-            .use(rehypePrettyCode, {
-                grid: false,
-                theme: {
-                    mocha: mocha,
-                }
-            })
-            .use(rehypeStringify)
-            .process(content)
-    )
 }
