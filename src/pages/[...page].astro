@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 
 import Layout from "@src/layouts/Layout.astro";
+import render_markdown from "@src/utils/remark";
 
 export async function getStaticPaths() {
   const pages = await getCollection("page");
@@ -13,9 +14,11 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+
+const title = render_markdown(`# ${entry.data.title}`);
 ---
 
 <Layout title={entry.data.title} description={entry.data.excerpt}>
-  <h1>{entry.data.title}</h1>
+  <Fragment set:html={title} />
   <Content />
 </Layout>

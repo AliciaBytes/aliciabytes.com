@@ -5,6 +5,7 @@ import compress from 'astro-compress';
 
 import mdx from "@astrojs/mdx";
 import { remarkKroki } from 'remark-kroki';
+import remarkHeaderId from 'remark-heading-id';
 
 import rehypePrettyCode from 'rehype-pretty-code';
 import frappe from '/utils/shiki-themes/frappe.json';
@@ -72,10 +73,17 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [
       [
+        remarkHeaderId,
+        {
+          defaults: true
+        }
+      ],
+      [
         remarkKroki, {
           server: "https://kroki.io/",
           output: "inline-svg",
-        }]
+        }
+      ],
     ],
     rehypePlugins: [
       [

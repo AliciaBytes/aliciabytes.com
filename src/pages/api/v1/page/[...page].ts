@@ -1,18 +1,6 @@
 import { getCollection, getEntry } from 'astro:content';
 
-import { unified } from 'unified';
-import remarkParse from 'remark-parse';
-import remarkGfm from 'remark-gfm';
-import remarkRehype from 'remark-rehype';
-import rehypeStringify from 'rehype-stringify';
-import rehypePrettyCode from 'rehype-pretty-code';
-
-import sanitizeHtml from 'sanitize-html';
-
-import frappe from '/utils/shiki-themes/frappe.json';
-import latte from '/utils/shiki-themes/latte.json';
-import macchiato from '/utils/shiki-themes/macchiato.json';
-import mocha from '/utils/shiki-themes/mocha.json';
+import render_markdown from '@src/utils/remark';
 
 export async function getStaticPaths() {
     const page = await getCollection("page");
@@ -44,29 +32,13 @@ export async function GET(context: { params: any, site: string }) {
         published: page.data.published,
         lastUpdated: page.data.lastUpdated,
         content: {
-            unstyled: sanitizeHtml(await render_post_content(page.body, undefined)),
-            frappe: await render_post_content(page.body, { frappe }),
-            latte: await render_post_content(page?.body, { latte }),
-            macchiato: await render_post_content(page?.body, { macchiato }),
-            mocha: await render_post_content(page?.body, { mocha }),
+            unstyled: await render_markdown(page.body, null),
+            frappe: await render_markdown(page.body, "frappe"),
+            latte: await render_markdown(page?.body, "latte"),
+            macchiato: await render_markdown(page?.body, "macchiato"),
+            mocha: await render_markdown(page?.body, "mocha"),
         }
     }
 
     return Response.json(JSON.stringify(data))
-}
-
-async function render_post_content(content: string | undefined, theme: any) {
-
-    return String(
-        await unified()
-            .use(remarkParse)
-            .use(remarkGfm)
-            .use(remarkRehype)
-            .use(rehypePrettyCode, {
-                grid: false,
-                theme: theme
-            })
-            .use(rehypeStringify)
-            .process(content)
-    )
 }

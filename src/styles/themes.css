@@ -4,7 +4,7 @@
     display: none;
 }
 
-:not(pre)>code {
+:not(pre)>code:not([data-theme]) {
     display: inline;
 }
 
