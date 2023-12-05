@@ -1,16 +1,9 @@
 /* Using the Catppuccin Theme: https://github.com/catppuccin/catppuccin */
 
-:where(pre, code) {
-    display: none;
-}
-
-:not(pre)>code:not([data-theme]) {
-    display: inline;
-}
-
-[data-selected-theme="system"] :is(pre, code)[data-theme="latte"],
-[data-selected-theme="latte"] :is(pre, code)[data-theme="latte"] {
-    display: inherit;
+:is([data-selected-theme="system"], [data-selected-theme="latte"]) code[data-theme*=' '],
+:is([data-selected-theme="system"], [data-selected-theme="latte"]) code[data-theme*=' '] span {
+    color: var(--shiki-latte);
+    background-color: var(--shiki-latte-bg);
 }
 
 :where(:root), [data-selected-theme="latte"] {
@@ -43,8 +36,10 @@
     color-scheme: light;
 }
 
-[data-selected-theme="frappe"] :is(pre, code)[data-theme="frappe"] {
-    display: inherit;
+[data-selected-theme="frappe"] code[data-theme*=' '],
+[data-selected-theme="frappe"] code[data-theme*=' '] span {
+    color: var(--shiki-frappe);
+    background-color: var(--shiki-frappe-bg);
 }
 
 [data-selected-theme="frappe"] {
@@ -77,8 +72,10 @@
     color-scheme: dark;
 }
 
-[data-selected-theme="macchiato"] :is(pre, code)[data-theme="macchiato"] {
-    display: inherit;
+[data-selected-theme="macchiato"] code[data-theme*=' '],
+[data-selected-theme="macchiato"] code[data-theme*=' '] span {
+    color: var(--shiki-macchiato);
+    background-color: var(--shiki-macchiato-bg);
 }
 
 [data-selected-theme="macchiato"] {
@@ -111,8 +108,10 @@
     color-scheme: dark;
 }
 
-[data-selected-theme="mocha"] :is(pre, code)[data-theme="mocha"] {
-    display: inherit;
+[data-selected-theme="mocha"] code[data-theme*=' '],
+[data-selected-theme="mocha"] code[data-theme*=' '] span {
+    color: var(--shiki-mocha);
+    background-color: var(--shiki-mocha-bg);
 }
 
 [data-selected-theme="mocha"] {
@@ -147,12 +146,10 @@
 
 @media (prefers-color-scheme: dark) {
 
-    [data-selected-theme="system"] :is(pre, code)[data-theme="latte"] {
-        display: none;
-    }
-
-    [data-selected-theme="system"] :is(pre, code)[data-theme="mocha"] {
-        display: inherit;
+    :is([data-selected-theme="system"], [data-selected-theme="mocha"]) code[data-theme*=' '],
+    :is([data-selected-theme="system"], [data-selected-theme="mocha"]) code[data-theme*=' '] span {
+        color: var(--shiki-mocha);
+        background-color: var(--shiki-mocha-bg);
     }
 
     :where(:root) {
