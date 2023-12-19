@@ -18,7 +18,7 @@
     "astro-compress": "2.2.5",
     "astro-robots-txt": "^1.0.0",
     "cssnano": "^6.0.1",
-    "date-fns": "^2.30.0",
+    "date-fns": "^3.0.0",
     "postcss": "^8.4.32",
     "postcss-load-config": "^5.0.2",
     "postcss-preset-env": "^9.3.0",
