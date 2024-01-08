@@ -15,7 +15,7 @@
     "@astrojs/sitemap": "^3.0.3",
     "@types/sanitize-html": "^2.9.5",
     "astro": "^4.0.1",
-    "astro-compress": "2.2.5",
+    "astro-compress": "2.2.7",
     "astro-robots-txt": "^1.0.0",
     "cssnano": "^6.0.1",
     "date-fns": "^3.0.1",
