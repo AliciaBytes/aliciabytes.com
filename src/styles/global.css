@@ -12,6 +12,10 @@ html {
     font-size: 18px;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
 h1 {
     font-size: var(--size-font-header1);
     margin: 12px 0;
