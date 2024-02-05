@@ -4,6 +4,7 @@ import sitemap from "@astrojs/sitemap";
 import compress from 'astro-compress';
 
 import mdx from "@astrojs/mdx";
+import pagefind from "astro-pagefind";
 import { remarkKroki } from 'remark-kroki';
 import remarkHeaderId from 'remark-heading-id';
 
@@ -69,7 +70,9 @@ export default defineConfig({
     }),
     sitemap({
       changefreq: 'weekly',
-    })],
+    }),
+    pagefind()
+  ],
   markdown: {
     remarkPlugins: [
       [
