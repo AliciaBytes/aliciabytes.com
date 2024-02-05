@@ -2,24 +2,39 @@
 const { class: className } = Astro.props;
 ---
 
-<footer class={className}>
-  <div class="social-section">
-    <a rel="me" href="https://tech.lgbt/@AliciaBytes">Mastodon</a>
-    <a rel="me" href="https://github.com/AliciaBytes">GitHub</a>
-    <a rel="me" href="https://www.linkedin.com/in/aliciamiedl/">LinkedIn</a>
-    <a rel="me" href="mailto:contact@aliciabytes.com">contact@aliciabytes.com</a
-    >
+<footer class={className} id="footer">
+  <div class="footer-sections">
+    <div class="social-section">
+      <h2>Socials:</h2>
+      <a rel="me" href="https://tech.lgbt/@AliciaBytes">Mastodon</a>
+      <a rel="me" href="https://github.com/AliciaBytes">GitHub</a>
+      <a rel="me" href="https://www.linkedin.com/in/aliciamiedl/">LinkedIn</a>
+      <a rel="me" href="mailto:contact@aliciabytes.com"
+        >contact@aliciabytes.com</a
+      >
+    </div>
+    <div class="footer-links">
+      <h2>Links:</h2>
+      <a href="/about/">About</a>
+      <a href="/things-i-enjoy-and-recommend/">Recommendations</a>
+    </div>
   </div>
 </footer>
 
 <style>
-  footer {
+  .footer-sections {
     margin: 18px 18px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
   }
 
-  .social-section {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(15ch, 100%), 1fr));
+  .footer-sections > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-sections h2 {
+    margin: 0;
   }
 
   a {
