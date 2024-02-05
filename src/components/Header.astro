@@ -1,4 +1,6 @@
 ---
+import Search from "astro-pagefind/components/Search";
+
 import ThemeToggle from "./ThemeToggle.astro";
 import ThemeSwitcher from "./ThemeSwitcher.astro";
 import Navigation from "./Navigation.astro";
@@ -25,6 +27,9 @@ const navigation = [
     <ThemeToggle />
   </div>
   <ThemeSwitcher />
+  <div id="pagefind-search-ui">
+    <Search uiOptions={{ showImages: false }} />
+  </div>
   <Navigation navigation={navigation} />
 </header>
 
@@ -58,6 +63,27 @@ const navigation = [
     height: var(--top-bar-size);
     margin: 0;
     padding: 0;
+  }
+
+  #pagefind-search-ui {
+    margin: 12px 0;
+  }
+
+  #pagefind-search-ui :global(*) {
+    background-color: var(--color-base);
+    border-color: var(--color-overlay0);
+    color: var(--color-text);
+    border-radius: 0%;
+    border-width: 1px;
+  }
+
+  #pagefind-search-ui :global(*::placeholder) {
+    color: var(--color-overlay0);
+    opacity: 1;
+  }
+
+  #pagefind-search-ui :global(form::before) {
+    background-color: var(--color-overlay0);
   }
 
   @media screen and (max-width: 450px) {
