@@ -1,0 +1,31 @@
+---
+import RemoteSVG from "./RemoteSVG.astro";
+
+const { text } = Astro.props;
+---
+
+<div>
+  <RemoteSVG
+    src="https://www.systemuicons.com/images/icons/info_circle.svg"
+    class="information-icon"
+  />
+  <span>Information: {text}</span>
+</div>
+
+<style>
+  div {
+    color: var(--color-rosewater);
+  }
+
+  .information-icon {
+    display: contents;
+  }
+
+  .information-icon > :global(svg) {
+    height: 1em;
+    width: 1em;
+    vertical-align: baseline;
+    transform: translateY(3px);
+    margin-inline-end: 3px;
+  }
+</style>
