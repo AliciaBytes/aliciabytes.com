@@ -7,5 +7,5 @@ https://web.dev/articles/accessible-tap-targets
     place-content: center;
     min-width: 44px !important;
     min-height: 44px !important;
-    line-height: 44px;
+    /* line-height: 44px; */
 }
