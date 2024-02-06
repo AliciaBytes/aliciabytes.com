@@ -1,6 +1,6 @@
 ---
 title: Things I enjoy and recommend
-excerpt: A list of random things I enjoy and recommend
+excerpt: A list of some things I enjoy and recommend
 slug: things-i-enjoy-and-recommend
 published: 2024-02-05
 tags: []
