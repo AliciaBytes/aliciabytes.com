@@ -28,3 +28,10 @@ Some of the main tools and technologies I use to achieve this are:
 - [pagefind](https://pagefind.app/) for the search functionality.
 
 You can find the source code for my website over at https://github.com/AliciaBytes/aliciabytes.com.
+
+---
+
+<span style="color: var(--color-red);">**Important note**: This website only supports browsers that are in common use at the moment. A good guideline is the default settings for browsers by [browserslist](https://github.com/browserslist/browserslist). **It will not support old "retro" browsers like Firefox 2.0.0.14, no matter how often my stupidly cute girlfriend pesters me. Sorry, I love you a lot, but that's a pain!**</span>
+
+> <span style="color: var(--color-sapphire);">At least I didn't ask for Internet Explorer 5 support.</span>
+> <footer>- <cite>My lovely girlfriend 💗</cite></footer>
