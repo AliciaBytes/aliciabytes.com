@@ -7,6 +7,7 @@ import mdx from "@astrojs/mdx";
 import pagefind from "astro-pagefind";
 import { remarkKroki } from 'remark-kroki';
 import remarkHeaderId from 'remark-heading-id';
+import astroMetaTags from "astro-meta-tags";
 
 import rehypePrettyCode from 'rehype-pretty-code';
 import frappe from '/utils/shiki-themes/frappe.json';
@@ -71,7 +72,8 @@ export default defineConfig({
     sitemap({
       changefreq: 'weekly',
     }),
-    pagefind()
+    pagefind(),
+    astroMetaTags()
   ],
   markdown: {
     remarkPlugins: [
