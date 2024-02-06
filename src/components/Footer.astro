@@ -7,27 +7,41 @@ const reportURL = encodeURI(
 
 <footer class={className} id="footer">
   <div>
-    <a id="report-page" href={reportURL}>Report broken page</a>
+    <a class="tap-target" id="report-page" href={reportURL}
+      >Report broken page</a
+    >
   </div>
   <hr />
   <div class="footer-sections">
     <div class="social-section">
       <h2>Socials:</h2>
-      <a rel="me" href="https://tech.lgbt/@AliciaBytes">Mastodon</a>
-      <a rel="me" href="https://www.twitch.tv/aliciabytes">Twitch</a>
-      <a rel="me" href="https://github.com/AliciaBytes">GitHub</a>
-      <a rel="me" href="https://www.linkedin.com/in/aliciamiedl/">LinkedIn</a>
-      <a rel="me" href="mailto:contact@aliciabytes.com"
+      <a class="tap-target" rel="me" href="https://tech.lgbt/@AliciaBytes"
+        >Mastodon</a
+      >
+      <a class="tap-target" rel="me" href="https://www.twitch.tv/aliciabytes"
+        >Twitch</a
+      >
+      <a class="tap-target" rel="me" href="https://github.com/AliciaBytes"
+        >GitHub</a
+      >
+      <a
+        class="tap-target"
+        rel="me"
+        href="https://www.linkedin.com/in/aliciamiedl/">LinkedIn</a
+      >
+      <a class="tap-target" rel="me" href="mailto:contact@aliciabytes.com"
         >contact@aliciabytes.com</a
       >
     </div>
     <div class="footer-links">
       <h2>Links:</h2>
-      <a href="/about/">About</a>
-      <a href="/privacy-policy/">Privacy Policy</a>
-      <a href="/things-i-enjoy-and-recommend/">Recommendations</a>
-      <a href="/rss.xml">RSS</a>
-      <a href="/cookie-policy/">Cookie Policy</a>
+      <a class="tap-target" href="/about/">About</a>
+      <a class="tap-target" href="/privacy-policy/">Privacy Policy</a>
+      <a class="tap-target" href="/things-i-enjoy-and-recommend/"
+        >Recommendations</a
+      >
+      <a class="tap-target" href="/rss.xml">RSS</a>
+      <a class="tap-target" href="/cookie-policy/">Cookie Policy</a>
     </div>
   </div>
 </footer>
@@ -53,11 +67,5 @@ const reportURL = encodeURI(
   }
   .footer-sections h2 {
     margin: 0;
-  }
-
-  a {
-    display: grid;
-    place-content: center;
-    line-height: 48px;
   }
 </style>

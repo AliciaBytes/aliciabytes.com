@@ -3,11 +3,21 @@
 ---
 
 <div id="theme-switcher" data-visible="false">
-  <button aria-pressed="true" data-theme="system">System Default</button>
-  <button aria-pressed="false" data-theme="latte">Latte</button>
-  <button aria-pressed="false" data-theme="frappe">Frappé</button>
-  <button aria-pressed="false" data-theme="macchiato">Macchiato</button>
-  <button aria-pressed="false" data-theme="mocha">Mocha</button>
+  <button class="tap-target" aria-pressed="true" data-theme="system"
+    >System Default</button
+  >
+  <button class="tap-target" aria-pressed="false" data-theme="latte"
+    >Latte</button
+  >
+  <button class="tap-target" aria-pressed="false" data-theme="frappe"
+    >Frappé</button
+  >
+  <button class="tap-target" aria-pressed="false" data-theme="macchiato"
+    >Macchiato</button
+  >
+  <button class="tap-target" aria-pressed="false" data-theme="mocha"
+    >Mocha</button
+  >
 </div>
 
 <script>
@@ -71,6 +81,5 @@
   button[aria-pressed="true"] {
     background: var(--color-text);
     color: var(--color-base);
-    min-height: 48px;
   }
 </style>

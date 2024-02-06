@@ -10,18 +10,12 @@ const pathname = url.pathname;
 
 {
   pathname === slug ? (
-    <a href={slug} aria-current="page">
+    <a class="tap-target" href={slug} aria-current="page">
       {title}
     </a>
   ) : (
-    <a href={slug}>{title}</a>
+    <a class="tap-target" href={slug}>
+      {title}
+    </a>
   )
 }
-
-<style>
-  a {
-    display: grid;
-    place-content: center;
-    line-height: 48px;
-  }
-</style>
