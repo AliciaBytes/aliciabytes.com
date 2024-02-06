@@ -43,13 +43,21 @@ li {
     margin: 9px 0;
 }
 
-figure, ol, ul {
+blockquote,
+figure,
+ol,
+ul {
     margin: 0;
 }
 
 hr {
     width: 100%;
     color: var(--color-overlay0);
+}
+
+blockquote {
+    border-left: 1px solid var(--color-overlay0);
+    padding-inline-start: 20px;
 }
 
 :where(.grid-center-wrapper) {
