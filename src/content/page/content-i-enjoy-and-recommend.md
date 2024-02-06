@@ -3,6 +3,7 @@ title: Things I enjoy and recommend
 excerpt: A list of some things I enjoy and recommend
 slug: things-i-enjoy-and-recommend
 published: 2024-02-05
+lastUpdated: 2024-02-06
 tags: []
 relatedPages: []
 backlinks: []
@@ -18,6 +19,11 @@ I want to share some of the things I enjoy. For the start it will be pretty limi
   - **Fists of the Ruby Phoenix**: The "Ruby Phoenix", sorcerer Hao Jin, once again calls for the strongest groups on Golarion to join the biggest martial arts fighting tournament in history. Watch the adventurers progress through the tournament, find their patrons and uncover mysterious happenings during the tournament. Despite being a fighting tournament it still has plenty of social interaction.
   - **Abomination Vaults**: At the time of writing this is the new campaign that they just started, so I can't say too much about it yet, but I love the start and the characterss. Pretty sure I'll heavily enjoy that one a lot again.
 - [Dini Mundart](https://www.srf.ch/audio/dini-mundart): A Swiss German podcast by the SRF about dialect and language. I'm enjoying learning more about the language and I gotta admit, it really sounds nice.
+
+## Video Games
+
+- Baldur's Gate 3: What can I say? I'm a sucker for RPG and even more so TTRPG content. And Baldur's Gate perfectly fits my interests. I love the story and the execution with the voice acting. It's a really fun game and you can sink a lot of hours into it and you're probably not gonna see all the choices and possible outcomes.
+- Stardew Valley: I spent so many hours tending my farm to relax after stressful days. This game really manages to calm me down.
 
 ## Anime/Manga/Webtoon
 
