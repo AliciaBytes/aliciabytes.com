@@ -1,5 +1,10 @@
 /* Using the Catppuccin Theme: https://github.com/catppuccin/catppuccin */
 
+:not(pre) > code {
+    background-color: var(--color-crust);
+    padding: 0 6px;
+}
+
 :is([data-selected-theme="system"], [data-selected-theme="latte"]) code[data-theme*=' '],
 :is([data-selected-theme="system"], [data-selected-theme="latte"]) code[data-theme*=' '] span {
     color: var(--shiki-latte);
