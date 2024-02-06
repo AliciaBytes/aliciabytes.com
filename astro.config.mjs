@@ -18,6 +18,12 @@ import mocha from '/utils/shiki-themes/mocha.json';
 // https://astro.build/config
 export default defineConfig({
   site: "https://www.aliciabytes.com",
+  image: {
+    remotePatterns: [
+      {
+        protocol: 'https'
+      }]
+  },
   integrations: [
     compress({
       CSS: false,
