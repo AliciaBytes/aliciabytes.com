@@ -3,6 +3,7 @@ const { class: className } = Astro.props;
 ---
 
 <footer class={className} id="footer">
+  <hr />
   <div class="footer-sections">
     <div class="social-section">
       <h2>Socials:</h2>
@@ -16,12 +17,16 @@ const { class: className } = Astro.props;
     <div class="footer-links">
       <h2>Links:</h2>
       <a href="/about/">About</a>
+      <a href="/privacy-policy/">Privacy Policy</a>
       <a href="/things-i-enjoy-and-recommend/">Recommendations</a>
     </div>
   </div>
 </footer>
 
 <style>
+  hr {
+    margin: 18px 0 0 0;
+  }
   .footer-sections {
     margin: 18px 18px;
     display: grid;
