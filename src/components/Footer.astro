@@ -1,8 +1,14 @@
 ---
-const { class: className } = Astro.props;
+const { class: className, title, url } = Astro.props;
+const reportURL = encodeURI(
+  `https://github.com/AliciaBytes/aliciabytes.com/issues/new?template=broken-page.yml&title=Broken page: ${title}&url=${url}`,
+);
 ---
 
 <footer class={className} id="footer">
+  <div>
+    <a id="report-page" href={reportURL}>Report broken page</a>
+  </div>
   <hr />
   <div class="footer-sections">
     <div class="social-section">
@@ -26,6 +32,10 @@ const { class: className } = Astro.props;
 </footer>
 
 <style>
+  #report-page {
+    color: var(--color-overlay0);
+    margin: 9px 0;
+  }
   hr {
     margin: 18px 0 0 0;
   }

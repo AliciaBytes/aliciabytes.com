@@ -1,0 +1,51 @@
+name: Broken page
+description: A *specific* page or blog post has a problem.
+title: "Broken page: [Page title]"
+labels: "broken page"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: url
+    attributes:
+      label: "Page URL:"
+      description: URL of the page that is broken
+      placeholder: ex. https://www.aliciabytes.com/things-i-enjoy-and-recommend/
+    validations:
+      required: true
+  - type: dropdown
+    id: is_regression
+    attributes:
+      label: Did this page previously work?
+      description: |
+        Please let me know if the page previously worked correctly if you're aware of it.
+      options:
+        - "N/A"
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+  - type: dropdown
+    id: issues
+    attributes:
+      label: What issues do you see?
+      description: Please select all that apply
+      multiple: true
+      options:
+        - Broken image(s)
+        - Broken embed(s)
+        - Figure caption not styled as a caption
+        - Broken styles
+        - Broken URLs
+        - Broken syntax highlighting
+        - Accessibility issue
+        - Other
+  - type: textarea
+    id: details
+    attributes:
+      label: Description of issues
+      description: Please provide more details
+    validations:
+      required: true
