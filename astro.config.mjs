@@ -51,11 +51,23 @@ export default defineConfig({
       host: "www.aliciabytes.com",
       policy: [
         {
-          userAgent: 'CCBot',
+          userAgent: 'Amazonbot',
           disallow: '/'
         },
         {
-          userAgent: 'GPTBot',
+          userAgent: 'anthropic-ai',
+          disallow: '/'
+        },
+        {
+          userAgent: 'Applebot',
+          disallow: '/'
+        },
+        {
+          userAgent: 'Bytespider',
+          disallow: '/'
+        },
+        {
+          userAgent: 'CCBot',
           disallow: '/'
         },
         {
@@ -63,11 +75,35 @@ export default defineConfig({
           disallow: '/'
         },
         {
+          userAgent: 'cohere-ai',
+          disallow: '/'
+        },
+        {
           userAgent: 'FacebookBot',
           disallow: '/'
         },
         {
+          userAgent: 'Google-Extended',
+          disallow: '/'
+        },
+        {
+          userAgent: 'GPTBot',
+          disallow: '/'
+        },
+        {
+          userAgent: 'omgili',
+          disallow: '/'
+        },
+        {
           userAgent: 'Omgilibot',
+          disallow: '/'
+        },
+        {
+          userAgent: 'PerplexityBot',
+          disallow: '/'
+        },
+        {
+          userAgent: 'YouBot',
           disallow: '/'
         },
         {
