@@ -23,7 +23,7 @@ export async function GET(context: { site: string }) {
             title: page.data.title,
             pubDate: page.data.lastUpdated || page.data.published,
             description: page.data.excerpt,
-            content: await render_markdown(page.body, "mocha"),
+            content: page.id.endsWith(".mdx") ? undefined : await render_markdown(page.body, "mocha"),
         })))
     })
 }
