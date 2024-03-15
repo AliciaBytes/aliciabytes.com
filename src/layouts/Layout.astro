@@ -56,6 +56,7 @@ const url = Astro.url;
       type="application/rss+xml"
     />
     <meta name="robots" content="noai, noimageai" />
+    <meta name="generator" content={Astro.generator} />
     <script>
       document.documentElement.classList.remove("no-js");
       document.documentElement.classList.add("js");
