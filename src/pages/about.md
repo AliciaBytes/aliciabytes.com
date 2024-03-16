@@ -16,3 +16,5 @@ Some of my interests are:
 - Board games: Getting more and more into it. One of my favorites right now is [Eclipse - 2nd Dawn for the Galaxy](https://en.lautapelit.fi/product/24681/eclipse---2nd-dawn-for-the-galaxy-eng)
 
 For more interests have a look at some [content that I enjoy and recommend](/things-i-enjoy-and-recommend/).
+
+If you want to know way too much about my past you can read ["Lost" years of my past](/lost-years-of-my-past) I guess. 🤷‍♀️ But be warned, that page has quite a few content warnings.
