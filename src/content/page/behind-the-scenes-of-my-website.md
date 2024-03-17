@@ -3,16 +3,17 @@ title: Behind the scenes of my website
 excerpt: The goals behind my website and what I use to build it.
 slug: behind-the-scenes-of-my-website
 published: 2023-08-13
-lastUpdated: 2024-02-06
+lastUpdated: 2024-03-17
 tags: []
 relatedPages: []
 backlinks: []
 ---
 
-First off, don't expect this to be a well thought out amazing piece of work. I'm not a web developer, UI or design person, I prefer to stay on the code side on the back end. My website is quirky and imperfect and missing features because of other more important projects. But it's my little space on the internet. And that's important. With the internet becoming more and more polluted with ads, walled in communities that lock up information, AI plagiarizing and stealing content, etc. I felt that I need my own place more now.
+First off, don't expect this to be a well thought out amazing piece of work. I'm not a frontend developer, UI or design person, I prefer to stay on the code side on the back end. My website is quirky and imperfect and missing features because of other more important projects. But it's my little space on the internet. And that's important. With the internet becoming more and more polluted with ads, walled in communities that lock up information, AI plagiarizing and stealing content, etc. I felt that I need my own place even more now.
 
 I had a few goals in mind when creating my website:
 
+- Just have a personal space that's mine. It doesn't have to be perfect, shiny or something special. It can be unique and flawed because it's me behind it, just a normal person. It's not some PR piece or social media post behind all the best filters. [^1]
 - The final website should be small, mostly static and efficient on the client.
 - Keep the writing experience simple and easy through the use of mostly Markdown and some sprinkles of MDX. That should also allow easy portability to different technologies or cross posting to other platforms.
 - Don't get locked into a walled garden and stick to open source solutions instead.
@@ -35,3 +36,5 @@ You can find the source code for my website over at https://github.com/AliciaByt
 
 > <span style="color: var(--color-sapphire);">At least I didn't ask for Internet Explorer 5 support.</span>
 > <footer>- <cite>My lovely girlfriend 💗</cite></footer>
+
+[^1]: I actually still struggle a lot with sharing stuff mostly unedited. I have to get better at writing, a lot of the time I'm just not feeling good about how things are worded yet and use tools to help out. So that's why it might not sound completely natural at times.
