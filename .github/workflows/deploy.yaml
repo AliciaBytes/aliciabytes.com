@@ -35,3 +35,8 @@ jobs:
         timeout-minutes: 5
       - name: Submit sitemap to google
         run: curl -X GET https://www.google.com/ping?sitemap=https://${{ env.DOMAIN }}/sitemap-index.xml
+      - name: Send urls to indexnow
+        uses: bojieyang/indexnow-action@v2
+        with:
+          sitemap-location: "https://www.aliciabytes.com/sitemap-index.xml"
+          key: ${{ secrets.INDEXNOW_KEY }}
