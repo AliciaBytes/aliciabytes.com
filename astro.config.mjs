@@ -111,9 +111,7 @@ export default defineConfig({
           allow: '/'
         }],
     }),
-    sitemap({
-      changefreq: 'weekly',
-    }),
+    sitemap(),
     pagefind(),
     astroMetaTags()
   ],
