@@ -48,7 +48,6 @@ export default defineConfig({
     }),
     mdx(),
     robotsTxt({
-      host: "www.aliciabytes.com",
       policy: [
         {
           userAgent: 'Amazonbot',
