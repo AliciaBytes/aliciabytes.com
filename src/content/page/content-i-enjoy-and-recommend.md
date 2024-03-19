@@ -25,6 +25,10 @@ I want to share some of the things I enjoy. For the start it will be pretty limi
 - Baldur's Gate 3: What can I say? I'm a sucker for RPG and even more so TTRPG content. And Baldur's Gate perfectly fits my interests. I love the story and the execution with the voice acting. It's a really fun game and you can sink a lot of hours into it and you're probably not gonna see all the choices and possible outcomes.
 - Stardew Valley: I spent so many hours tending my farm to relax after stressful days. This game really manages to calm me down.
 
+## Board Games
+
+- **[Eclipse - 2nd Dawn for the Galaxy](https://en.lautapelit.fi/product/24681/eclipse---2nd-dawn-for-the-galaxy-eng)**: It's a fun game that takes quite a while the first time playing, but it gets way better as you learn it. Some of the factions are definitely not absolutely balanced, but it's a fun space strategy game.
+
 ## Anime/Manga/Webtoon
 
 Years ago the list of Anime/Manga that I would have shared would have been way bigger, but I gave up basically everything for time reasons.
