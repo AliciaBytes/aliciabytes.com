@@ -13,7 +13,7 @@ Some of my interests are:
 - Tech: I love tinkering with anything techy. I'm a soft girl though, so usually I mostly deal with software and not as much with hardware.
 - TTRPGs: I love playing but also listening to podcasts or getting into the lore of the worlds.
 - Video games: Mostly roleplaying games, relaxing comfy games, space games or turn based strategy games. Also up for group based fun.
-- Board games: Getting more and more into it. One of my favorites right now is [Eclipse - 2nd Dawn for the Galaxy](https://en.lautapelit.fi/product/24681/eclipse---2nd-dawn-for-the-galaxy-eng)
+- Board games: Getting more and more into it again after not playing a lot of board games for a few years.
 
 For more interests have a look at some [content that I enjoy and recommend](/things-i-enjoy-and-recommend/).
 
