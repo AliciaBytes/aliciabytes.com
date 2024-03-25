@@ -1,5 +1,16 @@
 import { z, defineCollection, reference } from 'astro:content';
 
+/* Template for copying into new blogs:
+---
+title:
+excerpt:
+slug:
+published:
+tags: []
+relatedPages: []
+backlinks: []
+---
+*/
 const page = defineCollection({
     type: 'content',
     schema: z.object({
