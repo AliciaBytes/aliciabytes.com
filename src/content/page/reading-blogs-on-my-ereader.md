@@ -25,7 +25,7 @@ Thankfully, the [Kobo Libra 2](https://us.kobobooks.com/products/kobo-libra-2) E
 Here's an example of how this article for example looks like on my E-Reader:
 
 <figure>
-<Picture src="https://www-cdn.aliciabytes.com/file/aliciabytes-com/pages/why-i-love-my-ereader/ereader-example-through-recursion.jpg" alt="A picture of my E-Reader, a Kobo Libra 2, lying on my desk with this very page opened with black text on a white background." formats={['avif', 'webp']} fallbackFormat="jpg" width="3024" height="4032" quality="mid" />
+<Picture src="https://www-cdn.aliciabytes.com/file/aliciabytes-com/pages/why-i-love-my-ereader/ereader-example-through-recursion.jpg" alt="A picture of my E-Reader, a Kobo Libra 2, lying on my desk with this very page opened with black text on a white background." formats={['avif', 'webp']} fallbackFormat="jpg" width="1733" height="1881" quality="mid" />
 <figcaption>A picture of my E-Reader, a Kobo Libra 2, lying on my desk with this very page opened with black text on a white background.</figcaption>
 </figure>
 
