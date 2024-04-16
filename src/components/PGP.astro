@@ -1,11 +1,8 @@
 ---
-import render_markdown from "@utils/remark";
 const { src, class: className, ...rest } = Astro.props;
 
 const response = await fetch(src);
 const armored_key = await response.text();
-const markdown = "```pgp\n" + `${armored_key}` + "\n```";
-const html = await render_markdown(markdown);
 ---
 
-<Fragment set:html={html} class={className} {...rest} />
+<pre set:html={armored_key} class={className} {...rest} />
