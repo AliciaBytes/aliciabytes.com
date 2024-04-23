@@ -28,7 +28,7 @@
     "rehype-stringify": "10.0.0",
     "remark-gfm": "4.0.0",
     "remark-heading-id": "1.0.1",
-    "remark-kroki": "0.3.5",
+    "remark-kroki": "0.3.6",
     "remark-parse": "11.0.0",
     "remark-rehype": "11.1.0",
     "sanitize-html": "2.13.0",
