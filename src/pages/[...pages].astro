@@ -5,9 +5,12 @@ import Layout from "@src/layouts/Layout.astro";
 import render_markdown from "@src/utils/remark";
 
 export async function getStaticPaths() {
-  const pages = await getCollection("page");
+  const pages = [
+    ...(await getCollection("pages")),
+    ...(await getCollection("notes")),
+  ];
   return pages.map((entry) => ({
-    params: { page: entry.slug },
+    params: { pages: entry.data.prefix + entry.slug },
     props: { entry },
   }));
 }

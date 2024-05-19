@@ -1,0 +1,53 @@
+---
+import { getCollection } from "astro:content";
+import Preview from "./PreviewCollectionItem.astro";
+
+const { collection, header = true, limit, see_more_link } = Astro.props;
+
+let pages = await getCollection(collection);
+pages.sort((a, b) => {
+  const a_comparator = (a?.data?.lastUpdated || a.data.published).getTime();
+  const b_comparator = (b?.data?.lastUpdated || b.data.published).getTime();
+
+  return b_comparator - a_comparator;
+});
+---
+
+<section>
+  { header && (
+    <div class="container">
+    <h2 id=`latest-${collection}`>
+      Latest {collection[0].toUpperCase() + collection.slice(1)}
+      </h2>
+      <a class="see_more_link" href={see_more_link || `/${collection}`}
+      >See more {collection}</a
+    >
+  </div>
+    )
+    }
+  <ul>
+    {
+      pages.slice(0, limit).map((page) => (
+        <li>
+          <Preview {...page} />
+        </li>
+      ))
+    }
+  </ul>
+</section>
+
+<style>
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .container {
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 12px;
+  }
+  .see_more_link {
+    align-content: center;
+  }
+</style>

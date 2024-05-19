@@ -4,7 +4,7 @@ title: Hi, I'm Alicia - AliciaBytes
 excerpt: Taking my own weird way through life with lots of sticks, and stones in the way.
 ---
 
-import PageList from '@src/components/PageList.astro'
+import CollectionList from '@src/components/CollectionList.astro'
 
 # Hi, I'm Alicia.
 
@@ -12,4 +12,6 @@ I'm a queer, dorky nerd from Switzerland who loves tech way too much. I work as 
 
 If you want to follow me, I have a bunch of (social) links down below in the footer.
 
-<PageList />
+<CollectionList collection="pages" limit={5} />
+
+<CollectionList collection="notes" limit={5} />

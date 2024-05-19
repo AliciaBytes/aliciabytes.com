@@ -4,13 +4,16 @@ import { getCollection } from 'astro:content';
 import render_markdown from '@src/utils/remark';
 
 export async function GET(context: { site: string }) {
-  let pages = await getCollection("page");
+  const pages = [
+    ...await getCollection("pages"),
+    ...await getCollection("notes")
+  ];
 
   pages.sort((a, b) => {
-    const a_comparator = (a.data.lastUpdated || a.data.published).getTime();
-    const b_comparator = (b.data.lastUpdated || b.data.published).getTime();
+    const a_comparator = (a?.data?.lastUpdated || a.data.published).getTime();
+    const b_comparator = (b?.data?.lastUpdated || b.data.published).getTime();
 
-    return a_comparator - b_comparator;
+    return b_comparator - a_comparator;
   });
 
   return rss({
@@ -19,7 +22,7 @@ export async function GET(context: { site: string }) {
     site: context.site,
     stylesheet: '/rss/pretty-feed.xsl',
     items: await Promise.all(pages.map(async (page) => ({
-      link: `/${page.slug}/`,
+      link: `/${page.data.prefix}${page.slug}/`,
       title: page.data.title,
       pubDate: page.data.lastUpdated || page.data.published,
       description: page.data.excerpt,
