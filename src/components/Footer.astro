@@ -10,7 +10,6 @@ const reportURL = encodeURI(
   <hr />
   <div class="footer-sections">
     <div class="social-section">
-      <h2>Socials:</h2>
       <a class="tap-target" rel="me" href="https://tech.lgbt/@AliciaBytes"
         >Mastodon</a
       >
@@ -33,7 +32,6 @@ const reportURL = encodeURI(
       >
     </div>
     <div class="footer-links">
-      <h2>Links:</h2>
       <a class="tap-target" href="/about/">About</a>
       <a class="tap-target" href="/now/">Now</a>
       <a class="tap-target" href="/things-i-enjoy-and-recommend/"
@@ -41,6 +39,8 @@ const reportURL = encodeURI(
       >
       <a class="tap-target" href="/rss.xml">RSS</a>
       <a class="tap-target" href="/pgp/">PGP</a>
+    </div>
+    <div class="footer-logistical">
       <a class="tap-target" href="/privacy-policy/">Privacy Policy</a>
       <a class="tap-target" href="/cookie-policy/">Cookie Policy</a>
     </div>
@@ -48,6 +48,10 @@ const reportURL = encodeURI(
 </footer>
 
 <style>
+  a {
+    display: grid;
+    place-content: center;
+  }
   #report-page {
     color: var(--color-overlay0);
     margin: 9px 0;
@@ -56,8 +60,9 @@ const reportURL = encodeURI(
     margin: 9px 0 0 0;
   }
   .footer-sections {
-    margin: 18px 18px;
+    margin: 9px 0 18px 0;
     display: grid;
+    gap: 12px;
     grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
   }
 
@@ -65,8 +70,6 @@ const reportURL = encodeURI(
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  .footer-sections h2 {
-    margin: 0;
+    gap: 3px;
   }
 </style>
