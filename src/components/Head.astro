@@ -1,49 +1,53 @@
 ---
 interface Props {
-    description?: string;
-    title: string;
+  description?: string;
+  title: string;
 }
 
 let { description, title } = Astro.props;
 description ??=
-    "Taking my own weird way through life with lots of sticks, and stones in the way.";
+  "Taking my own weird way through life with lots of sticks, and stones in the way.";
 const origin = Astro.site?.origin;
 const url = Astro.url;
 ---
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title set:html={title} />
-    <meta name="description" content={description} />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content={`${origin}/opengraph.png`} />
-    <meta property="og:locale" content="en" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={url} />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content={`${origin}/opengraph.png`} />
-    <meta name="twitter:creator" content="@AliciaBytes" />
-    <meta
-        name="theme-color"
-        content="#1a202c"
-        media="(prefers-color-scheme: dark)"
-    />
-    <meta
-        name="theme-color"
-        content="#FFF"
-        media="(prefers-color-scheme: light)"
-    />
-    <link rel="canonical" href={url} />
-    <link
-        rel="alternate"
-        title="AliciaBytes' Blog"
-        href={`${origin}/rss.xml`}
-        type="application/rss+xml"
-    />
-    <script>
-        document.documentElement.classList.remove("no-js");
-        document.documentElement.classList.add("js");
-    </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title set:html={title} />
+  <meta name="description" content={description} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={`${origin}/opengraph.png`} />
+  <meta property="og:locale" content="en" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={url} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content={`${origin}/opengraph.png`} />
+  <meta name="twitter:creator" content="@AliciaBytes" />
+  <meta
+    name="theme-color"
+    content="#1a202c"
+    media="(prefers-color-scheme: dark)"
+  />
+  <meta
+    name="theme-color"
+    content="#FFF"
+    media="(prefers-color-scheme: light)"
+  />
+  <link rel="canonical" href={url} />
+  <link
+    rel="alternate"
+    title="AliciaBytes' Blog"
+    href={`${origin}/rss.xml`}
+    type="application/rss+xml"
+  />
+  <script>
+    document.documentElement.classList.remove("no-js");
+    document.documentElement.classList.add("js");
+  </script>
+  <script
+    defer
+    src="https://cloud.umami.is/script.js"
+    data-website-id="2e2ca1dc-34f7-42e0-bedc-7a3927021b4e"></script>
 </head>
