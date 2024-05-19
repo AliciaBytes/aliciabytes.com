@@ -10,6 +10,7 @@ import "sanitize.css/assets.css";
 import "sanitize.css/typography.css";
 // import "sanitize.css/reduce-motion.css";
 
+import Head from "@src/components/Head.astro";
 import Header from "@src/components/Header.astro";
 import Footer from "@src/components/Footer.astro";
 
@@ -24,61 +25,22 @@ const url = Astro.url;
 
 <!doctype html>
 <html lang="en" class="no-js" data-selected-theme="system">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title set:html={title} />
-    <meta name="description" content={description} />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content={`${origin}/opengraph.png`} />
-    <meta property="og:locale" content="en" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={url} />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content={`${origin}/opengraph.png`} />
-    <meta name="twitter:creator" content="@AliciaBytes" />
-    <meta
-      name="theme-color"
-      content="#1e1e2e"
-      media="(prefers-color-scheme: dark)"
-    />
-    <meta
-      name="theme-color"
-      content="#eff1f5"
-      media="(prefers-color-scheme: light)"
-    />
-    <link rel="canonical" href={url} />
-    <link
-      rel="alternate"
-      title="AliciaBytes' Blog"
-      href={`${origin}/rss.xml`}
-      type="application/rss+xml"
-    />
-    <meta name="robots" content="noai, noimageai" />
-    <meta name="generator" content={Astro.generator} />
-    <script>
-      document.documentElement.classList.remove("no-js");
-      document.documentElement.classList.add("js");
-    </script>
-  </head>
+  <Head title={title} description={description} />
   <body>
     <Header class="grid-center-wrapper" />
     <main class="grid-center-wrapper" data-pagefind-body>
       <slot />
     </main>
     <Footer class="grid-center-wrapper such-a-bottom" {title} {url} />
-  </body>
+  </body><style>
+    :where(body) {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .such-a-bottom {
+      margin-top: auto;
+    }
+  </style>
 </html>
-
-<style>
-  :where(body) {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .such-a-bottom {
-    margin-top: auto;
-  }
-</style>

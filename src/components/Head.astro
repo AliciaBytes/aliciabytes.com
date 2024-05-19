@@ -9,6 +9,9 @@ description ??=
   "Taking my own weird way through life with lots of sticks, and stones in the way.";
 const origin = Astro.site?.origin;
 const url = Astro.url;
+console.log(
+  `Alicia: ${import.meta.env.PROD} ${import.meta.env.preview !== true}`,
+);
 ---
 
 <head>
@@ -42,12 +45,20 @@ const url = Astro.url;
     href={`${origin}/rss.xml`}
     type="application/rss+xml"
   />
+  <meta name="robots" content="noai, noimageai" />
+  <meta name="generator" content={Astro.generator} />
   <script>
     document.documentElement.classList.remove("no-js");
     document.documentElement.classList.add("js");
   </script>
-  <script
-    defer
-    src="https://cloud.umami.is/script.js"
-    data-website-id="2e2ca1dc-34f7-42e0-bedc-7a3927021b4e"></script>
+  {
+    import.meta.env.PROD && import.meta.env.preview !== true && (
+      <script
+        is:inline
+        defer
+        src="https://cloud.umami.is/script.js"
+        data-website-id="2e2ca1dc-34f7-42e0-bedc-7a3927021b4e"
+      />
+    )
+  }
 </head>
