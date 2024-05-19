@@ -48,6 +48,11 @@ const reportURL = encodeURI(
 </footer>
 
 <style>
+  @media print {
+    footer {
+      display: none;
+    }
+  }
   a {
     display: grid;
     place-content: center;
