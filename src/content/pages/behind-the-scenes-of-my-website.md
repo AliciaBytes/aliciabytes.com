@@ -39,7 +39,9 @@ On the other hand I'm explicitly closing it off from Bots and AI as I see them a
 
 I want to use modern tools and technologies to keep my life simple. It should have a nice and modern development workflow and be fun to work with. I don't want to fight battles with legacy technologies. This also means that I might be playing around with new web technologies as they come out though. But I'm gonna try to keep it supported across all sensible browsers.
 
-But as this is a side project that I'm purposely cutting some corners too and not always doing cross platform tests on all possible browsers I can't 100% guarantee it. If something breaks, please leave an issue over on https://github.com/AliciaBytes/aliciabytes.com
+But as this is a side project that I'm purposely cutting some corners too and not always doing cross platform tests on all possible browsers I can't 100% guarantee it. If something breaks, please leave an issue over on https://github.com/AliciaBytes/aliciabytes.com.
+
+There are some limits regarding support though, [as my girlfriend found out](#girlfriend-support-notice)!
 
 ### Digital Garden
 
@@ -64,7 +66,7 @@ You can find the source code for my website over at https://github.com/AliciaByt
 
 ---
 
-<span style="color: var(--color-red);">**Important note**: This website only supports browsers that are in common use at the moment. A good guideline is the default settings for browsers by [browserslist](https://github.com/browserslist/browserslist). **It will not support old "retro" browsers like Firefox 2.0.0.14, no matter how often my stupidly cute girlfriend pesters me. Sorry, I love you a lot, but that's a pain!**</span>
+<span id="girlfriend-support-notice" style="color: var(--color-red);">**Important note**: This website only supports browsers that are in common use at the moment. A good guideline is the default settings for browsers by [browserslist](https://github.com/browserslist/browserslist). **It will not support old "retro" browsers like Firefox 2.0.0.14, no matter how often my stupidly cute girlfriend pesters me. Sorry, I love you a lot, but that's a pain!**</span>
 
 > <span style="color: var(--color-sapphire);">At least I didn't ask for Internet Explorer 5 support.</span>
 > <footer>- <cite>My lovely girlfriend 💗</cite></footer>
