@@ -2,11 +2,16 @@
 import { format } from "date-fns";
 import render_markdown from "@src/utils/remark";
 const { slug } = Astro.props;
-const { title, excerpt, published, lastUpdated } = Astro.props.data;
+const { title, excerpt, prefix, published, lastUpdated } = Astro.props.data;
 ---
 
 <article>
-  <a href={`/${slug}/`} set:html={render_markdown(`### ${title} {#${slug}}`)} />
+  <a
+    href={`/${prefix}${slug}/`}
+    set:html={render_markdown(
+      `### ${title} {#${prefix.replace("/", "_")}${slug}}`,
+    )}
+  />
   <div>
     <span
       >Published: <time datetime={published.toISOString()}

@@ -1,0 +1,23 @@
+---
+import Layout from "@src/layouts/Layout.astro";
+import CollectionList from "@src/components/CollectionList.astro";
+
+export async function getStaticPaths() {
+  const collections = ["pages", "notes"];
+  return collections.map((entry) => ({
+    params: { collection: entry },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const title = entry[0].toUpperCase() + entry.slice(1);
+---
+
+<Layout
+  title={`AliciaBytes' ${title}`}
+  description={`All the entries of my ${entry} collection`}
+>
+  <h1>{title}</h1>
+  <CollectionList collection={entry} header={false} />
+</Layout>
