@@ -20,7 +20,7 @@ jobs:
       - name: Download Images
         run: utils/download-images.sh
       - name: Build the website
-        run: preview=true npm run build
+        run: npm run build
       - name: Deploy to Cloudflare pages
         uses: cloudflare/wrangler-action@a84dcc6dd36c8769fbff7e622308c8050fc41f4f # v3
         with:
