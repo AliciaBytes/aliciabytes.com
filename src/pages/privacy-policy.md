@@ -16,6 +16,8 @@ If you are only a visitor to my website, please know that I do not collect any p
 
 The website is hosted on [Cloudflare Pages](https://pages.cloudflare.com/) which saves access information that is required to provide the website to you and guarantee proper service.
 
+The website also uses [Umami](https://umami.is/) for privacy friendly analytics to know what pages are being accessed on what devices/viewport sizes, so that I know what to focus on with development and web changes. It doesn't set any cookies or uses any personally identifiably data.
+
 If you contact me directly through the linked contact email ([contact@aliciabytes.com](mailto:contact@aliciabytes.com)), I may receive additional information such as email address, your name, content of the message, and/or attachments you may send me, and any other information you choose to provide. I will delete this data at latest 3 months after our last communication, or immediately upon request.
 
 ## How I use your information

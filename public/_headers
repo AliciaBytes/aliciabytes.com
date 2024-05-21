@@ -1,5 +1,5 @@
 /*
-    Content-Security-Policy: default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:
+    Content-Security-Policy: default-src 'self' *.umami.dev *.umami.is; script-src 'self' 'wasm-unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:
     Referrer-Policy: no-referrer-when-downgrade
     Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
     X-Frame-Options: SAMEORIGIN
