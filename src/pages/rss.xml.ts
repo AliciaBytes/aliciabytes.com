@@ -1,9 +1,17 @@
-import rss from '@astrojs/rss';
+import rss, { type RSSFeedItem } from "@astrojs/rss";
+import type { APIContext } from "astro";
+import { experimental_AstroContainer as AstroContainer } from "astro/container";
 import { getCollection } from 'astro:content';
+import Renderer from "../components/RssItemRenderer.astro";
+import { transform, walk } from "ultrahtml";
 
 import render_markdown from '@src/utils/remark';
 
-export async function GET(context: { site: string }) {
+export async function GET(context: APIContext) {
+
+  let baseUrl = context.site?.href || "https://www.aliciabytes.com";
+  if (baseUrl.at(-1) === "/") baseUrl = baseUrl.slice(0, -1);
+
   const pages = [
     ...await getCollection("pages"),
     ...await getCollection("notes")
@@ -16,17 +24,57 @@ export async function GET(context: { site: string }) {
     return b_comparator - a_comparator;
   });
 
-  return rss({
-    title: "AliciaBytes",
-    description: "My journey through life. I write about working in tech, as well as my personal life.",
-    site: context.site,
-    stylesheet: '/rss/pretty-feed.xsl',
-    items: await Promise.all(pages.map(async (page) => ({
+  const container = await AstroContainer.create({
+    renderers: [
+      {
+        name: "@astrojs/mdx", serverEntrypoint: "astro/jsx/server.js"
+      }
+    ]
+  })
+
+  const feedItems: RSSFeedItem[] = [];
+
+  for (const page of pages) {
+    feedItems.push({
       link: `/${page.data.prefix}${page.slug}/`,
       title: page.data.title,
       pubDate: page.data.lastUpdated || page.data.published,
       description: page.data.excerpt,
-      content: page.id.endsWith(".mdx") ? undefined : await render_markdown(page.body, "mocha"),
-    })))
+      content: await make_urls_absolute(await container.renderToString(Renderer, {
+        params: {
+          collection: page.collection,
+          slug: page.slug,
+        }
+      }), baseUrl),
+    })
+  }
+
+  return rss({
+    title: "AliciaBytes",
+    description: "My journey through life. I write about working in tech, as well as my personal life.",
+    site: baseUrl,
+    stylesheet: '/rss/pretty-feed.xsl',
+    items: feedItems,
   })
+}
+
+async function make_urls_absolute(rawContent: string, baseUrl: string) {
+  const content = await transform(rawContent, [
+    async (node) => {
+      await walk(node, (node) => {
+        if (node.name === "a" && node.attributes.href?.startsWith("/")) {
+          node.attributes.href = baseUrl + node.attributes.href;
+        }
+        if (node.name === "img" && node.attributes.src?.startsWith("/")) {
+          node.attributes.src = baseUrl + node.attributes.src;
+        }
+        if (node.name === "source" && node.attributes.srcset?.startsWith("/")) {
+          node.attributes.srcset = baseUrl + node.attributes.srcset;
+        }
+      });
+      return node;
+    },
+  ]);
+
+  return content;
 }
