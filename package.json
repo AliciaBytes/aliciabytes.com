@@ -23,7 +23,7 @@
     "date-fns": "3.6.0",
     "postcss": "8.4.38",
     "postcss-load-config": "5.1.0",
-    "postcss-preset-env": "9.5.13",
+    "postcss-preset-env": "9.5.14",
     "rehype-pretty-code": "0.13.2",
     "rehype-stringify": "10.0.0",
     "remark-gfm": "4.0.0",
