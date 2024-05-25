@@ -5,8 +5,6 @@ import { getCollection } from 'astro:content';
 import Renderer from "../components/RssItemRenderer.astro";
 import { transform, walk } from "ultrahtml";
 
-import render_markdown from '@src/utils/remark';
-
 export async function GET(context: APIContext) {
 
   let baseUrl = context.site?.href || "https://www.aliciabytes.com";

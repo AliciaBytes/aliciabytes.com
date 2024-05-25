@@ -9,6 +9,7 @@ published:
 tags: []
 relatedPages: []
 backlinks: []
+aliases: []
 ---
 */
 const pages = defineCollection({
@@ -23,6 +24,7 @@ const pages = defineCollection({
     categories: z.array(z.string()).optional(),
     relatedPages: z.array(reference('pages')),
     backlinks: z.array(reference('pages')),
+    aliases: z.array(z.string()).optional(),
   })
 });
 
@@ -38,6 +40,7 @@ const notes = defineCollection({
     categories: z.array(z.string()).optional(),
     relatedPages: z.array(reference('notes')),
     backlinks: z.array(reference('notes')),
+    aliases: z.array(z.string()).optional(),
   })
 });
 

@@ -1,12 +1,13 @@
 ---
-title: Things I enjoy and recommend
-excerpt: A list of some things I enjoy and recommend
-slug: things-i-enjoy-and-recommend
+title: Recommendations
+excerpt: I want to share some of the things I enjoy. For the start it will be pretty limited and will grow as time goes on. In general I'm a nerd who loves anything techy, TTRPG, or video game related. I also try to do sports and have several that I enjoy although I'm just getting more into it from a longer break.
+slug: recommendations
 published: 2024-02-05
 lastUpdated: 2024-02-06
 tags: []
 relatedPages: []
 backlinks: []
+aliases: ["/things-i-enjoy-and-recommend/"]
 ---
 
 I want to share some of the things I enjoy. For the start it will be pretty limited and will grow as time goes on. In general I'm a nerd who loves anything techy, TTRPG, or video game related. I also try to do sports and have several that I enjoy although I'm just getting more into it from a longer break.
