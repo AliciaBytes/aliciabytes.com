@@ -26,11 +26,11 @@ loginctl enable-linger <username>
 
 But if you're trying to automate as much of your infrastructure as possible, then that's not the best solution. There sadly isn't a config file for it that you can just send to your devices to have it enabled for all the systems. If you're doing automation with ansible like I am you can achieve it like this though:
 
-```ansible
+```yaml
 - name: Ensure lingering enabled
   command: "loginctl enable-linger {{ item.name }}"
     creates: /var/lib/systemd/linger/{{ item.name }}
   with_items: "{{ users }}"
 ```
 
-This iterates over an array of users and calls the `loginctl enable-linger <username>` for each user, unles the `/var/lib/systemd/linger/<username>` file already exists. This file automatically gets created by systemd when you enable lingering and gets deleted when you disable it. So it's a nice way to automate it.
+This iterates over an array of users and calls the `loginctl enable-linger <username>{:sh}` for each user, unles the `/var/lib/systemd/linger/<username>{:sh}` file already exists. This file automatically gets created by systemd when you enable lingering and gets deleted when you disable it. So it's a nice way to automate it.
