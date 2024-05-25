@@ -17,13 +17,13 @@ I recently moved in with one of my partners in Switzerland and am getting settle
 Yes, finally. Getting back into personal projects. Most stuff is still in the planning stage, but so far I'm doing:
 
 - Working a bit more on this website, trying to really really slowly get it into a more decent state.
-- Working through [Crafting Interpreters](https://craftinginterpreters.com) finally as a project to get deeper into C#. I've been planning on doing this for a while now.
+- Some homelab / infrastructure topics things.
+- Some (maybe only for now) private projects.
 
 ## Entertainment
 
-- Listening to the newest season of the [Dice Will Roll](https://www.dicewillroll.com) podcast as the episodes come out. This is the first time I'm following along as things get released and it's nice to chat with people in the community about it. It's also already brought me a lot of joy, entertainment and distraction when I wasn't doing well at all.
-- Recently watched "Nimona" and really enjoyed it. Also some crying involved. But it's just a movie that fits my chaos goblin nature.
-- Started a rewatch of all of Stargate SG-1
+- Listening to the newest season of the [Dice Will Roll](https://www.dicewillroll.com) podcast together with my sister as the episodes come out. This is the first time I'm following along as things get released and it's nice to chat with people in the community about it. It's also already brought me a lot of joy, entertainment and distraction when I wasn't doing well at all.
+- Still rewatching all of Stargate SG-1 as well as Ducktales.
 
 ## Reading
 
