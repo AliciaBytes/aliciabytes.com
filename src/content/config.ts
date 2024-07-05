@@ -20,7 +20,7 @@ const pages = defineCollection({
     prefix: z.string().default(""),
     published: z.date(),
     lastUpdated: z.date().optional(),
-    tags: z.array(z.string()),
+    tags: z.array(z.string()).optional(),
     categories: z.array(z.string()).optional(),
     relatedPages: z.array(z.object({
       collection: z.string(),
@@ -42,7 +42,7 @@ const notes = defineCollection({
     prefix: z.string().default("notes/"),
     published: z.date(),
     lastUpdated: z.date().optional(),
-    tags: z.array(z.string()),
+    tags: z.array(z.string()).optional(),
     categories: z.array(z.string()).optional(),
     relatedPages: z.array(z.object({
       collection: z.string(),

@@ -5,6 +5,12 @@ slug: recommendations
 published: 2024-02-05
 lastUpdated: 2024-02-06
 tags: []
+backlinks: [
+    {
+        collection: "pages",
+        id: "about"
+    },
+]
 aliases: ["/things-i-enjoy-and-recommend/"]
 ---
 
