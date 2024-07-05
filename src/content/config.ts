@@ -22,8 +22,14 @@ const pages = defineCollection({
     lastUpdated: z.date().optional(),
     tags: z.array(z.string()),
     categories: z.array(z.string()).optional(),
-    relatedPages: z.array(reference('pages')),
-    backlinks: z.array(reference('pages')),
+    relatedPages: z.array(z.object({
+      collection: z.string(),
+      id: z.string(),
+    })).optional(),
+    backlinks: z.array(z.object({
+      collection: z.string(),
+      id: z.string(),
+    })).optional(),
     aliases: z.array(z.string()).optional(),
   })
 });
@@ -38,8 +44,14 @@ const notes = defineCollection({
     lastUpdated: z.date().optional(),
     tags: z.array(z.string()),
     categories: z.array(z.string()).optional(),
-    relatedPages: z.array(reference('notes')),
-    backlinks: z.array(reference('notes')),
+    relatedPages: z.array(z.object({
+      collection: z.string(),
+      id: z.string(),
+    })).optional(),
+    backlinks: z.array(z.object({
+      collection: z.string(),
+      id: z.string(),
+    })).optional(),
     aliases: z.array(z.string()).optional(),
   })
 });
