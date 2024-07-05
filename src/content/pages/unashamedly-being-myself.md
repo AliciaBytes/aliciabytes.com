@@ -4,8 +4,7 @@ excerpt: Being unashamedly myself everywhere. Work, privately, publicly.
 slug: unashamedly-being-myself-everywhere
 published: 2024-06-15
 tags: ["Identity"]
-relatedPages: []
-backlinks: []
+relatedPages: [{collection: "pages", id: "lost-years-of-my-past"}]
 ---
 
 I need to let out my feelings and talk about what it means to be unashamedly myself. What it means to myself. Why I want to do it and it's important to me. What my fears about it and some negative consequences are. But also the positive consequences for me (and hopefully also others around me).

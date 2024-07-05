@@ -4,8 +4,6 @@ excerpt: In Linux even basic standard tooling that many people assume are the sa
 slug: cron-default-permission-inconsistencies
 published: 2022-10-22
 tags: ["Linux"]
-relatedPages: []
-backlinks: []
 ---
 
 In Linux even basic standard tooling that many people assume are the same across distributions, can behave differently and have inconsistencies. Sometimes standards like POSIX aren't detailed enough or people just plainly interpret them differently. This blog post is based on weird inconsistencies I found while studying for the LPIC-1 certificate at my vocational school.

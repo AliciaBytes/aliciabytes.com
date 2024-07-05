@@ -1,4 +1,6 @@
 ---
+import SectionDivider from "@components/SectionDivider.astro";
+
 const { class: className, title, url } = Astro.props;
 const reportURL = encodeURI(
   `https://github.com/AliciaBytes/aliciabytes.com/issues/new?template=broken-page.yml&title=Broken page: ${title}&url=${url}`,
@@ -7,7 +9,7 @@ const reportURL = encodeURI(
 
 <footer class={className} id="footer">
   <a class="tap-target" id="report-page" href={reportURL}>Report broken page</a>
-  <hr />
+  <SectionDivider />
   <div class="footer-sections">
     <div class="social-section">
       <a class="tap-target" rel="me" href="https://tech.lgbt/@AliciaBytes"
@@ -58,9 +60,6 @@ const reportURL = encodeURI(
   #report-page {
     color: var(--color-overlay0);
     margin: 9px 0;
-  }
-  hr {
-    margin: 9px 0 0 0;
   }
   .footer-sections {
     margin: 9px 0 18px 0;

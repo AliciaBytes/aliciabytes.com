@@ -4,8 +4,6 @@ excerpt: I'm gonna go and wear my heart on my sleeve here. I'm already always pr
 slug: a-guide-to-alicias-heart-emojis
 published: 2024-05-23
 tags: ["Emotions"]
-relatedPages: []
-backlinks: []
 ---
 
 I'm gonna go and wear my heart on my sleeve here. I'm already always pretty open about myself. And I try to be open about intentions, although one can always do better. But that's not the topic here. The topic is my heart. Well, at least my heart emojis. I'm a very weird and quirky woman. I don't know how common it is for others, but I have a bunch of meanings for the different heart emojis and colors. And why not share that little quirky bit about me?

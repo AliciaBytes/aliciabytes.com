@@ -1,0 +1,42 @@
+---
+import { getEntry, type CollectionKey } from "astro:content";
+
+import Preview from "@components/PreviewCollectionItem.astro";
+import SectionDivider from "./SectionDivider.astro";
+
+let { related_items, description } = Astro.props;
+
+let entries = [];
+if (related_items) {
+  for (const item of related_items) {
+    const entry = await getEntry(item.collection as CollectionKey, item.id);
+    entries.push(entry);
+  }
+}
+
+console.log(entries);
+
+description ??= "Related pages";
+---
+
+{
+  related_items && related_items.length != 0 && (
+    <section>
+      <h2>{description}</h2>
+      <ul>
+        {entries.map((page) => (
+          <li>
+            <Preview {...page} />
+          </li>
+        ))}
+      </ul>
+    </section>
+  )
+}
+
+<style>
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+</style>
