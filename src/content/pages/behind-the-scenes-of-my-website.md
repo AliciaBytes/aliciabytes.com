@@ -15,7 +15,7 @@ This is not a strict list as I don't want to get to formal with my website. Just
 
 ### A personal space
 
-I want to have a personal space that's mine. Where I can just be myself. The weird, quirky, queer, nerdy, etc. Person that I am. Where I can share whatever I want. A normal person with all my flaws and quirks. Not some kind of PR piece or highly polished image for social media behind a wall of filters.[^1]
+I want to have a personal space that's mine. Where I can just be authentically myself. The weird, quirky, queer, nerdy, etc. Person that I am. Where I can share whatever I want. A normal person with all my flaws and quirks. Not some kind of PR piece or highly polished image for social media behind a wall of filters.[^1]
 
 ### Small and efficient
 
@@ -47,9 +47,9 @@ I would also love it to transform into a [Digital Garden](https://maggieappleton
 
 But I'm not gonna focus on this as I feel like this might lead to my perfectionism keeping me from posting again.
 
-## Other Manifestos and Principles
+### Accessible, Inclusive and Safe
 
-With the ever rising amount of AI and Bots I think it's important to take a stand for a Human centered web. That's why I want to follow the [Manifesto for a Humane Web](https://humanewebmanifesto.com/), because we need a web **by and for humans**.
+I want my website to be accessible to as many people as possible. So I try my best to make the everything accessible to all kinds of ways we interact with the internet and not put up barriers. It's also explicitly a space to be queer and weird and inclusive in this regard (but not limited to that). It's meant as a comfy space for people to read.
 
 ## Tools and technologies I use to achieve those website goals
 
