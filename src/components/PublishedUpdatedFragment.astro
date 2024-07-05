@@ -1,0 +1,41 @@
+---
+import { format } from "date-fns";
+
+const { published, updated } = Astro.props;
+---
+
+<div>
+  <span>
+    Published:{" "}
+    <time datetime={published.toISOString()}>
+      {format(published, "dd MMMM yyyy")}
+    </time>
+  </span>
+  {
+    updated && (
+      <>
+        <span>
+          Last Updated:
+          <time datetime={updated.toISOString()}>
+            {format(updated, "dd MMMM yyyy")}
+          </time>
+        </span>
+      </>
+    )
+  }
+</div>
+
+<style>
+  div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 12px;
+    row-gap: 6px;
+  }
+
+  span {
+    color: var(--color-subtext0);
+    font-size: var(--size-font-subtext0);
+  }
+</style>
