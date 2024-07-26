@@ -1,5 +1,5 @@
 ---
-title: Kobo
+title: Kobo E-reader
 excerpt: Some notes on using Kobo
 slug: kobo
 published: 2024-05-19
