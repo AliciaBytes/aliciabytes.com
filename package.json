@@ -24,7 +24,7 @@
     "postcss": "8.4.41",
     "postcss-load-config": "6.0.1",
     "postcss-preset-env": "10.0.2",
-    "rehype-pretty-code": "0.13.2",
+    "rehype-pretty-code": "0.14.0",
     "rehype-stringify": "10.0.0",
     "remark-gfm": "4.0.0",
     "remark-heading-id": "1.0.1",
