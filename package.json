@@ -21,7 +21,7 @@
     "astro-robots-txt": "1.0.0",
     "cssnano": "7.0.5",
     "date-fns": "3.6.0",
-    "postcss": "8.4.41",
+    "postcss": "8.4.42",
     "postcss-load-config": "6.0.1",
     "postcss-preset-env": "10.0.2",
     "rehype-pretty-code": "0.14.0",
