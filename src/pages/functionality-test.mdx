@@ -1,0 +1,88 @@
+---
+layout: '@src/layouts/MarkdownLayout.astro'
+title: Functionality Test
+excerpt: This post is meant as a reference for the blog functionality for others to see how things work and for me to check that I don't break anything.
+slug: /functionality-test
+---
+
+import PictureFigure from '@src/components/PictureFigure.astro'
+import { Picture } from 'astro:assets';
+import InlineSpoiler from '@src/components/InlineSpoiler.astro';
+import Spoiler from '@src/components/Spoiler.astro';
+import CollectionList from '@src/components/CollectionList.astro'
+
+# Functionality Test
+
+This post is for me to test out all the features and styling of the website, and to make sure that if I change anything I don't break any of it! This is also a show off for the website where others could check the functionality I implement and how it's implemented on the frontend in the dev tools.
+
+## Embedding Code
+
+I sometimes post code, and I want the syntax to be nicely formatted and the syntax highlighted according to the currently selected theme.
+
+### Without highlighting
+
+```plaintext title="cron"
+* * * * * <command to execute>
+│ │ │ │ │
+│ │ │ │ └─── day of the week (0 = Sunday, 6 = Saturday)
+│ │ │ └─── month (1 - 12)
+│ │ └─── day of the month (1 - 31)
+│ └─── hour (0 - 23)
+└─── minute (0 - 59)
+```
+
+### With syntax highlighting
+
+```rust title="fibonacci.rs"
+/// Calculate the `n`th number in the fibonacci sequence recursively.
+fn fibonacci(n: u32) -> u128 {
+        match n {
+        0 => 0,
+        1 => 1,
+        // We start from F₂ here to skip some tiny steps. Meaning that both the
+        // previous and current values would be a 1.
+        _ => fibonacci_impl(n - 2, 1, 1),
+    }
+}
+
+/// Inner tail recursive implementation function.
+fn fibonacci_impl(n: u32, prev: u128, current: u128) -> u128 {
+    if n == 0 {
+        current
+    } else {
+        fibonacci_impl(n - 1, current, prev + current)
+    }
+}
+```
+
+### Inline code
+
+We can also mark up inline code without syntax highlighting `cron` and with syntax highlighting `u64{:rust}`.
+
+## Picture embeds
+
+<PictureFigure src="https://www-cdn.aliciabytes.com/file/aliciabytes-com/pages/about/taking-pictures-at-the-rheinfalls.jpg" alt="A view out through the trees above the Rheinfalls on a nice sunny day. You can see the water flowing rapidly. In the foreground Alicia is holding her phone up in landscape mode to take a picture of the scenery." formats={['avif', 'webp']} fallbackFormat="jpg" width="2000" height="819" quality="mid" caption="A view out through the trees above the Rheinfalls on a nice sunny day. You can see the water flowing rapidly. In the foreground Alicia is holding her phone up in landscape mode to take a picture of the scenery." />
+
+## Spoilers
+
+I want to be able to put things between spoilers and content warnings depending on the situation to actually be considerate of the reader. For example inline spoilers <InlineSpoiler>that certain people are very cute</InlineSpoiler>. Or also big block spoilers:
+
+<Spoiler>
+<summary slot="summary">Cuteness</summary>
+Actually a lot of people are very very cute!
+</Spoiler>
+
+## Showing off recent posts
+
+I can show a listing of my most reacent posts. For example the 3 most recent here:
+
+
+<CollectionList collection="pages" limit={3} />
+
+## Miscellaneous
+
+There is also miscelaneous items, like the styling of horizontal rulers:
+
+---
+
+That have to be consistent with the site.
