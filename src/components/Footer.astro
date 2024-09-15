@@ -3,7 +3,7 @@ import SectionDivider from "@components/SectionDivider.astro";
 
 const { class: className, title, url } = Astro.props;
 const reportURL = encodeURI(
-  `https://github.com/AliciaBytes/aliciabytes.com/issues/new?template=broken-page.yml&title=Broken page: ${title}&url=${url}`,
+  `https://github.com/AliciaBytes/aliciabytes.com/issues/new?template=broken-page.yml&title=Broken page: ${title}&url=${url}`
 );
 ---
 
@@ -43,6 +43,9 @@ const reportURL = encodeURI(
     <div class="footer-logistical">
       <a class="tap-target" href="/privacy-policy/">Privacy Policy</a>
       <a class="tap-target" href="/cookie-policy/">Cookie Policy</a>
+      <a class="tap-target" href="/functionality-overview/"
+        >Functionality Overview</a
+      >
     </div>
   </div>
 </footer>
