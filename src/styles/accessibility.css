@@ -2,10 +2,13 @@
 https://www.w3.org/WAI/WCAG21/Understanding/target-size.html
 https://web.dev/articles/accessible-tap-targets
 */
-@media (pointer:coarse) {
-    .tap-target {
-        min-width: 44px !important;
-        min-height: 44px !important;
-        /* line-height: 44px; */
+
+@layer accessibility {
+    @media (pointer:coarse) {
+        .tap-target {
+            min-width: 44px;
+            min-height: 44px;
+            /* line-height: 44px; */
+        }
     }
 }

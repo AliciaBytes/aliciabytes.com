@@ -4,20 +4,15 @@ export interface Props {
   description: string;
 }
 
-import "sanitize.css";
-import "sanitize.css/forms.css";
-import "sanitize.css/assets.css";
-import "sanitize.css/typography.css";
-// import "sanitize.css/reduce-motion.css";
-
 import Head from "@src/components/Head.astro";
 import Header from "@src/components/Header.astro";
 import Footer from "@src/components/Footer.astro";
 
-import "@styles/themes.css";
+import "@styles/layers.css";
+import "@styles/external.css";
 import "@styles/global.css";
+import "@styles/themes.css";
 import "@styles/accessibility.css";
-import { LazyResult } from "postcss";
 
 const { title, description } = Astro.props;
 const origin = Astro.site?.origin;
