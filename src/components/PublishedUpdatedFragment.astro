@@ -26,16 +26,18 @@ const { published, updated } = Astro.props;
 </div>
 
 <style>
-  div {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    column-gap: 12px;
-    row-gap: 6px;
-  }
+  @layer component {
+    div {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      column-gap: 12px;
+      row-gap: 6px;
+    }
 
-  span {
-    color: var(--color-subtext0);
-    font-size: var(--size-font-subtext0);
+    span {
+      color: var(--color-subtext0);
+      font-size: var(--size-font-subtext0);
+    }
   }
 </style>

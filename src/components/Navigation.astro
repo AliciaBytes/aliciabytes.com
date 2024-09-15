@@ -24,9 +24,11 @@ const { navigation } = Astro.props;
 </nav>
 
 <style>
-  ul {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(10ch, 100%), 1fr));
-    margin: 0;
+  @layer component {
+    ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(10ch, 100%), 1fr));
+      margin: 0;
+    }
   }
 </style>

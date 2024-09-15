@@ -53,17 +53,6 @@ ul {
     margin: 0;
 }
 
-figure {
-    margin: 6px 0;
-}
-
-figcaption {
-    width: 100%;
-    padding: 0 2.5%;
-    text-align: center;
-    color: var(--color-subtext1);
-}
-
 hr {
     width: 100%;
     color: var(--color-overlay0);
