@@ -17,6 +17,7 @@ import Footer from "@src/components/Footer.astro";
 import "@styles/themes.css";
 import "@styles/global.css";
 import "@styles/accessibility.css";
+import { LazyResult } from "postcss";
 
 const { title, description } = Astro.props;
 const origin = Astro.site?.origin;
@@ -32,15 +33,17 @@ const url = Astro.url;
       <slot />
     </main>
     <Footer class="grid-center-wrapper such-a-bottom" {title} {url} />
-  </body><style>
-    :where(body) {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .such-a-bottom {
-      margin-top: auto;
-    }
-  </style>
+  </body>
 </html>
+
+<style>
+  :where(body) {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .such-a-bottom {
+    margin-top: auto;
+  }
+</style>

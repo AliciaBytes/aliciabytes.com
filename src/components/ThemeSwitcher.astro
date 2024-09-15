@@ -62,24 +62,26 @@
 </script>
 
 <style>
-  :global(.no-js) #theme-switcher,
-  #theme-switcher[data-visible="false"] {
-    display: none;
-  }
+  @layer component {
+    :global(.no-js) #theme-switcher,
+    #theme-switcher[data-visible="false"] {
+      display: none;
+    }
 
-  #theme-switcher {
-    display: grid;
-    margin: 9px 0 0 0;
-    gap: 12px;
-    grid-template-columns: repeat(auto-fit, minmax(min(10ch, 100%), 1fr));
-  }
+    #theme-switcher {
+      display: grid;
+      margin: 9px 0 0 0;
+      gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(min(10ch, 100%), 1fr));
+    }
 
-  button {
-    border-color: var(--color-overlay0);
-  }
+    button {
+      border-color: var(--color-overlay0);
+    }
 
-  button[aria-pressed="true"] {
-    background: var(--color-text);
-    color: var(--color-base);
+    button[aria-pressed="true"] {
+      background: var(--color-text);
+      color: var(--color-base);
+    }
   }
 </style>

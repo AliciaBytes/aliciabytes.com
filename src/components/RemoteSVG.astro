@@ -7,8 +7,10 @@ const svg = await fetch(src);
 <div set:html={svg} class={className} {...rest} />
 
 <style>
-  div,
-  div :global(svg) {
-    max-width: 100%;
+  @layer component {
+    div,
+    div :global(svg) {
+      max-width: 100%;
+    }
   }
 </style>

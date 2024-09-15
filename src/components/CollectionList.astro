@@ -37,17 +37,19 @@ pages.sort((a, b) => {
 </section>
 
 <style>
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  .container {
-    display: inline-flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 12px;
-  }
-  .see_more_link {
-    align-content: center;
+  @layer component {
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .container {
+      display: inline-flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      gap: 12px;
+    }
+    .see_more_link {
+      align-content: center;
+    }
   }
 </style>

@@ -13,19 +13,21 @@ const { text } = Astro.props;
 </div>
 
 <style>
-  div {
-    color: var(--color-rosewater);
-  }
+  @layer component {
+    div {
+      color: var(--color-rosewater);
+    }
 
-  .information-icon {
-    display: contents;
-  }
+    .information-icon {
+      display: contents;
+    }
 
-  .information-icon > :global(svg) {
-    height: 1em;
-    width: 1em;
-    vertical-align: baseline;
-    transform: translateY(3px);
-    margin-inline-end: 3px;
+    .information-icon > :global(svg) {
+      height: 1em;
+      width: 1em;
+      vertical-align: baseline;
+      transform: translateY(3px);
+      margin-inline-end: 3px;
+    }
   }
 </style>

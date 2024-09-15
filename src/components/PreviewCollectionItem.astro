@@ -18,14 +18,16 @@ const { title, excerpt, prefix, published, lastUpdated } = Astro.props.data;
 </article>
 
 <style>
-  article {
-    margin-top: 9px;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 6px;
-  }
+  @layer component {
+    article {
+      margin-top: 9px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 6px;
+    }
 
-  article * {
-    margin: 0;
+    article * {
+      margin: 0;
+    }
   }
 </style>

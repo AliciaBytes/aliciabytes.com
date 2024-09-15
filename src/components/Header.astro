@@ -34,66 +34,68 @@ const navigation = [
 </header>
 
 <style>
-  @media print {
-    header {
-      display: none;
+  @layer component {
+    @media print {
+      header {
+        display: none;
+      }
     }
-  }
-  header {
-    margin-top: 18px;
-  }
+    header {
+      margin-top: 18px;
+    }
 
-  div {
-    display: grid;
-    grid-template-columns: 1fr auto;
-  }
+    div {
+      display: grid;
+      grid-template-columns: 1fr auto;
+    }
 
-  #home_link {
-    display: grid;
-    place-content: center;
-    grid-template-columns: auto auto;
-    gap: 6px;
-  }
+    #home_link {
+      display: grid;
+      place-content: center;
+      grid-template-columns: auto auto;
+      gap: 6px;
+    }
 
-  #top_bar {
-    --top-bar-size: 60px;
-    display: inline flex;
-    font-size: clamp(1.2rem, 5vw, var(--size-font-header1));
-    line-height: var(--top-bar-size);
-    height: var(--top-bar-size);
-    justify-content: space-between;
-  }
+    #top_bar {
+      --top-bar-size: 60px;
+      display: inline flex;
+      font-size: clamp(1.2rem, 5vw, var(--size-font-header1));
+      line-height: var(--top-bar-size);
+      height: var(--top-bar-size);
+      justify-content: space-between;
+    }
 
-  #top_bar * {
-    height: var(--top-bar-size);
-    margin: 0;
-    padding: 0;
-  }
+    #top_bar * {
+      height: var(--top-bar-size);
+      margin: 0;
+      padding: 0;
+    }
 
-  #pagefind-search-ui {
-    margin: 12px 0 0 0;
-  }
+    #pagefind-search-ui {
+      margin: 12px 0 0 0;
+    }
 
-  #pagefind-search-ui :global(*) {
-    background-color: var(--color-base);
-    border-color: var(--color-overlay0);
-    color: var(--color-text);
-    border-radius: 0%;
-    border-width: 1px;
-  }
+    #pagefind-search-ui :global(*) {
+      background-color: var(--color-base);
+      border-color: var(--color-overlay0);
+      color: var(--color-text);
+      border-radius: 0%;
+      border-width: 1px;
+    }
 
-  #pagefind-search-ui :global(*::placeholder) {
-    color: var(--color-overlay0);
-    opacity: 1;
-  }
+    #pagefind-search-ui :global(*::placeholder) {
+      color: var(--color-overlay0);
+      opacity: 1;
+    }
 
-  #pagefind-search-ui :global(form::before) {
-    background-color: var(--color-overlay0);
-  }
+    #pagefind-search-ui :global(form::before) {
+      background-color: var(--color-overlay0);
+    }
 
-  @media screen and (max-width: 450px) {
-    #title_text {
-      display: none;
+    @media screen and (max-width: 450px) {
+      #title_text {
+        display: none;
+      }
     }
   }
 </style>
