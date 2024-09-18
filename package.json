@@ -20,7 +20,7 @@
     "astro-pagefind": "1.6.0",
     "astro-robots-txt": "1.0.0",
     "cssnano": "7.0.6",
-    "date-fns": "3.6.0",
+    "date-fns": "4.1.0",
     "postcss": "8.4.47",
     "postcss-load-config": "6.0.1",
     "postcss-preset-env": "10.0.3",
