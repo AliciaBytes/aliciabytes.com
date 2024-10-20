@@ -30,3 +30,4 @@ public/*.svg
 
 # Prevent template files from being committed
 _template*
+/src/content/**_*
