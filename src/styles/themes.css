@@ -5,13 +5,13 @@
         padding: 0 6px;
     }
 
-    :is([data-selected-theme="system"], [data-selected-theme="latte"]) code[data-theme*=' '],
-    :is([data-selected-theme="system"], [data-selected-theme="latte"]) code[data-theme*=' '] span {
-        color: var(--shiki-latte);
-        background-color: var(--shiki-latte-bg);
+    :is([data-selected-theme="catppuccin-latte"]) code[data-theme*=' '],
+    :is([data-selected-theme="catppuccin-latte"]) code[data-theme*=' '] span {
+        color: var(--shiki-catppuccin-latte);
+        background-color: var(--shiki-catppuccin-latte-bg);
     }
 
-    :where(:root), [data-selected-theme="latte"] {
+    :where(:root), [data-selected-theme="catppuccin-latte"] {
         --color-base: hsl(220, 23%, 95%);
         --color-mantle: hsl(220, 22%, 92%);
         --color-crust: hsl(220, 21%, 89%);
@@ -41,13 +41,13 @@
         color-scheme: light;
     }
 
-    [data-selected-theme="frappe"] code[data-theme*=' '],
-    [data-selected-theme="frappe"] code[data-theme*=' '] span {
-        color: var(--shiki-frappe);
-        background-color: var(--shiki-frappe-bg);
+    [data-selected-theme="catppuccin-frappe"] code[data-theme*=' '],
+    [data-selected-theme="catppuccin-frappe"] code[data-theme*=' '] span {
+        color: var(--shiki-catppuccin-frappe);
+        background-color: var(--shiki-catppuccin-frappe-bg);
     }
 
-    [data-selected-theme="frappe"] {
+    [data-selected-theme="catppuccin-frappe"] {
         --color-base: hsl(229, 19%, 23%);
         --color-mantle: hsl(231, 19%, 20%);
         --color-crust: hsl(229, 20%, 17%);
@@ -77,13 +77,13 @@
         color-scheme: dark;
     }
 
-    [data-selected-theme="macchiato"] code[data-theme*=' '],
-    [data-selected-theme="macchiato"] code[data-theme*=' '] span {
-        color: var(--shiki-macchiato);
-        background-color: var(--shiki-macchiato-bg);
+    [data-selected-theme="catppuccin-macchiato"] code[data-theme*=' '],
+    [data-selected-theme="catppuccin-macchiato"] code[data-theme*=' '] span {
+        color: var(--shiki-catppuccin-macchiato);
+        background-color: var(--shiki-catppuccin-macchiato-bg);
     }
 
-    [data-selected-theme="macchiato"] {
+    [data-selected-theme="catppuccin-macchiato"] {
         --color-base: hsl(232, 23%, 18%);
         --color-mantle: hsl(233, 23%, 15%);
         --color-crust: hsl(236, 23%, 12%);
@@ -113,13 +113,13 @@
         color-scheme: dark;
     }
 
-    [data-selected-theme="mocha"] code[data-theme*=' '],
-    [data-selected-theme="mocha"] code[data-theme*=' '] span {
-        color: var(--shiki-mocha);
-        background-color: var(--shiki-mocha-bg);
+    [data-selected-theme="catppuccin-mocha"] code[data-theme*=' '],
+    [data-selected-theme="catppuccin-mocha"] code[data-theme*=' '] span {
+        color: var(--shiki-catppuccin-mocha);
+        background-color: var(--shiki-catppuccin-mocha-bg);
     }
 
-    [data-selected-theme="mocha"] {
+    [data-selected-theme="catppuccin-mocha"] {
         --color-base: hsl(240, 21%, 15%);
         --color-mantle: hsl(240, 21%, 12%);
         --color-crust: hsl(240, 23%, 9%);
@@ -151,14 +151,14 @@
 
     @media (prefers-color-scheme: dark) {
 
-        :is([data-selected-theme="system"], [data-selected-theme="mocha"]) code[data-theme*=' '],
-        :is([data-selected-theme="system"], [data-selected-theme="mocha"]) code[data-theme*=' '] span {
-            color: var(--shiki-mocha);
-            background-color: var(--shiki-mocha-bg);
+        :is([data-selected-theme="catppuccin-mocha"]) code[data-theme*=' '],
+        :is([data-selected-theme="catppuccin-mocha"]) code[data-theme*=' '] span {
+            color: var(--shiki-catppuccin-mocha);
+            background-color: var(--shiki-catppuccin-mocha-bg);
         }
 
         :where(:root) {
-            /* Using Mocha theme as default dark scheme */
+            /* Using catppuccin-macchiato theme as default dark scheme */
             --color-base: hsl(240, 21%, 15%);
             --color-mantle: hsl(240, 21%, 12%);
             --color-crust: hsl(240, 23%, 9%);

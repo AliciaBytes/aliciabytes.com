@@ -34,7 +34,7 @@ Okay, enough of a tangent. Now that you've hopefully rebooted and tried one or t
 
 This setting is managed by `/etc/default/grub`. This might look something like
 
-```sh
+```sh title="/etc/default/grub"
 GRUB_TIMEOUT=5
 GRUB_DISTRIBUTOR="$(sed 's, release .*$,,g' /etc/system-release)"
 GRUB_SAVEDEFAULT=true

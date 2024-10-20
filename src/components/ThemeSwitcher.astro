@@ -3,19 +3,18 @@
 ---
 
 <div id="theme-switcher" data-visible="false">
-  <button class="tap-target" aria-pressed="true" data-theme="system"
-    >System</button
-  >
-  <button class="tap-target" aria-pressed="false" data-theme="latte"
+  <button class="tap-target" aria-pressed="false" data-theme="catppuccin-latte"
     >Latte</button
   >
-  <button class="tap-target" aria-pressed="false" data-theme="frappe"
+  <button class="tap-target" aria-pressed="false" data-theme="catppuccin-frappe"
     >Frappé</button
   >
-  <button class="tap-target" aria-pressed="false" data-theme="macchiato"
-    >Macchiato</button
+  <button
+    class="tap-target"
+    aria-pressed="false"
+    data-theme="catppuccin-macchiato">Macchiato</button
   >
-  <button class="tap-target" aria-pressed="false" data-theme="mocha"
+  <button class="tap-target" aria-pressed="false" data-theme="catppuccin-mocha"
     >Mocha</button
   >
 </div>
@@ -39,19 +38,26 @@
 
     /* if clicked theme is different from current theme */
     if (isPressed !== "true") {
-      const theme = target.getAttribute("data-theme") || defaultTheme;
+      const theme = target.getAttribute("data-theme");
       applyTheme(theme);
       localStorage.setItem("selected-theme", theme);
     }
   };
 
-  const savedTheme = localStorage.getItem("selected-theme");
-  const defaultTheme = "system";
-
-  /* if saved theme is different from current theme */
-  if (savedTheme && savedTheme !== defaultTheme) {
-    applyTheme(savedTheme);
+  let savedTheme = localStorage.getItem("selected-theme");
+  if (
+    savedTheme === null ||
+    ![
+      "catppuccin-latte",
+      "catppuccin-frappe",
+      "catppuccin-macchiato",
+      "catppuccin-mocha",
+    ].includes(savedTheme)
+  ) {
+    savedTheme = "catppuccin-mocha";
   }
+
+  applyTheme(savedTheme);
 
   const themeSwitcher = document.querySelector("#theme-switcher");
   const buttons = themeSwitcher?.querySelectorAll("button");
