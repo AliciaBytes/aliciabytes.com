@@ -4,7 +4,8 @@ import { experimental_AstroContainer as AstroContainer } from "astro/container";
 import { getCollection } from 'astro:content';
 import Renderer from "../components/RssItemRenderer.astro";
 import { transform, walk } from "ultrahtml";
-import mdxRenderer from "astro/jsx/server.js";
+import { getContainerRenderer as mdxRenderer } from "@astrojs/mdx";
+import { loadRenderers } from "astro:container";
 
 export async function GET(context: APIContext) {
 
@@ -23,8 +24,8 @@ export async function GET(context: APIContext) {
     return b_comparator - a_comparator;
   });
 
-  const container = await AstroContainer.create()
-  container.addServerRenderer({ name: "@astrojs/mdx", renderer: mdxRenderer });
+  const renderers = await loadRenderers([mdxRenderer()]);
+  const container = await AstroContainer.create({ renderers })
 
   const feedItems: RSSFeedItem[] = [];
 
