@@ -14,7 +14,7 @@ Also for the sake of simplicity I'm focusing on Linux and using that as terminol
 
 `cron` is a command line utility to schedule jobs (cron-jobs) to run common commands regularly or at fixed dates. The jobs are stored in `crontab` files and each user has their own file, as well as a system-wide `crontab` that only administrators can access. The syntax for cron is:
 
-```plaintext
+```cron title="cron"
 * * * * * <command to execute>
 │ │ │ │ │
 │ │ │ │ └─── day of the week (0 = Sunday, 6 = Saturday)
@@ -28,7 +28,7 @@ Only the positions with an actual value get checked. Positions with a star are n
 
 For example the cron declaration:
 
-```plaintext
+```cron title="cron"
 0 0 * * * examplescript
 ```
 
@@ -36,7 +36,7 @@ would execute `examplescript` at minute 0 and hour 0, no matter the day of the m
 
 The script
 
-```plaintext
+```cron title="cron"
 * * * * 1 examplescript
 ```
 

@@ -9,11 +9,7 @@ import { remarkKroki } from 'remark-kroki';
 import remarkHeaderId from 'remark-heading-id';
 import astroMetaTags from "astro-meta-tags";
 
-import rehypePrettyCode from 'rehype-pretty-code';
-import frappe from '/utils/shiki-themes/frappe.json';
-import latte from '/utils/shiki-themes/latte.json';
-import macchiato from '/utils/shiki-themes/macchiato.json';
-import mocha from '/utils/shiki-themes/mocha.json';
+import expressiveCode from 'astro-expressive-code';
 
 // https://astro.build/config
 export default defineConfig({
@@ -25,27 +21,22 @@ export default defineConfig({
       }]
   },
   integrations: [
-    compress({
-      CSS: false,
-      HTML: {
-        "collapseWhitespace": true,
-        "collapseInlineTagWhitespace": true,
-        "preserveLineBreaks": true,
-        "conservativeCollapse": true,
-        "decodeEntities": true,
-        "minifyCSS": true,
-        "minifyJS": true,
-        "removeComments": true,
-        "removeScriptTypeAttributes": true,
-        "removeStyleLinkTypeAttributes": true,
-        "sortAttributes": true,
-        "sortClassName": true,
-        "useShortDoctype": true
-      },
-      Image: false,
-      JavaScript: false,
-      SVG: false,
-    }),
+    expressiveCode(
+      {
+        themeCssSelector: (theme, context) => `[data-selected-theme="${theme.name}"]`,
+        themes: [
+          "catppuccin-frappe",
+          "catppuccin-latte",
+          "catppuccin-macchiato",
+          "catppuccin-mocha"
+        ],
+        useStyleReset: false,
+        useThemedSelectionColors: true,
+        styleOverrides: {
+          borderColor: ({ theme }) => theme.colors['titleBar.activeBackground'],
+        }
+      }
+    ),
     mdx(),
     robotsTxt({
       policy: [
@@ -112,7 +103,28 @@ export default defineConfig({
     }),
     sitemap(),
     pagefind(),
-    astroMetaTags()
+    astroMetaTags(),
+    compress({
+      CSS: false,
+      HTML: {
+        "collapseWhitespace": true,
+        "collapseInlineTagWhitespace": true,
+        "preserveLineBreaks": true,
+        "conservativeCollapse": true,
+        "decodeEntities": true,
+        "minifyCSS": true,
+        "minifyJS": true,
+        "removeComments": true,
+        "removeScriptTypeAttributes": true,
+        "removeStyleLinkTypeAttributes": true,
+        "sortAttributes": true,
+        "sortClassName": true,
+        "useShortDoctype": true
+      },
+      Image: false,
+      JavaScript: false,
+      SVG: false,
+    }),
   ],
   markdown: {
     remarkPlugins: [
@@ -130,17 +142,6 @@ export default defineConfig({
       ],
     ],
     rehypePlugins: [
-      [
-        rehypePrettyCode,
-        {
-          theme: {
-            frappe: frappe,
-            latte: latte,
-            macchiato: macchiato,
-            mocha: mocha
-          }
-        }
-      ],
     ],
     syntaxHighlight: false
   },
