@@ -16,6 +16,10 @@ jobs:
       statuses: write
     steps:
       - uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # v4
+      - name: Setup IndexNow
+      # Generate files dynamically to prevent them from being leaked in public repositories.
+      # This example will put the file in the root directory of the site.You may change the location by yourself.
+        run: echo ${{ secrets.INDEXNOW_KEY }} > public/${{ secrets.INDEXNOW_KEY }}.txt
       - uses: actions/setup-node@0a44ba7841725637a19e28fa30b79a866c81b0a6 # v4
         with:
           node-version: "lts/*"
@@ -40,3 +44,7 @@ jobs:
         with:
           sitemap-location: "https://www.aliciabytes.com/sitemap-index.xml"
           key: ${{ secrets.INDEXNOW_KEY }}
+          endpoint: "api.indexnow.org"
+          timeout: 50000
+          limit: 1000
+          failure-strategy: "error"
