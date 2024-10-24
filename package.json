@@ -23,7 +23,7 @@
     "cssnano": "7.0.6",
     "date-fns": "4.1.0",
     "postcss-load-config": "6.0.1",
-    "postcss-preset-env": "10.0.7",
+    "postcss-preset-env": "10.0.8",
     "postcss": "8.4.47",
     "rehype-stringify": "10.0.1",
     "remark-gfm": "4.0.0",
