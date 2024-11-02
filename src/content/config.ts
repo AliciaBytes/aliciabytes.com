@@ -17,7 +17,7 @@ const common_schema = z.object({
     title: z.string(),
     excerpt: z.string(),
     published: z.date(),
-    lastUpdated: z.date().optional(),
+  lastUpdated: z.date().or(z.null()).optional(),
     tags: z.array(z.string()).optional(),
     categories: z.array(z.string()).optional(),
     relatedPages: z.array(z.object({
