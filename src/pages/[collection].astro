@@ -1,11 +1,12 @@
 ---
 import Layout from "@src/layouts/Layout.astro";
 import CollectionList from "@src/components/CollectionList.astro";
+import { slugify } from "@src/utils/slugify";
 
 export async function getStaticPaths() {
-  const collections = ["pages", "notes", "monthly_notes"];
+  const collections = ["pages", "notes", "monthly notes"];
   return collections.map((entry) => ({
-    params: { collection: entry },
+    params: { collection: slugify(entry) },
     props: { entry },
   }));
 }

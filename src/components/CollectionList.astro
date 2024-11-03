@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import Preview from "./PreviewCollectionItem.astro";
+import { slugify } from "@src/utils/slugify";
 
 const { collection, header = true, limit, see_more_link } = Astro.props;
 
@@ -19,7 +20,7 @@ pages.sort((a, b) => {
     <h2 id=`latest-${collection}`>
       Latest {collection[0].toUpperCase() + collection.slice(1)}
       </h2>
-      <a class="see_more_link" href={see_more_link || `/${collection}/`}
+      <a class="see_more_link" href={see_more_link || `/${slugify(collection)}/`}
       >See more {collection}</a
     >
   </div>
