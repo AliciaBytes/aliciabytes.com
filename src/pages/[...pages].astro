@@ -12,7 +12,7 @@ export async function getStaticPaths() {
   const pages = [
     ...(await getCollection("pages")),
     ...(await getCollection("notes")),
-    ...(await getCollection("monthly_notes")),
+    ...(await getCollection("monthly notes")),
   ];
   return pages.map((entry) => ({
     params: { pages: entry.data.prefix + entry.slug },

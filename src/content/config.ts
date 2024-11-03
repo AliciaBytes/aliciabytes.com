@@ -46,12 +46,12 @@ const notes = defineCollection({
 
 const monthly_notes = defineCollection({
   schema: common_schema.extend({
-    prefix: z.string().default('monthly_notes/'),
+    prefix: z.string().default('monthly notes/'),
   }),
 })
 
 export const collections = {
   pages,
   notes,
-  monthly_notes,
+  "monthly notes": monthly_notes,
 };
