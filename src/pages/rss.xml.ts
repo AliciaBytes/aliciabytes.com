@@ -14,7 +14,8 @@ export async function GET(context: APIContext) {
 
   const pages = [
     ...await getCollection("pages"),
-    ...await getCollection("notes")
+    ...await getCollection("notes"),
+    ...await getCollection("monthly notes"),
   ];
 
   pages.sort((a, b) => {
