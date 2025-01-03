@@ -10,7 +10,7 @@ const { title, excerpt, prefix, published, lastUpdated } = Astro.props.data;
   <a
     href={`/${prefix}${slug}/`}
     set:html={render_markdown(
-      `### ${title} {#${prefix.replace("/", "_")}${slug}}`,
+      `### ${title} {#${prefix.replace("/", "_")}${slug}}`
     )}
   />
   <PublishedUpdatedFragment published={published} updated={lastUpdated} />
