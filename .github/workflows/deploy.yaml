@@ -40,7 +40,7 @@ jobs:
       - name: Submit sitemap to google
         run: curl -X GET https://www.google.com/ping?sitemap=https://${{ env.DOMAIN }}/sitemap-index.xml
       - name: Send urls to indexnow
-        uses: bojieyang/indexnow-action@99fa50cf58d1ee519945b7db8ae71b0e60303ad7 # v2
+        uses: bojieyang/indexnow-action@cd6d1576582c1839b80dd71f418f172aa40d6552 # v2
         with:
           sitemap-location: "https://www.aliciabytes.com/sitemap-index.xml"
           key: ${{ secrets.INDEXNOW_KEY }}
