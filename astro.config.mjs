@@ -1,15 +1,14 @@
 import { defineConfig } from 'astro/config';
-import robotsTxt from "astro-robots-txt";
-import sitemap from "@astrojs/sitemap";
+import { remarkKroki } from 'remark-kroki';
+import astroMetaTags from "astro-meta-tags";
 import compress from 'astro-compress';
-
+import expressiveCode from 'astro-expressive-code';
 import mdx from "@astrojs/mdx";
 import pagefind from "astro-pagefind";
-import { remarkKroki } from 'remark-kroki';
 import remarkHeaderId from 'remark-heading-id';
-import astroMetaTags from "astro-meta-tags";
-
-import expressiveCode from 'astro-expressive-code';
+import robotsTxt from "astro-robots-txt";
+import sitemap from "@astrojs/sitemap";
+import solidJs from '@astrojs/solid-js';
 
 // https://astro.build/config
 export default defineConfig({
@@ -21,6 +20,7 @@ export default defineConfig({
       }]
   },
   integrations: [
+    solidJs(),
     expressiveCode(
       {
         themeCssSelector: (theme, context) => `[data-selected-theme="${theme.name}"]`,

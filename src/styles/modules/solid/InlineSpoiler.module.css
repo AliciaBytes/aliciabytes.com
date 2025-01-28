@@ -1,0 +1,13 @@
+.inline_spoiler {
+    display: contents;
+}
+
+.inline_spoiler * {
+    display: inline;
+    background-color: var(--color-surface0);
+}
+
+.spoiler_text[aria-hidden="true"] {
+    color: transparent;
+    user-select: none;
+}
