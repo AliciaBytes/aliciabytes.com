@@ -1,22 +1,20 @@
 import rss, { type RSSFeedItem } from "@astrojs/rss";
 import type { APIContext } from "astro";
 import { experimental_AstroContainer as AstroContainer } from "astro/container";
-import { getCollection } from 'astro:content';
-import Renderer from "../components/RssItemRenderer.astro";
+import { getCollection, render } from "astro:content";
 import { transform, walk } from "ultrahtml";
 import { getContainerRenderer as mdxRenderer } from "@astrojs/mdx";
 import { getContainerRenderer as solidRenderer } from "@astrojs/solid-js";
 import { loadRenderers } from "astro:container";
 
 export async function GET(context: APIContext) {
-
   let baseUrl = context.site?.href || "https://www.aliciabytes.com";
   if (baseUrl.at(-1) === "/") baseUrl = baseUrl.slice(0, -1);
 
   const pages = [
-    ...await getCollection("pages"),
-    ...await getCollection("notes"),
-    ...await getCollection("monthly notes"),
+    ...(await getCollection("pages")),
+    ...(await getCollection("notes")),
+    ...(await getCollection("monthly notes")),
   ];
 
   pages.sort((a, b) => {
@@ -27,32 +25,32 @@ export async function GET(context: APIContext) {
   });
 
   const renderers = await loadRenderers([mdxRenderer(), solidRenderer()]);
-  const container = await AstroContainer.create({ renderers })
+  const container = await AstroContainer.create({ renderers });
 
   const feedItems: RSSFeedItem[] = [];
 
   for (const page of pages) {
+    const { Content } = await render(page);
     feedItems.push({
-      link: `/${page.data.prefix}${page.slug}/`,
+      link: `/${page.data.prefix}${page.id}/`,
       title: page.data.title,
       pubDate: page.data.lastUpdated || page.data.published,
       description: page.data.excerpt,
-      content: await make_urls_absolute(await container.renderToString(Renderer, {
-        params: {
-          collection: page.collection,
-          slug: page.slug,
-        }
-      }), baseUrl),
-    })
+      content: await make_urls_absolute(
+        await container.renderToString(Content),
+        baseUrl
+      ),
+    });
   }
 
   return rss({
     title: "AliciaBytes",
-    description: "My journey through life. I write about working in tech, as well as my personal life.",
+    description:
+      "My journey through life. I write about working in tech, as well as my personal life.",
     site: baseUrl,
-    stylesheet: '/rss/pretty-feed.xsl',
+    stylesheet: "/rss/pretty-feed.xsl",
     items: feedItems,
-  })
+  });
 }
 
 async function make_urls_absolute(rawContent: string, baseUrl: string) {

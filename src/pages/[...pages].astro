@@ -1,5 +1,5 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 
 import Layout from "@src/layouts/Layout.astro";
 import render_markdown from "@src/utils/remark";
@@ -15,13 +15,13 @@ export async function getStaticPaths() {
     ...(await getCollection("monthly notes")),
   ];
   return pages.map((entry) => ({
-    params: { pages: entry.data.prefix + entry.slug },
+    params: { pages: entry.data.prefix + entry.id },
     props: { entry },
   }));
 }
 
 const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 
 const title = render_markdown(`# ${entry.data.title}`);
 ---

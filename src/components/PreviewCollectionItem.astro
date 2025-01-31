@@ -2,7 +2,7 @@
 import render_markdown from "@src/utils/remark";
 import PublishedUpdatedFragment from "./PublishedUpdatedFragment.astro";
 
-const { slug } = Astro.props;
+const { id: slug } = Astro.props;
 const { title, excerpt, prefix, published, lastUpdated } = Astro.props.data;
 ---
 
