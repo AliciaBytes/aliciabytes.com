@@ -48,3 +48,4 @@ jobs:
           timeout: 50000
           limit: 1000
           failure-strategy: "error"
+          lastmod-required: false
