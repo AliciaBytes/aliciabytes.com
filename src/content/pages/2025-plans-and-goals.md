@@ -3,7 +3,7 @@ title: 2025 plans and goals
 excerpt: Some of my general plans for the new year.
 slug: 2025-plans-and-goals
 published: 2025-01-31
-# lastUpdated: 2024-02-06
+lastUpdated: 2025-02-02
 tags: []
 ---
 
@@ -20,6 +20,10 @@ I feel like I focused a lot on putting myself out there, connecting, making myse
 ## Giving a lot of love to this website
 
 I have a lot of plans for changes with my website. It will probably have to wait until after my big Australia vacation though before I can really start it. I also sadly changed my plans with the kinky NSFW section for my website due to ToS restrictions with services and platforms I use. 😓 But I have a whole lot of other plans still. My website sadly is one project that always gets neglected a bit and I want to change this. Having more time at home will hopefully help a lot here.
+
+## Note taking and journaling
+
+I kind of stopped a lot of my note taking and journaling about life because of all the traveling, general business, and not wanting to do it when I'm over at other peoples and feel like I'm doing my own thing and not anything together. That's part of being more selfish this year, because so far it felt too selfish to do things on my own, but I really should. I still care too much about others in such a way that it's detrimental to my own time and things. This year I want to journal a lot. Take notes about all the little things I do. Cooking, writing some stories. Just generally write a lot and have fun.
 
 ## Cooking and Baking
 
