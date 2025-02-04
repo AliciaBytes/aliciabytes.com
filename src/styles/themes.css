@@ -5,8 +5,10 @@
         padding: 0 6px;
     }
 
-    :is([data-selected-theme="catppuccin-latte"]) code[data-theme*=" "],
-    :is([data-selected-theme="catppuccin-latte"]) code[data-theme*=" "] span {
+    :where([data-selected-theme="catppuccin-latte"]) code[data-theme*=" "],
+    :where([data-selected-theme="catppuccin-latte"])
+        code[data-theme*=" "]
+        span {
         color: var(--shiki-catppuccin-latte);
         background-color: var(--shiki-catppuccin-latte-bg);
     }
@@ -42,125 +44,93 @@
         color-scheme: light;
     }
 
-    [data-selected-theme="catppuccin-frappe"] code[data-theme*=" "],
-    [data-selected-theme="catppuccin-frappe"] code[data-theme*=" "] span {
-        color: var(--shiki-catppuccin-frappe);
-        background-color: var(--shiki-catppuccin-frappe-bg);
-    }
+    @media screen {
+        :where([data-selected-theme="catppuccin-frappe"]) code[data-theme*=" "],
+        :where([data-selected-theme="catppuccin-frappe"])
+            code[data-theme*=" "]
+            span {
+            color: var(--shiki-catppuccin-frappe);
+            background-color: var(--shiki-catppuccin-frappe-bg);
+        }
 
-    [data-selected-theme="catppuccin-frappe"] {
-        --color-base: hsl(229, 19%, 23%);
-        --color-mantle: hsl(231, 19%, 20%);
-        --color-crust: hsl(229, 20%, 17%);
-        --color-surface0: hsl(230, 16%, 30%);
-        --color-surface1: hsl(227, 15%, 37%);
-        --color-surface2: hsl(228, 13%, 44%);
-        --color-overlay0: hsl(229, 13%, 52%);
-        --color-overlay1: hsl(227, 17%, 58%);
-        --color-overlay2: hsl(228, 22%, 66%);
-        --color-text: hsl(227, 70%, 87%);
-        --color-subtext0: hsl(228, 29%, 73%);
-        --color-subtext1: hsl(227, 44%, 80%);
-        --color-rosewater: hsl(10, 57%, 88%);
-        --color-flamingo: hsl(0, 59%, 84%);
-        --color-pink: hsl(316, 73%, 84%);
-        --color-mauve: hsl(277, 59%, 76%);
-        --color-red: hsl(359, 68%, 71%);
-        --color-maroon: hsl(358, 66%, 76%);
-        --color-peach: hsl(20, 79%, 70%);
-        --color-yellow: hsl(40, 62%, 73%);
-        --color-green: hsl(96, 44%, 68%);
-        --color-teal: hsl(172, 39%, 65%);
-        --color-sky: hsl(189, 48%, 73%);
-        --color-sapphire: hsl(199, 55%, 69%);
-        --color-blue: hsl(222, 74%, 74%);
-        --color-lavender: hsl(239, 66%, 84%);
-        color-scheme: dark;
-    }
+        [data-selected-theme="catppuccin-frappe"] {
+            --color-base: hsl(229, 19%, 23%);
+            --color-mantle: hsl(231, 19%, 20%);
+            --color-crust: hsl(229, 20%, 17%);
+            --color-surface0: hsl(230, 16%, 30%);
+            --color-surface1: hsl(227, 15%, 37%);
+            --color-surface2: hsl(228, 13%, 44%);
+            --color-overlay0: hsl(229, 13%, 52%);
+            --color-overlay1: hsl(227, 17%, 58%);
+            --color-overlay2: hsl(228, 22%, 66%);
+            --color-text: hsl(227, 70%, 87%);
+            --color-subtext0: hsl(228, 29%, 73%);
+            --color-subtext1: hsl(227, 44%, 80%);
+            --color-rosewater: hsl(10, 57%, 88%);
+            --color-flamingo: hsl(0, 59%, 84%);
+            --color-pink: hsl(316, 73%, 84%);
+            --color-mauve: hsl(277, 59%, 76%);
+            --color-red: hsl(359, 68%, 71%);
+            --color-maroon: hsl(358, 66%, 76%);
+            --color-peach: hsl(20, 79%, 70%);
+            --color-yellow: hsl(40, 62%, 73%);
+            --color-green: hsl(96, 44%, 68%);
+            --color-teal: hsl(172, 39%, 65%);
+            --color-sky: hsl(189, 48%, 73%);
+            --color-sapphire: hsl(199, 55%, 69%);
+            --color-blue: hsl(222, 74%, 74%);
+            --color-lavender: hsl(239, 66%, 84%);
+            color-scheme: dark;
+        }
 
-    [data-selected-theme="catppuccin-macchiato"] code[data-theme*=" "],
-    [data-selected-theme="catppuccin-macchiato"] code[data-theme*=" "] span {
-        color: var(--shiki-catppuccin-macchiato);
-        background-color: var(--shiki-catppuccin-macchiato-bg);
-    }
+        :where([data-selected-theme="catppuccin-macchiato"])
+            code[data-theme*=" "],
+        :where([data-selected-theme="catppuccin-macchiato"])
+            code[data-theme*=" "]
+            span {
+            color: var(--shiki-catppuccin-macchiato);
+            background-color: var(--shiki-catppuccin-macchiato-bg);
+        }
 
-    [data-selected-theme="catppuccin-macchiato"] {
-        --color-base: hsl(232, 23%, 18%);
-        --color-mantle: hsl(233, 23%, 15%);
-        --color-crust: hsl(236, 23%, 12%);
-        --color-surface0: hsl(230, 19%, 26%);
-        --color-surface1: hsl(231, 16%, 34%);
-        --color-surface2: hsl(230, 14%, 41%);
-        --color-overlay0: hsl(230, 12%, 49%);
-        --color-overlay1: hsl(228, 15%, 57%);
-        --color-overlay2: hsl(228, 20%, 65%);
-        --color-text: hsl(227, 68%, 88%);
-        --color-subtext0: hsl(227, 27%, 72%);
-        --color-subtext1: hsl(228, 39%, 80%);
-        --color-rosewater: hsl(10, 58%, 90%);
-        --color-flamingo: hsl(0, 58%, 86%);
-        --color-pink: hsl(316, 74%, 85%);
-        --color-mauve: hsl(267, 83%, 80%);
-        --color-red: hsl(351, 74%, 73%);
-        --color-maroon: hsl(355, 71%, 77%);
-        --color-peach: hsl(21, 86%, 73%);
-        --color-yellow: hsl(40, 70%, 78%);
-        --color-green: hsl(105, 48%, 72%);
-        --color-teal: hsl(171, 47%, 69%);
-        --color-sky: hsl(189, 59%, 73%);
-        --color-sapphire: hsl(199, 66%, 69%);
-        --color-blue: hsl(220, 83%, 75%);
-        --color-lavender: hsl(234, 82%, 85%);
-        color-scheme: dark;
-    }
+        [data-selected-theme="catppuccin-macchiato"] {
+            --color-base: hsl(232, 23%, 18%);
+            --color-mantle: hsl(233, 23%, 15%);
+            --color-crust: hsl(236, 23%, 12%);
+            --color-surface0: hsl(230, 19%, 26%);
+            --color-surface1: hsl(231, 16%, 34%);
+            --color-surface2: hsl(230, 14%, 41%);
+            --color-overlay0: hsl(230, 12%, 49%);
+            --color-overlay1: hsl(228, 15%, 57%);
+            --color-overlay2: hsl(228, 20%, 65%);
+            --color-text: hsl(227, 68%, 88%);
+            --color-subtext0: hsl(227, 27%, 72%);
+            --color-subtext1: hsl(228, 39%, 80%);
+            --color-rosewater: hsl(10, 58%, 90%);
+            --color-flamingo: hsl(0, 58%, 86%);
+            --color-pink: hsl(316, 74%, 85%);
+            --color-mauve: hsl(267, 83%, 80%);
+            --color-red: hsl(351, 74%, 73%);
+            --color-maroon: hsl(355, 71%, 77%);
+            --color-peach: hsl(21, 86%, 73%);
+            --color-yellow: hsl(40, 70%, 78%);
+            --color-green: hsl(105, 48%, 72%);
+            --color-teal: hsl(171, 47%, 69%);
+            --color-sky: hsl(189, 59%, 73%);
+            --color-sapphire: hsl(199, 66%, 69%);
+            --color-blue: hsl(220, 83%, 75%);
+            --color-lavender: hsl(234, 82%, 85%);
+            color-scheme: dark;
+        }
 
-    [data-selected-theme="catppuccin-mocha"] code[data-theme*=" "],
-    [data-selected-theme="catppuccin-mocha"] code[data-theme*=" "] span {
-        color: var(--shiki-catppuccin-mocha);
-        background-color: var(--shiki-catppuccin-mocha-bg);
-    }
-
-    [data-selected-theme="catppuccin-mocha"] {
-        --color-base: hsl(240, 21%, 15%);
-        --color-mantle: hsl(240, 21%, 12%);
-        --color-crust: hsl(240, 23%, 9%);
-        --color-surface0: hsl(237, 16%, 23%);
-        --color-surface1: hsl(234, 13%, 31%);
-        --color-surface2: hsl(233, 12%, 39%);
-        --color-overlay0: hsl(231, 11%, 47%);
-        --color-overlay1: hsl(230, 13%, 55%);
-        --color-overlay2: hsl(228, 17%, 64%);
-        --color-text: hsl(226, 64%, 88%);
-        --color-subtext0: hsl(228, 24%, 72%);
-        --color-subtext1: hsl(227, 35%, 80%);
-        --color-rosewater: hsl(10, 56%, 91%);
-        --color-flamingo: hsl(0, 59%, 88%);
-        --color-pink: hsl(316, 72%, 86%);
-        --color-mauve: hsl(267, 84%, 81%);
-        --color-red: hsl(343, 81%, 75%);
-        --color-maroon: hsl(350, 65%, 77%);
-        --color-peach: hsl(23, 92%, 75%);
-        --color-yellow: hsl(41, 86%, 83%);
-        --color-green: hsl(115, 54%, 76%);
-        --color-teal: hsl(170, 57%, 73%);
-        --color-sky: hsl(189, 71%, 73%);
-        --color-sapphire: hsl(199, 76%, 69%);
-        --color-blue: hsl(217, 92%, 76%);
-        --color-lavender: hsl(232, 97%, 85%);
-        color-scheme: dark;
-    }
-
-    @media (prefers-color-scheme: dark) {
-        :is([data-selected-theme="catppuccin-mocha"]) code[data-theme*=" "],
-        :is([data-selected-theme="catppuccin-mocha"])
+        :where([data-selected-theme="catppuccin-mocha"]) code[data-theme*=" "],
+        :where([data-selected-theme="catppuccin-mocha"])
             code[data-theme*=" "]
             span {
             color: var(--shiki-catppuccin-mocha);
             background-color: var(--shiki-catppuccin-mocha-bg);
         }
 
-        :where(:root) {
-            /* Using catppuccin-macchiato theme as default dark scheme */
+        [data-selected-theme="catppuccin-mocha"] {
             --color-base: hsl(240, 21%, 15%);
             --color-mantle: hsl(240, 21%, 12%);
             --color-crust: hsl(240, 23%, 9%);
@@ -188,6 +158,48 @@
             --color-blue: hsl(217, 92%, 76%);
             --color-lavender: hsl(232, 97%, 85%);
             color-scheme: dark;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :where([data-selected-theme="catppuccin-mocha"])
+                code[data-theme*=" "],
+            :where([data-selected-theme="catppuccin-mocha"])
+                code[data-theme*=" "]
+                span {
+                color: var(--shiki-catppuccin-mocha);
+                background-color: var(--shiki-catppuccin-mocha-bg);
+            }
+
+            :where(:root) {
+                /* Using catppuccin-macchiato theme as default dark scheme */
+                --color-base: hsl(240, 21%, 15%);
+                --color-mantle: hsl(240, 21%, 12%);
+                --color-crust: hsl(240, 23%, 9%);
+                --color-surface0: hsl(237, 16%, 23%);
+                --color-surface1: hsl(234, 13%, 31%);
+                --color-surface2: hsl(233, 12%, 39%);
+                --color-overlay0: hsl(231, 11%, 47%);
+                --color-overlay1: hsl(230, 13%, 55%);
+                --color-overlay2: hsl(228, 17%, 64%);
+                --color-text: hsl(226, 64%, 88%);
+                --color-subtext0: hsl(228, 24%, 72%);
+                --color-subtext1: hsl(227, 35%, 80%);
+                --color-rosewater: hsl(10, 56%, 91%);
+                --color-flamingo: hsl(0, 59%, 88%);
+                --color-pink: hsl(316, 72%, 86%);
+                --color-mauve: hsl(267, 84%, 81%);
+                --color-red: hsl(343, 81%, 75%);
+                --color-maroon: hsl(350, 65%, 77%);
+                --color-peach: hsl(23, 92%, 75%);
+                --color-yellow: hsl(41, 86%, 83%);
+                --color-green: hsl(115, 54%, 76%);
+                --color-teal: hsl(170, 57%, 73%);
+                --color-sky: hsl(189, 71%, 73%);
+                --color-sapphire: hsl(199, 76%, 69%);
+                --color-blue: hsl(217, 92%, 76%);
+                --color-lavender: hsl(232, 97%, 85%);
+                color-scheme: dark;
+            }
         }
     }
 }
