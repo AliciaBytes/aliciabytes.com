@@ -2,3 +2,4 @@ default: true
 single-title: false
 line-length: false
 no-inline-html: false
+link-fragments: false
