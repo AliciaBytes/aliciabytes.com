@@ -1,10 +1,14 @@
 ---
-title: Cookie Policy - AliciaBytes
+title: Cookie Policy
 excerpt: Hey, I'm AliciaBytes. Here's my policy about how I don't use cookis to track you.
-layout: '@src/layouts/MarkdownLayout.astro'
+slug: cookie-policy
+publishedDate: 2022-07-06
+lastUpdated:
+tags: []
+related_pages: []
+backlinks: []
+aliases: []
 ---
-
-# Cookie Policy
 
 This blog does not currently utilize cookies or other tracking technologies. I value your privacy and believe in a transparent online experience. This means no hidden information gathering, no targeted advertising, and no invasive data collection.
 
