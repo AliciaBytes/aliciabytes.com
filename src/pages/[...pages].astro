@@ -14,10 +14,12 @@ export async function getStaticPaths() {
     ...(await getCollection("notes")),
     ...(await getCollection("monthly notes")),
   ];
-  return pages.map((entry) => ({
-    params: { pages: entry.data.prefix + entry.id },
-    props: { entry },
-  }));
+  return pages
+    .filter((entry) => !entry.id.startsWith("_"))
+    .map((entry) => ({
+      params: { pages: entry.data.prefix + entry.id },
+      props: { entry },
+    }));
 }
 
 const { entry } = Astro.props;

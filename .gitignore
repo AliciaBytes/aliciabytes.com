@@ -27,7 +27,3 @@ src/lib/rassets/
 public/*icon*
 public/*.png
 public/*.svg
-
-# Prevent template files from being committed
-_template*
-_*
