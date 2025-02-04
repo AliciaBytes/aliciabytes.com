@@ -13,17 +13,19 @@ import Layout from "@src/layouts/Layout.astro";
 </Layout>
 
 <style>
-  :global(body) {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-  }
-  div {
-    display: grid;
-    grid-template-rows: auto auto;
-    align-content: space-evenly;
-    height: 100%;
-  }
-  h1 {
-    text-align: center;
+  @layer defaults {
+    :global(body) {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+    }
+    div {
+      display: grid;
+      grid-template-rows: auto auto;
+      align-content: space-evenly;
+      height: 100%;
+    }
+    h1 {
+      text-align: center;
+    }
   }
 </style>
