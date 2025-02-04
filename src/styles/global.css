@@ -95,12 +95,12 @@
         text-underline-offset: 0.2em;
     }
 
-    pre>code {
+    pre > code {
         display: grid;
     }
 
     .kroki-inline-svg,
-    .kroki-inline-svg>svg {
+    .kroki-inline-svg > svg {
         color: black;
         max-width: 100%;
     }

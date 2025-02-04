@@ -1,4 +1,4 @@
-@import "sanitize.css"layer(reset);
-@import "sanitize.css/forms.css"layer(reset);
-@import "sanitize.css/assets.css"layer(reset);
-@import "sanitize.css/typography.css"layer(reset);
+@import "sanitize.css" layer(reset);
+@import "sanitize.css/forms.css" layer(reset);
+@import "sanitize.css/assets.css" layer(reset);
+@import "sanitize.css/typography.css" layer(reset);
