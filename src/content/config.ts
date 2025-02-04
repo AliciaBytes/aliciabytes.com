@@ -1,19 +1,6 @@
 import { glob } from "astro/loaders";
 import { z, defineCollection, reference } from "astro:content";
 
-/* Template for copying into new blogs:
----
-title:
-excerpt:
-slug:
-publishedDate:
-tags: []
-relatedPages: []
-backlinks: []
-aliases: []
----
-*/
-
 const common_schema = z.object({
   title: z.string(),
   excerpt: z.string(),
@@ -70,6 +57,8 @@ const monthly_notes = defineCollection({
     prefix: z.string().default("monthly-notes/"),
   }),
 });
+
+export type CommonSchema = z.infer<typeof common_schema>;
 
 export const collections = {
   pages,
