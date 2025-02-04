@@ -2,7 +2,7 @@
 title: "TIL: Setting up systemd lingering with ansible"
 excerpt: Systemd only starts up after the login of a user and then immediately gets killed again when all the sessions for that user get closed. Let's look at how to disable this with ansible.
 slug: til-systemd-lingering-with-ansible
-published: 2024-04-18
+publishedDate: 2024-04-18
 tags: ["Ansible"]
 ---
 

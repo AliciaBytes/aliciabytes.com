@@ -3,6 +3,7 @@ import { getCollection, render } from "astro:content";
 
 import Layout from "@src/layouts/Layout.astro";
 import render_markdown from "@src/utils/remark";
+import { collectionFilter } from "@src/utils/collections";
 
 import PublishUpdatedFragment from "@components/PublishedUpdatedFragment.astro";
 import LinkedPostList from "@src/components/LinkedPostList.astro";
@@ -10,9 +11,9 @@ import SectionDivider from "@components/SectionDivider.astro";
 
 export async function getStaticPaths() {
   const pages = [
-    ...(await getCollection("pages")),
-    ...(await getCollection("notes")),
-    ...(await getCollection("monthly notes")),
+    ...(await getCollection("pages", collectionFilter)),
+    ...(await getCollection("notes", collectionFilter)),
+    ...(await getCollection("monthly notes", collectionFilter)),
   ];
   return pages
     .filter((entry) => !entry.id.startsWith("_"))
@@ -31,7 +32,7 @@ const title = render_markdown(`# ${entry.data.title}`);
 <Layout title={entry.data.title} description={entry.data.excerpt}>
   <Fragment set:html={title} />
   <PublishUpdatedFragment
-    published={entry.data.published}
+    publishedDate={entry.data.publishedDate}
     updated={entry.data.lastUpdated}
   />
 

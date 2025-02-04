@@ -2,13 +2,14 @@
 import { getCollection } from "astro:content";
 import Preview from "./PreviewCollectionItem.astro";
 import { slugify } from "@src/utils/slugify";
+import { collectionFilter } from "@src/utils/collections";
 
 const { collection, header = true, limit, see_more_link } = Astro.props;
 
-let pages = await getCollection(collection);
+let pages = await getCollection(collection, collectionFilter);
 pages.sort((a, b) => {
-  const a_comparator = (a?.data?.lastUpdated || a.data.published).getTime();
-  const b_comparator = (b?.data?.lastUpdated || b.data.published).getTime();
+  const a_comparator = (a?.data?.lastUpdated || a.data.publishedDate).getTime();
+  const b_comparator = (b?.data?.lastUpdated || b.data.publishedDate).getTime();
 
   return b_comparator - a_comparator;
 });

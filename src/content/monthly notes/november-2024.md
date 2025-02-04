@@ -2,7 +2,7 @@
 title: November 2024
 excerpt: Lan party, relationships and just way too much going on in my life. I need a break! 😅
 slug: "november-2024"
-published: 2024-12-01
+publishedDate: 2024-12-01
 tags: ["Monthly Note"]
 related_pages: []
 backlinks: []

@@ -2,7 +2,7 @@
 title: Cron Default Permission Inconsistencies
 excerpt: In Linux even basic standard tooling that many people assume are the same across distributions, can behave differently and have inconsistencies.
 slug: cron-default-permission-inconsistencies
-published: 2022-10-22
+publishedDate: 2022-10-22
 tags: ["Linux"]
 ---
 

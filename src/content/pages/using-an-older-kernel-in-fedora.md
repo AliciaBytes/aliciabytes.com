@@ -2,7 +2,7 @@
 title: Using an older kernel version in Fedora
 excerpt: I recently had issues with my hardware configuration since updating the linux system. Turns out it was because of issues with the new kernel version and that I had to go back a version. Here's how to do this.
 slug: using-an-older-kernel-version-in-fedora
-published: 2024-10-20
+publishedDate: 2024-10-20
 tags: ["Linux", "Fedora"]
 aliases: []
 ---

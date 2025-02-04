@@ -2,7 +2,7 @@
 title: Unashamedly being myself. Everywhere!
 excerpt: Being unashamedly myself everywhere. Work, privately, publicly.
 slug: unashamedly-being-myself-everywhere
-published: 2024-06-15
+publishedDate: 2024-06-15
 tags: ["Identity"]
 relatedPages: [
     {
