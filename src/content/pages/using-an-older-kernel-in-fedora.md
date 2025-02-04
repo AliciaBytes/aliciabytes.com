@@ -55,4 +55,4 @@ sudo grub2-editenv - set menu_auto_hide=1
 sudo grub2-mkconfig -o /etc/grub2-efi.cfg
 ```
 
-I hope this helped you with your possible kernel issues as well. Also if you want further information about grub configuration you can look at https://www.gnu.org/software/grub/manual/grub/html_node/Simple-configuration.html for a start.
+I hope this helped you with your possible kernel issues as well. Also if you want further information about grub configuration you can look at <https://www.gnu.org/software/grub/manual/grub/html_node/Simple-configuration.html> for a start.
