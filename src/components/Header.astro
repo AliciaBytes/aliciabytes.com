@@ -42,6 +42,7 @@ const navigation = [
     }
     header {
       margin-top: 18px;
+      container-type: inline-size;
     }
 
     div {
@@ -59,7 +60,7 @@ const navigation = [
     #top_bar {
       --top-bar-size: 60px;
       display: inline flex;
-      font-size: clamp(1.2rem, 5vw, var(--size-font-header1));
+      font-size: var(--size-font-header1);
       line-height: var(--top-bar-size);
       height: var(--top-bar-size);
       justify-content: space-between;
@@ -92,7 +93,7 @@ const navigation = [
       background-color: var(--color-overlay0);
     }
 
-    @media screen and (max-width: 450px) {
+    @container (max-width: 540px) {
       #title_text {
         display: none;
       }
