@@ -1,10 +1,14 @@
 ---
-title: Privacy Policy - AliciaBytes
+title: Privacy Policy
 excerpt: Hey, I'm AliciaBytes. Here's how I protect your data and respect your privacy.
-layout: '@src/layouts/MarkdownLayout.astro'
+slug: privacy-policy
+publishedDate: 2022-07-06
+lastUpdated:
+tags: []
+related_pages: []
+backlinks: []
+aliases: []
 ---
-
-# Privacy Policy
 
 Hey, I'm AliciaBytes. Here's how I protect your data and respect your privacy.
 
