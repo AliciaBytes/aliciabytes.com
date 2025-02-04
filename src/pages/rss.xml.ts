@@ -6,20 +6,25 @@ import { transform, walk } from "ultrahtml";
 import { getContainerRenderer as mdxRenderer } from "@astrojs/mdx";
 import { getContainerRenderer as solidRenderer } from "@astrojs/solid-js";
 import { loadRenderers } from "astro:container";
+import { collectionFilter } from "@src/utils/collections";
 
 export async function GET(context: APIContext) {
   let baseUrl = context.site?.href || "https://www.aliciabytes.com";
   if (baseUrl.at(-1) === "/") baseUrl = baseUrl.slice(0, -1);
 
   const pages = [
-    ...(await getCollection("pages")),
-    ...(await getCollection("notes")),
-    ...(await getCollection("monthly notes")),
+    ...(await getCollection("pages", collectionFilter)),
+    ...(await getCollection("notes", collectionFilter)),
+    ...(await getCollection("monthly notes", collectionFilter)),
   ];
 
   pages.sort((a, b) => {
-    const a_comparator = (a?.data?.lastUpdated || a.data.published).getTime();
-    const b_comparator = (b?.data?.lastUpdated || b.data.published).getTime();
+    const a_comparator = (
+      a?.data?.lastUpdated || a.data.publishedDate
+    ).getTime();
+    const b_comparator = (
+      b?.data?.lastUpdated || b.data.publishedDate
+    ).getTime();
 
     return b_comparator - a_comparator;
   });
@@ -34,7 +39,7 @@ export async function GET(context: APIContext) {
     feedItems.push({
       link: `/${page.data.prefix}${page.id}/`,
       title: page.data.title,
-      pubDate: page.data.lastUpdated || page.data.published,
+      pubDate: page.data.lastUpdated || page.data.publishedDate,
       description: page.data.excerpt,
       content: await make_urls_absolute(
         await container.renderToString(Content),

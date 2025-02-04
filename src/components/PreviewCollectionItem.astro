@@ -3,7 +3,7 @@ import render_markdown from "@src/utils/remark";
 import PublishedUpdatedFragment from "./PublishedUpdatedFragment.astro";
 
 const { id: slug } = Astro.props;
-const { title, excerpt, prefix, published, lastUpdated } = Astro.props.data;
+const { title, excerpt, prefix, publishedDate, lastUpdated } = Astro.props.data;
 ---
 
 <article>
@@ -13,7 +13,10 @@ const { title, excerpt, prefix, published, lastUpdated } = Astro.props.data;
       `### ${title} {#${prefix.replace("/", "_")}${slug}}`
     )}
   />
-  <PublishedUpdatedFragment published={published} updated={lastUpdated} />
+  <PublishedUpdatedFragment
+    publishedDate={publishedDate}
+    updated={lastUpdated}
+  />
   <p set:html={excerpt} />
 </article>
 

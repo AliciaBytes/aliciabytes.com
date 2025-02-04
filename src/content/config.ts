@@ -6,7 +6,7 @@ import { z, defineCollection, reference } from "astro:content";
 title:
 excerpt:
 slug:
-published:
+publishedDate:
 tags: []
 relatedPages: []
 backlinks: []
@@ -17,7 +17,8 @@ aliases: []
 const common_schema = z.object({
   title: z.string(),
   excerpt: z.string(),
-  published: z.date(),
+  published: z.boolean().default(true),
+  publishedDate: z.date(),
   lastUpdated: z.date().or(z.null()).optional(),
   tags: z.array(z.string()).optional(),
   categories: z.array(z.string()).optional(),

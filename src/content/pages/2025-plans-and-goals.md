@@ -2,7 +2,7 @@
 title: 2025 plans and goals
 excerpt: Some of my general plans for the new year.
 slug: 2025-plans-and-goals
-published: 2025-01-31
+publishedDate: 2025-01-31
 lastUpdated: 2025-02-02
 tags: []
 ---

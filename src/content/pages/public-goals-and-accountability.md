@@ -2,7 +2,7 @@
 title: Public goals and accountability
 excerpt: I decided to make (some) of my goals public, so that people can hold me accountable. This is mostly so that I'll actually do the final steps for accomplishing the individual goals. I had multiple different website/blog setups in the past. But while I was actually working on blogs, most of the time they ended up sitting in the drafts folder for way too long. Why? Not because they weren't good, but because they weren't perfect. Currently I'm very explicitly trying not to be perfect. I put out things explicitly in an unfinished state to make myself more comfortable with it. Let my flaws and quirks be seen.
 slug: public-goals-and-accountability
-published: 2024-07-06
+publishedDate: 2024-07-06
 tags: []
 ---
 

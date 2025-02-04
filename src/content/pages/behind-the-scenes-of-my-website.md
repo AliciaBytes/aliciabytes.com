@@ -2,7 +2,7 @@
 title: Behind the scenes of my website
 excerpt: The goals and principles behind my website. What I want this place to be, what to expect, and what I use to build it.
 slug: behind-the-scenes-of-my-website
-published: 2023-08-13
+publishedDate: 2023-08-13
 lastUpdated: 2024-05-19
 tags: []
 ---

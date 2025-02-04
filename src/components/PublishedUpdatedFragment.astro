@@ -1,14 +1,14 @@
 ---
 import { format } from "date-fns";
 
-const { published, updated } = Astro.props;
+const { publishedDate, updated } = Astro.props;
 ---
 
 <div>
   <span>
     Published:{" "}
-    <time datetime={published.toISOString()}>
-      {format(published, "dd MMMM yyyy")}
+    <time datetime={publishedDate.toISOString()}>
+      {format(publishedDate, "dd MMMM yyyy")}
     </time>
   </span>
   {
