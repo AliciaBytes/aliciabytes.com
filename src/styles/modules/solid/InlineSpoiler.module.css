@@ -1,4 +1,4 @@
-@layer components {
+@layer component {
     .inline_spoiler {
         display: contents;
     }
