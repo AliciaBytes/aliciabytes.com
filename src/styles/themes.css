@@ -1,17 +1,18 @@
 /* Using the Catppuccin Theme: https://github.com/catppuccin/catppuccin */
 @layer theme {
-    :not(pre)>code {
+    :not(pre) > code {
         background-color: var(--color-crust);
         padding: 0 6px;
     }
 
-    :is([data-selected-theme="catppuccin-latte"]) code[data-theme*=' '],
-    :is([data-selected-theme="catppuccin-latte"]) code[data-theme*=' '] span {
+    :is([data-selected-theme="catppuccin-latte"]) code[data-theme*=" "],
+    :is([data-selected-theme="catppuccin-latte"]) code[data-theme*=" "] span {
         color: var(--shiki-catppuccin-latte);
         background-color: var(--shiki-catppuccin-latte-bg);
     }
 
-    :where(:root), [data-selected-theme="catppuccin-latte"] {
+    :where(:root),
+    [data-selected-theme="catppuccin-latte"] {
         --color-base: hsl(220, 23%, 95%);
         --color-mantle: hsl(220, 22%, 92%);
         --color-crust: hsl(220, 21%, 89%);
@@ -41,8 +42,8 @@
         color-scheme: light;
     }
 
-    [data-selected-theme="catppuccin-frappe"] code[data-theme*=' '],
-    [data-selected-theme="catppuccin-frappe"] code[data-theme*=' '] span {
+    [data-selected-theme="catppuccin-frappe"] code[data-theme*=" "],
+    [data-selected-theme="catppuccin-frappe"] code[data-theme*=" "] span {
         color: var(--shiki-catppuccin-frappe);
         background-color: var(--shiki-catppuccin-frappe-bg);
     }
@@ -77,8 +78,8 @@
         color-scheme: dark;
     }
 
-    [data-selected-theme="catppuccin-macchiato"] code[data-theme*=' '],
-    [data-selected-theme="catppuccin-macchiato"] code[data-theme*=' '] span {
+    [data-selected-theme="catppuccin-macchiato"] code[data-theme*=" "],
+    [data-selected-theme="catppuccin-macchiato"] code[data-theme*=" "] span {
         color: var(--shiki-catppuccin-macchiato);
         background-color: var(--shiki-catppuccin-macchiato-bg);
     }
@@ -113,8 +114,8 @@
         color-scheme: dark;
     }
 
-    [data-selected-theme="catppuccin-mocha"] code[data-theme*=' '],
-    [data-selected-theme="catppuccin-mocha"] code[data-theme*=' '] span {
+    [data-selected-theme="catppuccin-mocha"] code[data-theme*=" "],
+    [data-selected-theme="catppuccin-mocha"] code[data-theme*=" "] span {
         color: var(--shiki-catppuccin-mocha);
         background-color: var(--shiki-catppuccin-mocha-bg);
     }
@@ -150,9 +151,10 @@
     }
 
     @media (prefers-color-scheme: dark) {
-
-        :is([data-selected-theme="catppuccin-mocha"]) code[data-theme*=' '],
-        :is([data-selected-theme="catppuccin-mocha"]) code[data-theme*=' '] span {
+        :is([data-selected-theme="catppuccin-mocha"]) code[data-theme*=" "],
+        :is([data-selected-theme="catppuccin-mocha"])
+            code[data-theme*=" "]
+            span {
             color: var(--shiki-catppuccin-mocha);
             background-color: var(--shiki-catppuccin-mocha-bg);
         }
