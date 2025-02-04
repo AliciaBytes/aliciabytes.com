@@ -20,7 +20,11 @@
 </div>
 
 <script>
+  const screenMediaQuerry = window.matchMedia("screen");
   const applyTheme = (theme: string) => {
+    if (!screenMediaQuerry.matches) {
+      theme = "catppuccin-latte";
+    }
     const target = document.querySelector(`[data-theme="${theme}"]`);
 
     document.documentElement.setAttribute("data-selected-theme", theme);
@@ -44,6 +48,27 @@
     }
   };
 
+  const handleMediaChannge = (mq: MediaQueryList) => {
+    if (!mq.matches) {
+      return applyTheme("catpuccin-latte");
+    }
+
+    let savedTheme = localStorage.getItem("selected-theme");
+    if (
+      savedTheme === null ||
+      ![
+        "catppuccin-latte",
+        "catppuccin-frappe",
+        "catppuccin-macchiato",
+        "catppuccin-mocha",
+      ].includes(savedTheme)
+    ) {
+      savedTheme = "catppuccin-mocha";
+    }
+
+    applyTheme(savedTheme);
+  };
+
   let savedTheme = localStorage.getItem("selected-theme");
   if (
     savedTheme === null ||
@@ -64,6 +89,9 @@
 
   buttons?.forEach((button) => {
     button.addEventListener("click", handleThemeSelection);
+  });
+  screenMediaQuerry.addEventListener("change", handleMediaChannge, {
+    passive: true,
   });
 </script>
 
