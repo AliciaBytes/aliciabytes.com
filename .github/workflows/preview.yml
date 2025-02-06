@@ -35,5 +35,5 @@ jobs:
           message: |
             ## Preview URLs
 
-            Deployment URL: `${{ steps.deploy.outputs.deployment-url }}`
-            Deployment alias URL: `${{ steps.deploy.outputs.deployment-alias-url }}`
+            Deployment URL: ${{ steps.deploy.outputs.deployment-url }}
+            Deployment alias URL: ${{ steps.deploy.outputs.deployment-alias-url }}
