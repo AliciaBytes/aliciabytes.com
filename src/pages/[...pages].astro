@@ -30,7 +30,11 @@ if (entry?.data?.relatedContent?.length || entry?.data?.backlinks?.length) {
 }
 ---
 
-<Layout title={entry.data.title} description={entry.data.excerpt}>
+<Layout
+  title={entry.data.title}
+  description={entry.data.excerpt}
+  metaTitle={entry.data.metaTitle}
+>
   <Fragment set:html={title} />
   <PublishUpdatedFragment
     publishedDate={entry.data.publishedDate}

@@ -2,9 +2,10 @@
 interface Props {
   description?: string;
   title: string;
+  metaTitle: string | undefined;
 }
 
-let { description, title } = Astro.props;
+let { description, title, metaTitle } = Astro.props;
 description ??=
   "Taking my own weird way through life with lots of sticks, and stones in the way.";
 const origin = Astro.site?.origin;
@@ -14,9 +15,8 @@ const url = Astro.url;
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title set:html={title} />
+  <title set:html={metaTitle || title} />
   <meta name="description" content={description} />
-  <meta name="title" content={title} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:image" content={`${origin}/opengraph.png`} />

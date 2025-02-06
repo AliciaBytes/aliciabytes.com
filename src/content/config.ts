@@ -3,6 +3,7 @@ import { z, defineCollection } from "astro:content";
 
 const common_schema = z.object({
   title: z.string(),
+  metaTitle: z.string().optional(),
   excerpt: z.string(),
   published: z.boolean().default(true),
   publishedDate: z.date(),

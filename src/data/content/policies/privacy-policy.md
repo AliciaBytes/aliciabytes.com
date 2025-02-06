@@ -1,5 +1,6 @@
 ---
 title: Privacy Policy
+metaTitle: Privacy Policy - AliciaBytes
 excerpt: Hey, I'm AliciaBytes. Here's how I protect your data and respect your privacy.
 slug: privacy-policy
 publishedDate: 2022-07-06

@@ -1,5 +1,6 @@
 ---
 title: November 2024
+metaTitle: November 2024 - AliciaBytes
 excerpt: Lan party, relationships and just way too much going on in my life. I need a break! 😅
 slug: "november-2024"
 publishedDate: 2024-12-01
