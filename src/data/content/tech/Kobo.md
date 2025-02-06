@@ -4,6 +4,7 @@ excerpt: Some notes on using Kobo
 slug: kobo
 publishedDate: 2024-05-19
 tags: []
+aliases: ["notes/kobo"]
 ---
 ## Using Custom Fonts
 

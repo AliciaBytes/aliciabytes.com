@@ -5,7 +5,7 @@ slug: cookie-policy
 publishedDate: 2022-07-06
 lastUpdated:
 tags: []
-related_pages: []
+relatedContent: []
 backlinks: []
 aliases: []
 ---

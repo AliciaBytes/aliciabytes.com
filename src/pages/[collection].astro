@@ -4,7 +4,7 @@ import CollectionList from "@src/components/astro/CollectionList.astro";
 import { slugify } from "@src/utils/slugify";
 
 export async function getStaticPaths() {
-  const collections = ["pages", "notes", "monthly notes"];
+  const collections = ["content"];
   return collections.map((entry) => ({
     params: { collection: slugify(entry) },
     props: { entry },

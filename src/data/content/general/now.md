@@ -5,7 +5,7 @@ slug: now
 publishedDate: 2022-07-06
 lastUpdated: 2025-02-04
 tags: []
-related_pages: []
+relatedContent: []
 backlinks: []
 aliases: []
 ---

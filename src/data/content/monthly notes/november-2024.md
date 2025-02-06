@@ -4,9 +4,9 @@ excerpt: Lan party, relationships and just way too much going on in my life. I n
 slug: "november-2024"
 publishedDate: 2024-12-01
 tags: ["Monthly Note"]
-related_pages: []
+relatedContent: []
 backlinks: []
-aliases: []
+aliases: ["monthly-notes/november-2024"]
 ---
 
 ## Quick bits
