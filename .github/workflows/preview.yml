@@ -22,9 +22,18 @@ jobs:
       - name: Build the website
         run: npm run build
       - name: Deploy to Cloudflare pages
+        id: deploy
         uses: cloudflare/wrangler-action@7a5f8bbdfeedcde38e6777a50fe685f89259d4ca # v3
         with:
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
           apiToken: ${{ secrets.CF_API_TOKEN }}
           command: pages deploy dist --project-name=aliciabytes-com
         timeout-minutes: 5
+      - name: Print the preview URLs
+        uses: mshick/add-pr-comment@b8f338c590a895d50bcbfa6c5859251edc8952fc # v2
+        with:
+          message: |
+            ## Preview URLs
+
+            Deployment URL: `${{ steps.deploy.outputs.deployment-url }}`
+            Deployment alias URL: `${{ steps.deploy.outputs.deployment-alias-url }}`
