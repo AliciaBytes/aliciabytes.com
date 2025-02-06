@@ -1,5 +1,6 @@
 ---
 title: Cookie Policy
+metaTitle: Cookie Policy - AliciaBytes
 excerpt: Hey, I'm AliciaBytes. Here's my policy about how I don't use cookis to track you.
 slug: cookie-policy
 publishedDate: 2022-07-06

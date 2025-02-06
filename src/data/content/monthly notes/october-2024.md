@@ -1,5 +1,6 @@
 ---
 title: October 2024
+metaTitle: October 2024 - AliciaBytes
 excerpt: Starting a new job, learning French, trying to make local friends and thinking about moving all my notes/life organizing around once again.
 slug: "october-2024"
 publishedDate: 2024-11-02

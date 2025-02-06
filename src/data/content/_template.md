@@ -1,5 +1,6 @@
 ---
 title: ""
+metaTitle: ""
 excerpt: ""
 slug:
 published: false
