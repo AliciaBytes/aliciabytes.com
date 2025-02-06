@@ -23,6 +23,11 @@ const { entry } = Astro.props;
 const { Content } = await render(entry);
 
 const title = render_markdown(`# ${entry.data.title}`);
+let hasRelatedItems = null;
+
+if (entry?.data?.relatedContent?.length || entry?.data?.backlinks?.length) {
+  hasRelatedItems = true;
+}
 ---
 
 <Layout title={entry.data.title} description={entry.data.excerpt}>
@@ -34,7 +39,7 @@ const title = render_markdown(`# ${entry.data.title}`);
 
   <Content />
 
-  {(entry.data.relatedContent || entry.data.backlinks) && <SectionDivider />}
+  {hasRelatedItems && <SectionDivider />}
 
   <LinkedPostList
     description="Related content"
