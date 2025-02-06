@@ -7,7 +7,7 @@ lastUpdated: 2024-09-08
 tags: ["Emotions"]
 backlinks: [
     {
-        collection: "pages",
+        collection: "content",
         id: "about"
     },
 ]

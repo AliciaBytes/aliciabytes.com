@@ -1,5 +1,5 @@
 import { glob } from "astro/loaders";
-import { z, defineCollection, reference } from "astro:content";
+import { z, defineCollection } from "astro:content";
 
 const common_schema = z.object({
   title: z.string(),
@@ -9,7 +9,7 @@ const common_schema = z.object({
   lastUpdated: z.date().or(z.null()).optional(),
   tags: z.array(z.string()).optional(),
   categories: z.array(z.string()).optional(),
-  relatedPages: z
+  relatedContent: z
     .array(
       z.object({
         collection: z.string(),
@@ -28,40 +28,16 @@ const common_schema = z.object({
   aliases: z.array(z.string()).optional(),
 });
 
-const pages = defineCollection({
+const content = defineCollection({
   loader: glob({
-    pattern: ["*.md", "*.mdx"],
-    base: "./src/content/pages",
+    pattern: ["**/*.md", "**/*.mdx"],
+    base: "./src/data/content",
   }),
-  schema: common_schema.extend({
-    prefix: z.string().default(""),
-  }),
-});
-
-const notes = defineCollection({
-  loader: glob({
-    pattern: ["*.md", "*.mdx"],
-    base: "./src/content/notes",
-  }),
-  schema: common_schema.extend({
-    prefix: z.string().default("notes/"),
-  }),
-});
-
-const monthly_notes = defineCollection({
-  loader: glob({
-    pattern: ["*.md", "*.mdx"],
-    base: "./src/content/monthly notes",
-  }),
-  schema: common_schema.extend({
-    prefix: z.string().default("monthly-notes/"),
-  }),
+  schema: common_schema,
 });
 
 export type CommonSchema = z.infer<typeof common_schema>;
 
 export const collections = {
-  pages,
-  notes,
-  "monthly notes": monthly_notes,
+  content,
 };

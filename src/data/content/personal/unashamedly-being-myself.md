@@ -4,9 +4,9 @@ excerpt: Being unashamedly myself everywhere. Work, privately, publicly.
 slug: unashamedly-being-myself-everywhere
 publishedDate: 2024-06-15
 tags: ["Identity"]
-relatedPages: [
+relatedContent: [
     {
-        collection: "pages",
+        collection: "content",
         id: "lost-years-of-my-past"
     }
 ]

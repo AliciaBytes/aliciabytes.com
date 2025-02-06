@@ -4,9 +4,9 @@ excerpt: Starting a new job, learning French, trying to make local friends and t
 slug: "october-2024"
 publishedDate: 2024-11-02
 tags: ["Monthly Note"]
-related_pages: []
+relatedContent: []
 backlinks: []
-aliases: []
+aliases: ["monthly-notes/october-2024"]
 ---
 
 ## Quick bits

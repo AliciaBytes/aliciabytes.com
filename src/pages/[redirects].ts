@@ -6,11 +6,7 @@ export async function getStaticPaths() {
 }
 
 export async function GET(context: APIContext) {
-  const pages = [
-    ...(await getCollection("pages")),
-    ...(await getCollection("notes")),
-    ...(await getCollection("monthly notes")),
-  ];
+  const pages = await getCollection("content");
 
   return new Response(
     pages
@@ -18,7 +14,7 @@ export async function GET(context: APIContext) {
       .flatMap((page) =>
         page.data.aliases?.map((alias) => ({
           source: `${alias}`,
-          destination: `/${page.data.prefix}${page.id}`,
+          destination: `/${page.id}`,
         }))
       )
       .map((redirect) => `${redirect?.source} ${redirect?.destination} 301`)

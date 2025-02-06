@@ -4,6 +4,7 @@ excerpt: Systemd only starts up after the login of a user and then immediately g
 slug: til-systemd-lingering-with-ansible
 publishedDate: 2024-04-18
 tags: ["Ansible"]
+aliases: ["notes/til-systemd-lingering-with-ansible"]
 ---
 
 Systemd only starts up after the login of a user and then immediately gets killed again when all the sessions for that user get closed. Let's look at how to disable this with ansible. But systemd is an important part necessary for a lot of programs and services on a Linux system. For example systemd timers won't run without it and you also can't run podman containers as they would get killed when systemd gets killed with the end of the users session.

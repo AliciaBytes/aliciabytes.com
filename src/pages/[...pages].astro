@@ -10,15 +10,11 @@ import LinkedPostList from "@src/components/astro/LinkedPostList.astro";
 import SectionDivider from "@components/astro/SectionDivider.astro";
 
 export async function getStaticPaths() {
-  const pages = [
-    ...(await getCollection("pages", collectionFilter)),
-    ...(await getCollection("notes", collectionFilter)),
-    ...(await getCollection("monthly notes", collectionFilter)),
-  ];
-  return pages
+  const content = await getCollection("content", collectionFilter);
+  return content
     .filter((entry) => !entry.id.startsWith("_"))
     .map((entry) => ({
-      params: { pages: entry.data.prefix + entry.id },
+      params: { pages: entry.id },
       props: { entry },
     }));
 }
@@ -38,15 +34,15 @@ const title = render_markdown(`# ${entry.data.title}`);
 
   <Content />
 
-  {(entry.data.relatedPages || entry.data.backlinks) && <SectionDivider />}
+  {(entry.data.relatedContent || entry.data.backlinks) && <SectionDivider />}
 
   <LinkedPostList
-    description="Related pages"
-    related_items={entry.data.relatedPages}
+    description="Related content"
+    related_items={entry.data.relatedContent}
   />
 
   <LinkedPostList
-    description="Pages linking here"
+    description="Content linking here"
     related_items={entry.data.backlinks}
   />
 </Layout>

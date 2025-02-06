@@ -7,7 +7,7 @@ lastUpdated: 2024-02-06
 tags: []
 backlinks: [
     {
-        collection: "pages",
+        collection: "content",
         id: "about"
     },
 ]

@@ -12,13 +12,9 @@ export async function GET(context: APIContext) {
   let baseUrl = context.site?.href || "https://www.aliciabytes.com";
   if (baseUrl.at(-1) === "/") baseUrl = baseUrl.slice(0, -1);
 
-  const pages = [
-    ...(await getCollection("pages", collectionFilter)),
-    ...(await getCollection("notes", collectionFilter)),
-    ...(await getCollection("monthly notes", collectionFilter)),
-  ];
+  const content = await getCollection("content", collectionFilter);
 
-  pages.sort((a, b) => {
+  content.sort((a, b) => {
     const a_comparator = (
       a?.data?.lastUpdated || a.data.publishedDate
     ).getTime();
@@ -34,10 +30,10 @@ export async function GET(context: APIContext) {
 
   const feedItems: RSSFeedItem[] = [];
 
-  for (const page of pages) {
+  for (const page of content) {
     const { Content } = await render(page);
     feedItems.push({
-      link: `/${page.data.prefix}${page.id}/`,
+      link: `/${page.id}/`,
       title: page.data.title,
       pubDate: page.data.lastUpdated || page.data.publishedDate,
       description: page.data.excerpt,
