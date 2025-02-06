@@ -1,6 +1,5 @@
 ---
-title: Colophon
-metaTitle: Colophon of AliciaBytes
+title: Colophon, or how this site is built
 excerpt: The goals and principles behind my website. What I want this place to be, what to expect, and what I use to build it.
 slug: colophon
 publishedDate: 2023-08-13
@@ -13,7 +12,7 @@ First off, don't expect this to be a well thought out amazing piece of work. I'm
 
 ## Goals and principles for my website
 
-This is not a strict list as I don't want to get to formal with my website. Just a loose list of goals and principles I'd love to keep up with my website.
+This is not a strict list as I don't want to get too formal with my website. Just a loose list of goals and principles I'd love to keep up with my website.
 
 ### A personal space
 
@@ -33,7 +32,7 @@ Although I probably will over-engineer it anyways, because it's a fun side proje
 
 I want it to be the opposite of all the walled gardens popping up with the ever encroaching enshittification of the internet. I want it to be open and accessible for people. With a guarantee that I can keep it running this way and am not on a timer until whatever platform I'm using decides to lock stuff down.
 
-On the other hand I'm explicitly closing it off from Bots and AI as I see them as parasites feasting on human content and destroying a lot of creative areas. Making the internet worse for everyone.
+On the other hand I'm explicitly closing it off from Bots and AI as I see them as parasites feasting on human content and destroying a lot of creative areas, making the internet worse for everyone.
 
 ### Modern tooling
 
@@ -57,7 +56,7 @@ I want my website to be accessible to as many people as possible. So I try my be
 
 - [astro](https://astro.build/) as a web framework to assemble the code and content into static pages.
 - [Catppuccin Theme](https://github.com/catppuccin/catppuccin) so I don't have to think about color schemes and making things pretty. It comes with 4 different nice looking flavors. I have done my own color scheme for my website before, but I'm not a fan of doing that work.
-- [Rehype Pretty Code](https://rehype-pretty-code.netlify.app/) & [Shiki](https://github.com/shikijs/shiki) for nice looking static code highlighting that fits the rest of the website.
+- [Expressive Code](https://expressive-code.com) for nice looking static code highlighting that fits the rest of the website and adjusts properly according to the selected theme.
 - The amazing [Kroki](https://kroki.io/) through [remark-kroki](https://github.com/nice-move/remark-kroki) for diagrams and visualizations.
 - The amazing [Rainbow Caticorn](https://openclipart.org/detail/222469/rainbow-caticorn) is a public domain SVG from Openclipart that I use for favicon and other graphics content.
 - [pagefind](https://pagefind.app/) for the search functionality.
