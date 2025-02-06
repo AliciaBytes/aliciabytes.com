@@ -5,9 +5,9 @@ import Layout from "@src/layouts/Layout.astro";
 import render_markdown from "@src/utils/remark";
 import { collectionFilter } from "@src/utils/collections";
 
-import PublishUpdatedFragment from "@components/PublishedUpdatedFragment.astro";
-import LinkedPostList from "@src/components/LinkedPostList.astro";
-import SectionDivider from "@components/SectionDivider.astro";
+import PublishUpdatedFragment from "@components/astro/PublishedUpdatedFragment.astro";
+import LinkedPostList from "@src/components/astro/LinkedPostList.astro";
+import SectionDivider from "@components/astro/SectionDivider.astro";
 
 export async function getStaticPaths() {
   const pages = [
