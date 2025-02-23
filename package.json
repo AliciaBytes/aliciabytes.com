@@ -24,7 +24,7 @@
     "date-fns": "4.1.0",
     "postcss": "8.5.3",
     "postcss-load-config": "6.0.1",
-    "postcss-preset-env": "10.1.4",
+    "postcss-preset-env": "10.1.5",
     "rehype-stringify": "10.0.1",
     "remark-gfm": "4.0.1",
     "remark-heading-id": "1.0.1",
