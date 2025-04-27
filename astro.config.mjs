@@ -9,6 +9,8 @@ import remarkHeaderId from 'remark-heading-id';
 import robotsTxt from "astro-robots-txt";
 import sitemap from "@astrojs/sitemap";
 import solidJs from '@astrojs/solid-js';
+import { browserslistToTargets } from 'lightningcss';
+import browserslist from 'browserslist';
 
 // https://astro.build/config
 export default defineConfig({
@@ -147,10 +149,19 @@ export default defineConfig({
   },
   vite: {
     build: {
-      assetsInlineLimit: -1
+      assetsInlineLimit: -1,
+      cssMinify: 'lightningcss',
     },
+    css: {
+      transformer: 'lightningcss',
+      lightningcss: {
+        errorRecovery: true,
+        targets: browserslistToTargets(browserslist('defaults'))
+      }
+    },
+    logLevel: 'error',
     ssr: {
       noExternal: ['sanitize.css']
-    }
+    },
   }
 });

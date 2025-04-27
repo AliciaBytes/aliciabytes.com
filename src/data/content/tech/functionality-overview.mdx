@@ -15,6 +15,7 @@ import { Picture } from 'astro:assets';
 import InlineSpoiler from '@src/components/astro/InlineSpoiler.astro';
 import Spoiler from '@src/components/astro/Spoiler.astro';
 import CollectionList from '@src/components/astro/CollectionList.astro'
+import { Information } from 'nibbles-and-bites/astro'
 
 This post is for me to test out all the features and styling of the website, and to make sure that if I change anything I don't break any of it! This is also a show off for the website where others could check the functionality I implement and how it's implemented on the frontend in the dev tools.
 
@@ -65,6 +66,10 @@ We can also mark up inline code without syntax highlighting `cron` and with synt
 ## Picture embeds
 
 <PictureFigure src="https://www-cdn.aliciabytes.com/file/aliciabytes-com/pages/about/taking-pictures-at-the-rheinfalls.jpg" alt="A view out through the trees above the Rheinfalls on a nice sunny day. You can see the water flowing rapidly. In the foreground Alicia is holding her phone up in landscape mode to take a picture of the scenery." formats={['avif', 'webp']} fallbackFormat="jpg" width="2000" height="819" quality="mid" caption="A view out through the trees above the Rheinfalls on a nice sunny day. You can see the water flowing rapidly. In the foreground Alicia is holding her phone up in landscape mode to take a picture of the scenery." />
+
+## Asides
+
+<Information>Just some generic information</Information>
 
 ## Spoilers
 

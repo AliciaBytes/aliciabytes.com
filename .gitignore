@@ -23,7 +23,6 @@ pnpm-debug.log*
 .DS_Store
 
 # Remotely downloaded assets during build
-src/lib/rassets/
 public/*icon*
 public/*.png
 public/*.svg
