@@ -7,10 +7,6 @@
         --size-font-subtext0: 0.9rem;
     }
 
-    * {
-        box-sizing: border-box;
-    }
-
     html {
         color: var(--color-text);
         background-color: var(--color-base);
