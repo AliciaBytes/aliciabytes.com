@@ -28,7 +28,7 @@ const navigation = [
   </div>
   <ThemeSwitcher />
   <div id="pagefind-search-ui">
-    <Search uiOptions={{ showImages: false }} />
+    <Search uiOptions={{ showImages: false, resetStyles: false }} />
   </div>
   <Navigation navigation={navigation} />
 </header>
@@ -77,20 +77,20 @@ const navigation = [
     }
 
     #pagefind-search-ui :global(*) {
-      background-color: var(--color-base);
-      border-color: var(--color-overlay0);
-      color: var(--color-text);
-      border-radius: 0%;
-      border-width: 1px;
+      background-color: var(--color-base) !important;
+      border-color: var(--color-overlay0) !important;
+      color: var(--color-text) !important;
+      border-radius: 0% !important;
+      border-width: 1px !important;
     }
 
     #pagefind-search-ui :global(*::placeholder) {
-      color: var(--color-overlay0);
-      opacity: 1;
+      color: var(--color-overlay0) !important;
+      opacity: 1 !important;
     }
 
     #pagefind-search-ui :global(form::before) {
-      background-color: var(--color-overlay0);
+      background-color: var(--color-overlay0) !important;
     }
 
     @container (max-width: 540px) {
