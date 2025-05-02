@@ -7,7 +7,7 @@ import { collectionFilter } from "@src/utils/collections";
 
 import PublishUpdatedFragment from "@components/astro/PublishedUpdatedFragment.astro";
 import LinkedPostList from "@src/components/astro/LinkedPostList.astro";
-import SectionDivider from "@components/astro/SectionDivider.astro";
+import { SectionDivider } from "nibbles-and-bites/astro";
 
 export async function getStaticPaths() {
   const content = await getCollection("content", collectionFilter);
