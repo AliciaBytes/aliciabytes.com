@@ -21,7 +21,7 @@
     "astro-meta-tags": "0.3.2",
     "astro-pagefind": "1.8.3",
     "astro-robots-txt": "1.0.0",
-    "astro": "5.7.11",
+    "astro": "5.7.12",
     "browserlist": "^1.0.1",
     "cssnano": "7.0.7",
     "date-fns": "4.1.0",
