@@ -6,7 +6,6 @@ import expressiveCode from 'astro-expressive-code';
 import mdx from "@astrojs/mdx";
 import pagefind from "astro-pagefind";
 import remarkHeaderId from 'remark-heading-id';
-import robotsTxt from "astro-robots-txt";
 import sitemap from "@astrojs/sitemap";
 import solidJs from '@astrojs/solid-js';
 import { browserslistToTargets } from 'lightningcss';
@@ -40,69 +39,6 @@ export default defineConfig({
       }
     ),
     mdx(),
-    robotsTxt({
-      policy: [
-        {
-          userAgent: 'Amazonbot',
-          disallow: '/'
-        },
-        {
-          userAgent: 'anthropic-ai',
-          disallow: '/'
-        },
-        {
-          userAgent: 'Applebot',
-          disallow: '/'
-        },
-        {
-          userAgent: 'Bytespider',
-          disallow: '/'
-        },
-        {
-          userAgent: 'CCBot',
-          disallow: '/'
-        },
-        {
-          userAgent: 'ChatGPT-User',
-          disallow: '/'
-        },
-        {
-          userAgent: 'cohere-ai',
-          disallow: '/'
-        },
-        {
-          userAgent: 'FacebookBot',
-          disallow: '/'
-        },
-        {
-          userAgent: 'Google-Extended',
-          disallow: '/'
-        },
-        {
-          userAgent: 'GPTBot',
-          disallow: '/'
-        },
-        {
-          userAgent: 'omgili',
-          disallow: '/'
-        },
-        {
-          userAgent: 'Omgilibot',
-          disallow: '/'
-        },
-        {
-          userAgent: 'PerplexityBot',
-          disallow: '/'
-        },
-        {
-          userAgent: 'YouBot',
-          disallow: '/'
-        },
-        {
-          userAgent: '*',
-          allow: '/'
-        }],
-    }),
     sitemap(),
     pagefind(),
     astroMetaTags(),
