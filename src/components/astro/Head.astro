@@ -5,6 +5,8 @@ interface Props {
   metaTitle: string | undefined;
 }
 
+import { SEO } from "astro-seo";
+
 let { description, title, metaTitle } = Astro.props;
 description ??=
   "Taking my own weird way through life with lots of sticks, and stones in the way.";
@@ -13,40 +15,64 @@ const url = Astro.url;
 ---
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title set:html={metaTitle || title} />
-  <meta name="description" content={description} />
-  <meta property="og:title" content={title} />
-  <meta property="og:description" content={description} />
-  <meta property="og:image" content={`${origin}/opengraph.png`} />
-  <meta property="og:locale" content="en" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content={url} />
-  <meta name="fediverse:creator" content="@AliciaBytes@polycule.li" />
+  <SEO
+    title={metaTitle || title}
+    description={description}
+    charset="utf-8"
+    extend={{
+      link: [
+        {
+          rel: "alternate",
+          title: "AliciaBytes' Blog",
+          href: `${origin}/rss.xml`,
+          type: "application/rss+xml",
+        },
+      ],
+      meta: [
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+        { name: "fediverse:creator", content: "@AliciaBytes@polycule.li" },
+        { name: "robots", content: "noai, noimageai" },
+        { name: "generator", content: Astro.generator },
+        {
+          name: "theme-color",
+          content: "#1a202c",
+          media: "(prefers-color-scheme: dark)",
+        },
+        {
+          name: "theme-color",
+          content: "#FFF",
+          media: "(prefers-color-scheme: light)",
+        },
+      ],
+    }}
+    openGraph={{
+      basic: {
+        title: title,
+        type: "website",
+        image: `${origin}/opengraph.png`,
+        url: url.href,
+      },
+      optional: {
+        description: description,
+        locale: "en",
+        siteName: "AliciaBytes",
+      },
+    }}
+    twitter={{
+      card: "summary_large_image",
+      site: "@AliciaBytes",
+      creator: "@AliciaBytes",
+      title: title,
+      image: `${origin}/opengraph.png`,
+      imageAlt:
+        "2 pink caticors (cats with a rainbow colored horn like a unicorn) to either side, facing towards the middle. In the middle there's the cursive text 'AliciaBytes'",
+      description: description,
+    }}
+  />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content={`${origin}/opengraph.png`} />
   <meta name="twitter:creator" content="@AliciaBytes" />
-  <meta
-    name="theme-color"
-    content="#1a202c"
-    media="(prefers-color-scheme: dark)"
-  />
-  <meta
-    name="theme-color"
-    content="#FFF"
-    media="(prefers-color-scheme: light)"
-  />
-  <link rel="canonical" href={url} />
-  <link
-    rel="alternate"
-    title="AliciaBytes' Blog"
-    href={`${origin}/rss.xml`}
-    type="application/rss+xml"
-  />
-  <meta name="robots" content="noai, noimageai" />
-  <meta name="generator" content={Astro.generator} />
   <script>
     document.documentElement.classList.remove("no-js");
     document.documentElement.classList.add("js");
