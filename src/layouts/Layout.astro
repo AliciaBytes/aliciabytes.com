@@ -3,6 +3,7 @@ export interface Props {
   title: string;
   description: string;
   metaTitle?: string;
+  headings?: any;
 }
 
 import Head from "@src/components/astro/Head.astro";
@@ -15,8 +16,9 @@ import "@styles/global.css";
 import "nibbles-and-bites/css/layers.css";
 import "nibbles-and-bites/css/theme.css";
 import "nibbles-and-bites/css/accessibility.css";
+import { Toc } from "nibbles-and-bites/astro";
 
-const { title, description, metaTitle } = Astro.props;
+const { title, description, metaTitle, headings } = Astro.props;
 const url = Astro.url;
 ---
 
@@ -26,6 +28,7 @@ const url = Astro.url;
   <body>
     <Header class="grid-center-wrapper" />
     <main class="grid-center-wrapper" data-pagefind-body>
+      {headings && <Toc headings={headings} />}
       <slot />
     </main>
     <Footer class="grid-center-wrapper such-a-bottom" {title} {url} />
