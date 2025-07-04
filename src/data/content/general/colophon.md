@@ -60,6 +60,7 @@ I want my website to be accessible to as many people as possible. So I try my be
 - The amazing [Kroki](https://kroki.io/) through [remark-kroki](https://github.com/nice-move/remark-kroki) for diagrams and visualizations.
 - The amazing [Rainbow Caticorn](https://openclipart.org/detail/222469/rainbow-caticorn) is a public domain SVG from Openclipart that I use for favicon and other graphics content.
 - [pagefind](https://pagefind.app/) for the search functionality.
+- I also used [aseprite](https://www.aseprite.org) to create an [88x31 button](/88x31/) for my website.
 
 You can find the source code for my website over at https://github.com/AliciaBytes/aliciabytes.com.
 
