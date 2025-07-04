@@ -9,6 +9,7 @@ export interface Props {
 import Head from "@src/components/astro/Head.astro";
 import Header from "@src/components/astro/Header.astro";
 import Footer from "@src/components/astro/Footer.astro";
+import Banners from "@src/components/astro/88x31.astro";
 
 import "@styles/layers.css";
 import "@styles/external.css";
@@ -31,6 +32,7 @@ const url = Astro.url;
       {headings && <Toc headings={headings} />}
       <slot />
     </main>
+    <Banners class="grid-center-wrapper" />
     <Footer class="grid-center-wrapper such-a-bottom" {title} {url} />
   </body>
 </html>

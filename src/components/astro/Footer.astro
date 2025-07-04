@@ -2,7 +2,6 @@
 import { SectionDivider } from "nibbles-and-bites/astro";
 
 const { class: className, title, url } = Astro.props;
-const origin = Astro.site?.origin;
 const reportURL = encodeURI(
   `https://github.com/AliciaBytes/aliciabytes.com/issues/new?template=broken-page.yml&title=Broken page: ${title}&url=${url}`
 );
@@ -51,31 +50,8 @@ const reportURL = encodeURI(
         >Functionality Overview</a
       >
       <a class="tap-target" href="/colophon/">Colophon</a>
+      <a class="tap-target" href="/88x31/">88x31</a>
     </div>
-  </div>
-  <div class="banners">
-    <a href={origin}>
-      <img
-        width="88"
-        height="31"
-        src="/88x31.webp"
-        alt="A 88x31 button with the text 'AliciaBytes' at the bottom. At the top there is a rainbow unicorn/caticorn horn that becomes smaller towards the top right where it tip ends pointing towards the corner."
-        decoding="async"
-        fetchpriority="low"
-        loading="lazy"
-      />
-    </a>
-    <a href={origin}>
-      <img
-        width="88"
-        height="31"
-        src="/88x31-animated.webp"
-        alt="A 88x31 button with the text 'AliciaBytes' at the bottom. At the top there is a rainbow unicorn/caticorn horn that becomes smaller towards the top right where it tip ends pointing towards the corner. The rainbow horn is animated slowly adding more and more of its rainbow segments until they all disappear at the end again."
-        decoding="async"
-        fetchpriority="low"
-        loading="lazy"
-      />
-    </a>
   </div>
 </footer>
 
@@ -106,15 +82,6 @@ const reportURL = encodeURI(
       flex-direction: column;
       align-items: center;
       gap: 3px;
-    }
-
-    .banners {
-      display: grid;
-      margin: 0px auto 18px auto;
-      grid-template-columns: 88px 88px;
-      gap: 18px;
-      align-items: center;
-      justify-items: center;
     }
   }
 </style>

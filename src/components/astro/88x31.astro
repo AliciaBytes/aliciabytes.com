@@ -1,0 +1,48 @@
+---
+import { SectionDivider } from "nibbles-and-bites/astro";
+
+const origin = Astro.site?.origin;
+const { class: className } = Astro.props;
+---
+
+<section class:list={[className]}>
+  <SectionDivider />
+  <h2>Other cute beings and places you might want to check out:</h2>
+  <div class="banners">
+    <a href="https://beehive.gay/">
+      <img
+        width="88px"
+        height="31px"
+        src="https://beehive.gay/button.png"
+        alt='A bee and the text "beehive.gay" with a rainbow underline.'
+        title="beehive.gay"
+      />
+    </a>
+    <a href="https://www.theresnotime.co.uk">
+      <img
+        title="TheresNoTime"
+        width="88px"
+        height="31px"
+        alt="A 88x31 website button with a fox emoji, and the text TheresNoTime"
+        src="https://www.theresnotime.co.uk/button.png"
+      />
+    </a>
+  </div>
+  <p>
+    And I also have an 88x31 over at <a href="/88x31"
+      >if you would like to add it</a
+    >.
+  </p>
+</section>
+
+<style>
+  .banners {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 88px);
+    gap: 9px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+</style>
