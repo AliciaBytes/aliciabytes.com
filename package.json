@@ -10,13 +10,13 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "@astrojs/mdx": "4.3.1",
+    "@astrojs/mdx": "4.3.2",
     "@astrojs/rss": "4.0.12",
     "@astrojs/sitemap": "3.4.2",
     "@astrojs/solid-js": "^5.0.4",
     "@csstools/postcss-relative-color-syntax": "^3.0.9",
     "@types/sanitize-html": "2.16.0",
-    "astro": "5.12.6",
+    "astro": "5.12.7",
     "astro-compress": "2.3.8",
     "astro-expressive-code": "^0.41.0",
     "astro-meta-tags": "0.4.0",
