@@ -15,7 +15,7 @@ jobs:
       pull-requests: write
       statuses: write
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+      - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4
       - name: Setup IndexNow
       # Generate files dynamically to prevent them from being leaked in public repositories.
       # This example will put the file in the root directory of the site.You may change the location by yourself.
