@@ -12,11 +12,11 @@
   "devDependencies": {
     "@astrojs/mdx": "4.3.4",
     "@astrojs/rss": "4.0.12",
-    "@astrojs/sitemap": "3.5.0",
+    "@astrojs/sitemap": "3.5.1",
     "@astrojs/solid-js": "^5.0.4",
     "@csstools/postcss-relative-color-syntax": "^3.0.9",
     "@types/sanitize-html": "2.16.0",
-    "astro": "5.13.2",
+    "astro": "5.13.3",
     "astro-compress": "2.3.8",
     "astro-expressive-code": "^0.41.0",
     "astro-meta-tags": "0.4.0",
