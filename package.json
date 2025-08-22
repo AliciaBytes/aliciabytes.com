@@ -22,7 +22,7 @@
     "astro-meta-tags": "0.4.0",
     "astro-pagefind": "1.8.3",
     "browserlist": "^1.0.1",
-    "cssnano": "7.1.0",
+    "cssnano": "7.1.1",
     "date-fns": "4.1.0",
     "lightningcss": "^1.29.3",
     "nibbles-and-bites": "0.1.5",
