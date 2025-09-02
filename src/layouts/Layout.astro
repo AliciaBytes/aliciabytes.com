@@ -4,12 +4,18 @@ export interface Props {
   description: string;
   metaTitle?: string;
   headings?: any;
+  published?: any;
+  updated?: any;
+  relatedContent?: any;
+  backlinks?: any;
 }
 
 import Head from "@src/components/astro/Head.astro";
 import Header from "@src/components/astro/Header.astro";
 import Footer from "@src/components/astro/Footer.astro";
 import Banners from "@src/components/astro/88x31.astro";
+import PublishUpdatedFragment from "@components/astro/PublishedUpdatedFragment.astro";
+import LinkedPostList from "@src/components/astro/LinkedPostList.astro";
 
 import "@styles/layers.css";
 import "@styles/external.css";
@@ -17,10 +23,24 @@ import "@styles/global.css";
 import "nibbles-and-bites/css/layers.css";
 import "nibbles-and-bites/css/theme.css";
 import "nibbles-and-bites/css/accessibility.css";
-import { Toc } from "nibbles-and-bites/astro";
+import { SectionDivider, Toc } from "nibbles-and-bites/astro";
 
-const { title, description, metaTitle, headings } = Astro.props;
+const {
+  title,
+  description,
+  metaTitle,
+  headings,
+  published,
+  updated,
+  relatedContent,
+  backlinks,
+} = Astro.props;
 const url = Astro.url;
+
+let hasRelatedItems = false;
+if (relatedContent?.length || backlinks?.length) {
+  hasRelatedItems = true;
+}
 ---
 
 <!doctype html>
@@ -30,8 +50,28 @@ const url = Astro.url;
     <Header class="grid-center-wrapper" />
     <main class="grid-center-wrapper" data-pagefind-body>
       {headings && <Toc headings={headings} />}
+      <PublishUpdatedFragment
+        publishedDate={published}
+        updated={updated}
+        class="publishedFragment"
+      />
       <slot />
     </main>
+    {
+      hasRelatedItems && (
+        <section class="grid-center-wrapper">
+          <SectionDivider />
+          <LinkedPostList
+            description="Related content"
+            related_items={relatedContent}
+          />
+          <LinkedPostList
+            description="Content linking here"
+            related_items={backlinks}
+          />
+        </section>
+      )
+    }
     <Banners class="grid-center-wrapper" />
     <Footer class="grid-center-wrapper such-a-bottom" {title} {url} />
   </body>
@@ -46,5 +86,9 @@ const url = Astro.url;
 
   .such-a-bottom {
     margin-top: auto;
+  }
+
+  .publishedFragment {
+    margin-top: 9px;
   }
 </style>

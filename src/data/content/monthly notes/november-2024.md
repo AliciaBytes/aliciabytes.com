@@ -10,6 +10,8 @@ backlinks: []
 aliases: ["monthly-notes/november-2024"]
 ---
 
+# November 2024
+
 ## Quick bits
 
 - Lots of complicated feelings this month, it was very emotional internally. 😕😵‍💫

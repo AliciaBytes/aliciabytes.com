@@ -11,6 +11,8 @@ backlinks: []
 aliases: []
 ---
 
+# Cookie Policy
+
 This blog does not currently utilize cookies or other tracking technologies. I value your privacy and believe in a transparent online experience. This means no hidden information gathering, no targeted advertising, and no invasive data collection.
 
 ## What are cookies?

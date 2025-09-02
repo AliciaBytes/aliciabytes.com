@@ -15,6 +15,8 @@ backlinks: [
 aliases: ["/things-i-enjoy-and-recommend/"]
 ---
 
+# Recommendations
+
 I want to share some of the things I enjoy. For the start it will be pretty limited and will grow as time goes on. In general I'm a nerd who loves anything techy, TTRPG, or video game related. I also try to do sports and have several that I enjoy although I'm just getting more into it from a longer break.
 
 ## Podcasts

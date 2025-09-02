@@ -20,6 +20,7 @@ export default defineConfig({
         protocol: 'https'
       }]
   },
+  scopedStyleStrategy: 'where',
   integrations: [
     solidJs(),
     expressiveCode(

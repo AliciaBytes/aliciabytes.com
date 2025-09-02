@@ -1,29 +1,31 @@
 ---
 import { format } from "date-fns";
 
-const { publishedDate, updated } = Astro.props;
+const { publishedDate, updated, class: className, ...rest } = Astro.props;
 ---
 
-<div>
-  <span>
-    Published:{" "}
-    <time datetime={publishedDate.toISOString()}>
-      {format(publishedDate, "dd MMMM yyyy")}
-    </time>
-  </span>
-  {
-    updated && (
-      <>
-        <span>
-          Last Updated:
-          <time datetime={updated.toISOString()}>
-            {format(updated, "dd MMMM yyyy")}
-          </time>
-        </span>
-      </>
-    )
-  }
-</div>
+{
+  publishedDate && (
+    <div class={className} {...rest}>
+      <span>
+        Published:{" "}
+        <time datetime={publishedDate.toISOString()}>
+          {format(publishedDate, "dd MMMM yyyy")}
+        </time>
+      </span>
+      {updated && (
+        <>
+          <span>
+            Last Updated:
+            <time datetime={updated.toISOString()}>
+              {format(updated, "dd MMMM yyyy")}
+            </time>
+          </span>
+        </>
+      )}
+    </div>
+  )
+}
 
 <style>
   @layer component {
@@ -31,7 +33,7 @@ const { publishedDate, updated } = Astro.props;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      column-gap: 12px;
+      column-gap: 18px;
       row-gap: 6px;
     }
 

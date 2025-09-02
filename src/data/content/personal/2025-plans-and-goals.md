@@ -7,6 +7,8 @@ lastUpdated: 2025-02-02
 tags: []
 ---
 
+# 2025 plans and goals
+
 The last few years have been pretty busy and hectic for me. Especially with running from one thing to the next, lots of plan changes and also way too much travelling. I'm trying to have things a bit more structured this year and also to focus a bit more on myself and time for recovery.
 
 ## Get settled and comfortable

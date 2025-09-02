@@ -12,6 +12,8 @@ relatedContent: [
 ]
 ---
 
+# Unashamedly being myself. Everywhere!
+
 I need to let out my feelings and talk about what it means to be unashamedly myself. What it means to myself. Why I want to do it and it's important to me. What my fears about it and some negative consequences are. But also the positive consequences for me (and hopefully also others around me).
 
 It's been on my mind for a while already, but especially after this past weekend and the (2024) European election results. (As I'm typing this, not as of this blog post releasing. This will probably be quite a while in the past by the time you get to see it.) I got asked if I'm not worried about putting my [Trauma](/lost-years-of-my-past/) publicly. If I'm not afraid about employers seeing it and me not getting work. But also about being public with it in general and just having other people know so much about me, people I might not even know anything at all about.

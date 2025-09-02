@@ -5,10 +5,6 @@ import Layout from "@src/layouts/Layout.astro";
 import render_markdown from "@src/utils/remark";
 import { collectionFilter } from "@src/utils/collections";
 
-import PublishUpdatedFragment from "@components/astro/PublishedUpdatedFragment.astro";
-import LinkedPostList from "@src/components/astro/LinkedPostList.astro";
-import { SectionDivider } from "nibbles-and-bites/astro";
-
 export async function getStaticPaths() {
   const content = await getCollection("content", collectionFilter);
   return content
@@ -35,24 +31,10 @@ if (entry?.data?.relatedContent?.length || entry?.data?.backlinks?.length) {
   description={entry.data.excerpt}
   metaTitle={entry.data.metaTitle}
   headings={headings}
+  published={entry?.data.publishedDate}
+  updated={entry.data.lastUpdated}
+  relatedContent={entry.data.relatedContent}
+  backlinks={entry.data.backlinks}
 >
-  <Fragment set:html={title} />
-  <PublishUpdatedFragment
-    publishedDate={entry.data.publishedDate}
-    updated={entry.data.lastUpdated}
-  />
-
   <Content />
-
-  {hasRelatedItems && <SectionDivider />}
-
-  <LinkedPostList
-    description="Related content"
-    related_items={entry.data.relatedContent}
-  />
-
-  <LinkedPostList
-    description="Content linking here"
-    related_items={entry.data.backlinks}
-  />
 </Layout>

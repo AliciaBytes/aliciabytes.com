@@ -7,6 +7,8 @@ tags: ["Linux", "Fedora"]
 aliases: []
 ---
 
+# Using an older kernel version in Fedora
+
 I recently had issues with my hardware configuration since updating the linux system. The issues were mostly about the system not waking from sleep and also about general instability and artifacts. Turns out it was because of issues with the new kernel version and that I had to go back a version. Here's how I went about doing this.
 
 ## Figuring out the issue

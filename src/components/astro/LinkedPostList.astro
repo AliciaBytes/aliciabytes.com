@@ -3,7 +3,7 @@ import { getEntry, type CollectionKey } from "astro:content";
 
 import Preview from "@components/astro/PreviewCollectionItem.astro";
 
-let { related_items, description } = Astro.props;
+let { related_items, description, class: className } = Astro.props;
 
 let entries = [];
 if (related_items) {
@@ -18,7 +18,7 @@ description ??= "Related pages";
 
 {
   related_items && related_items.length != 0 && (
-    <section>
+    <section class={className}>
       <h2>{description}</h2>
       <ul>
         {entries.map((page) => (
