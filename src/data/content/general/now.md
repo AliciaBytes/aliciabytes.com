@@ -10,6 +10,8 @@ backlinks: []
 aliases: []
 ---
 
+# Now, or what's currently going on in my life
+
 I want to use this page as a small space to share what I'm generally up to in life without going into too many details or talking about anything sensitive/private. Maybe somebody else will find something here that they'll get curious about and want to try doing themselves, find shared hobbies to talk with and a reason to reach out to me or whatever honestly. I'm gonna try to keep this page updated, but please cut me some slack, life just sometimes happens. And sometimes it tends to happen way too hard/fast.
 
 ## Moving

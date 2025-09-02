@@ -6,6 +6,9 @@ publishedDate: 2024-05-19
 tags: []
 aliases: ["notes/kobo"]
 ---
+
+# Kobo E-reader
+
 ## Using Custom Fonts
 
 To use custom fonts you have to connect the Kobo e-Reader to your computer and create a `fonts` directory in the root directory of the e-Reader. After ejecting and letting your e-Reader process the changes you have to restart it completely to pick up the new fonts.

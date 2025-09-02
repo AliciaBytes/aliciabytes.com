@@ -8,6 +8,8 @@ tags: []
 aliases: ["behind-the-scenes-of-my-website"]
 ---
 
+# Colophon, or how this site is built
+
 First off, don't expect this to be a well thought out amazing piece of work. I'm not a frontend developer, UI or design person, I prefer to stay on the code side on the back end. My website is quirky and imperfect and missing features because of other more important projects. But it's my little space on the internet. And that's important. With the internet becoming more and more polluted with ads, walled in communities that lock up information, AI plagiarizing and stealing content, etc. I felt that I need my own place even more now.
 
 ## Goals and principles for my website

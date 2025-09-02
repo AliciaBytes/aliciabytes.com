@@ -10,6 +10,8 @@ backlinks: []
 aliases: ["monthly-notes/october-2024"]
 ---
 
+# October 2024
+
 ## Quick bits
 
 - I started a new job, and so far it's been going great. I'm enjoying it a lot. The usual onboarding phase with it's issues that you always have at the start, but otherwise seems to be going well.

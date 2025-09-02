@@ -1,7 +1,6 @@
 ---
 import { SectionDivider } from "nibbles-and-bites/astro";
 
-const origin = Astro.site?.origin;
 const { class: className } = Astro.props;
 ---
 
@@ -16,6 +15,9 @@ const { class: className } = Astro.props;
         src="https://beehive.gay/button.png"
         alt='A bee and the text "beehive.gay" with a rainbow underline.'
         title="beehive.gay"
+        decoding="async"
+        fetchpriority="low"
+        loading="lazy"
       />
     </a>
     <a href="https://www.theresnotime.co.uk">
@@ -25,6 +27,21 @@ const { class: className } = Astro.props;
         height="31px"
         alt="A 88x31 website button with a fox emoji, and the text TheresNoTime"
         src="https://www.theresnotime.co.uk/button.png"
+        decoding="async"
+        fetchpriority="low"
+        loading="lazy"
+      />
+    </a>
+    <a href="https://foxes.systems/">
+      <img
+        title="Hayley (foxes.system)"
+        width="88px"
+        height="31px"
+        alt='A 88x31 website button with the text "foxes.systems" and a orange purple gradient border.'
+        src="https://foxes.systems/88x31.png"
+        decoding="async"
+        fetchpriority="low"
+        loading="lazy"
       />
     </a>
   </div>
@@ -33,6 +50,30 @@ const { class: className } = Astro.props;
       >if you would like to add it</a
     >.
   </p>
+  <div class="banners">
+    <a href="https://www.aliciabytes.com">
+      <img
+        width="88px"
+        height="31px"
+        src="/88x31.webp"
+        alt="A 88x31 button with the text 'AliciaBytes' at the bottom. At the top there is a rainbow unicorn/caticorn horn that becomes smaller towards the top right where it tip ends pointing towards the corner."
+        decoding="async"
+        fetchpriority="low"
+        loading="lazy"
+      />
+    </a>
+    <a href="https://www.aliciabytes.com">
+      <img
+        width="88px"
+        height="31px"
+        src="/88x31-animated.webp"
+        alt="A 88x31 button with the text 'AliciaBytes' at the bottom. At the top there is a rainbow unicorn/caticorn horn that becomes smaller towards the top right where it tip ends pointing towards the corner. The rainbow horn is animated slowly adding more and more of its rainbow segments until they all disappear at the end again."
+        decoding="async"
+        fetchpriority="low"
+        loading="lazy"
+      />
+    </a>
+  </div>
 </section>
 
 <style>

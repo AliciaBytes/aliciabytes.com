@@ -7,6 +7,8 @@ tags: ["Ansible"]
 aliases: ["notes/til-systemd-lingering-with-ansible"]
 ---
 
+# TIL: Setting up systemd lingering with ansible
+
 Systemd only starts up after the login of a user and then immediately gets killed again when all the sessions for that user get closed. Let's look at how to disable this with ansible. But systemd is an important part necessary for a lot of programs and services on a Linux system. For example systemd timers won't run without it and you also can't run podman containers as they would get killed when systemd gets killed with the end of the users session.
 
 There is a way to have systemd start for users on system boot and stay active though. You need to enable lingering for the user.

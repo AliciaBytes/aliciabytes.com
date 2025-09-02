@@ -15,6 +15,8 @@ Hey, I'm AliciaBytes. Here's how I protect your data and respect your privacy.
 
 ---
 
+# Privacy Policy
+
 ## Data I collect
 
 If you are only a visitor to my website, please know that I do not collect any personal data. I also don't set any cookies or do any other logging.
