@@ -17,7 +17,7 @@
     "@csstools/postcss-relative-color-syntax": "^3.0.9",
     "@types/sanitize-html": "2.16.0",
     "astro": "5.16.8",
-    "astro-compress": "2.3.8",
+    "astro-compress": "2.3.9",
     "astro-expressive-code": "^0.41.3",
     "astro-meta-tags": "0.4.0",
     "astro-pagefind": "1.8.5",
