@@ -43,6 +43,6 @@
     "unified": "11.0.5"
   },
   "dependencies": {
-    "astro-seo": "^0.8.4"
+    "astro-seo": "^1.0.0"
   }
 }
