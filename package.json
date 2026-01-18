@@ -28,7 +28,7 @@
     "nibbles-and-bites": "^0.1.8",
     "postcss": "8.5.6",
     "postcss-load-config": "6.0.1",
-    "postcss-preset-env": "10.6.1",
+    "postcss-preset-env": "11.1.1",
     "rehype-stringify": "10.0.1",
     "remark-gfm": "4.0.1",
     "remark-heading-id": "1.0.1",
