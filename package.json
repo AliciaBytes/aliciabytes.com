@@ -35,7 +35,7 @@
     "remark-kroki": "0.3.8",
     "remark-parse": "11.0.0",
     "remark-rehype": "11.1.2",
-    "sanitize-html": "2.17.0",
+    "sanitize-html": "2.17.1",
     "sanitize.css": "13.0.0",
     "sharp": "0.34.5",
     "solid-js": "^1.9.4",
