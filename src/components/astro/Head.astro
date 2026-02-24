@@ -58,21 +58,7 @@ const url = Astro.url;
         siteName: "AliciaBytes",
       },
     }}
-    twitter={{
-      card: "summary_large_image",
-      site: "@AliciaBytes",
-      creator: "@AliciaBytes",
-      title: title,
-      image: `${origin}/opengraph.png`,
-      imageAlt:
-        "2 pink caticorns (cats with a rainbow colored horn like a unicorn) to either side, facing towards the middle. In the middle there's the cursive text 'AliciaBytes'",
-      description: description,
-    }}
   />
-  <meta name="twitter:title" content={title} />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content={`${origin}/opengraph.png`} />
-  <meta name="twitter:creator" content="@AliciaBytes" />
   <script>
     document.documentElement.classList.remove("no-js");
     document.documentElement.classList.add("js");
