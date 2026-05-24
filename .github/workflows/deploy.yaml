@@ -20,7 +20,7 @@ jobs:
       # Generate files dynamically to prevent them from being leaked in public repositories.
       # This example will put the file in the root directory of the site.You may change the location by yourself.
         run: echo ${{ secrets.INDEXNOW_KEY }} > public/${{ secrets.INDEXNOW_KEY }}.txt
-      - uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
+      - uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6
         with:
           node-version: "lts/*"
           cache: "npm"
