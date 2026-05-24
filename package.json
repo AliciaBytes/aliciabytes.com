@@ -10,22 +10,22 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "@astrojs/mdx": "4.3.14",
+    "@astrojs/mdx": "5.0.6",
     "@astrojs/rss": "4.0.18",
     "@astrojs/sitemap": "3.7.2",
-    "@astrojs/solid-js": "^5.0.4",
-    "@csstools/postcss-relative-color-syntax": "^4.0.0",
+    "@astrojs/solid-js": "^6.0.1",
+    "astro-pagefind": "^2.0.0",
+    "@csstools/postcss-relative-color-syntax": "^4.0.4",
     "@types/sanitize-html": "2.16.1",
-    "astro": "5.18.1",
+    "astro": "6.3.7",
     "astro-compress": "2.4.1",
     "astro-expressive-code": "^0.42.0",
     "astro-meta-tags": "0.4.1",
-    "astro-pagefind": "1.8.6",
-    "browserlist": "^1.0.1",
+    "browserlist": "^1.0.2",
     "cssnano": "8.0.1",
-    "date-fns": "4.2.1",
-    "lightningcss": "^1.29.3",
-    "nibbles-and-bites": "^0.1.8",
+    "date-fns": "4.3.0",
+    "lightningcss": "^1.32.0",
+    "nibbles-and-bites": "^0.2.0",
     "postcss": "8.5.15",
     "postcss-load-config": "6.0.1",
     "postcss-preset-env": "11.3.0",
@@ -38,11 +38,11 @@
     "sanitize-html": "2.17.4",
     "sanitize.css": "13.0.0",
     "sharp": "0.34.5",
-    "solid-js": "^1.9.4",
-    "ultrahtml": "^1.5.3",
+    "solid-js": "^1.9.13",
+    "ultrahtml": "^1.6.0",
     "unified": "11.0.5"
   },
   "dependencies": {
-    "astro-seo": "^1.0.0"
+    "astro-seo": "^1.1.0"
   }
 }
