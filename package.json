@@ -22,7 +22,7 @@
     "astro-expressive-code": "^0.43.0",
     "astro-meta-tags": "0.4.1",
     "browserlist": "^1.0.2",
-    "cssnano": "8.0.1",
+    "cssnano": "8.0.2",
     "date-fns": "4.4.0",
     "lightningcss": "^1.32.0",
     "nibbles-and-bites": "^0.2.0",
