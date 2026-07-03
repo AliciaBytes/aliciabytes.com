@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "@astrojs/mdx": "5.0.6",
-    "@astrojs/rss": "4.0.18",
+    "@astrojs/rss": "4.0.19",
     "@astrojs/sitemap": "3.7.3",
     "@astrojs/solid-js": "^6.0.1",
     "astro-pagefind": "^2.0.0",
