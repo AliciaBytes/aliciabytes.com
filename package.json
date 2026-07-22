@@ -10,10 +10,10 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "@astrojs/mdx": "5.0.6",
+    "@astrojs/mdx": "7.0.3",
     "@astrojs/rss": "4.0.19",
     "@astrojs/sitemap": "3.7.3",
-    "@astrojs/solid-js": "^6.0.1",
+    "@astrojs/solid-js": "^7.0.0",
     "astro-pagefind": "^2.0.0",
     "@csstools/postcss-relative-color-syntax": "^4.0.4",
     "@types/sanitize-html": "2.16.1",
